@@ -1,0 +1,182 @@
+[
+  {
+    "episode": "ep012",
+    "scene": 4,
+    "field": "text",
+    "before": "Here is what the city inspection actually found. The structural engineering report documented a sixty-foot rudimentary trench dug between two adjacent synagogue basements by unauthorized students trying to expand prayer space.",
+    "after": "Here is what city inspectors actually reported: a sixty-foot unauthorized underground tunnel beneath a rear extension near the synagogue. Accounts linked the excavation to a dispute over expanding prayer space.",
+    "reason": "The city description does not establish two synagogue basements or the excavators' motive as an engineering finding.",
+    "source": "https://www.factcheck.org/2024/01/what-we-know-about-the-brooklyn-synagogue-tunnel/"
+  },
+  {
+    "episode": "ep012",
+    "scene": 4,
+    "field": "on_screen",
+    "before": "60-FOOT BASEMENT TRENCH · ZERO CONNECTIONS BEYOND",
+    "after": "60-FOOT UNAUTHORIZED TUNNEL · BUILDING SAFETY VIOLATIONS",
+    "reason": "Remove overbroad zero connections assertion.",
+    "source": "https://www.factcheck.org/2024/01/what-we-know-about-the-brooklyn-synagogue-tunnel/"
+  },
+  {
+    "episode": "ep012",
+    "scene": 5,
+    "field": "text",
+    "before": "It did not cross the street. It did not touch any museum. Synagogue leadership condemned the excavation and called building inspectors immediately.",
+    "after": "It did not connect to the children’s museum across the street. Chabad leadership condemned the excavation, and city officials ordered work to stabilize the affected buildings.",
+    "reason": "No verified immediate report to inspectors; avoid claiming that timing.",
+    "source": "https://www.factcheck.org/2024/01/what-we-know-about-the-brooklyn-synagogue-tunnel/"
+  },
+  {
+    "episode": "ep012",
+    "scene": 5,
+    "field": "on_screen",
+    "before": "LEADERSHIP CONDEMNED & REPORTED HAZARD",
+    "after": "NO MUSEUM CONNECTION · LEADERSHIP CONDEMNED EXCAVATION",
+    "reason": "Match verified account.",
+    "source": "https://www.factcheck.org/2024/01/what-we-know-about-the-brooklyn-synagogue-tunnel/"
+  },
+  {
+    "episode": "ep012",
+    "scene": 6,
+    "field": "text",
+    "before": "A real municipal safety violation was weaponized into ancient folklore. Look at the verified blueprints, not the runaway rumors.",
+    "after": "A real municipal safety violation became fuel for unsupported accusations. Read the city’s documented findings, and separate what inspectors established from what people added online.",
+    "reason": "Do not claim possession of verified official blueprints.",
+    "source": "https://www.factcheck.org/2024/01/what-we-know-about-the-brooklyn-synagogue-tunnel/"
+  },
+  {
+    "episode": "ep012",
+    "scene": 6,
+    "field": "on_screen",
+    "before": "STICK TO VERIFIED BLUEPRINTS",
+    "after": "READ THE DOCUMENTED FINDINGS",
+    "reason": "No official blueprint reproduced.",
+    "source": "https://www.factcheck.org/2024/01/what-we-know-about-the-brooklyn-synagogue-tunnel/"
+  },
+  {
+    "episode": "ep013",
+    "scene": 4,
+    "field": "text",
+    "before": "The design committee included Benjamin Franklin, Thomas Jefferson, and Charles Thomson. Thomson’s official report explains the pyramid stands for strength and duration. The eye represents providence.",
+    "after": "Franklin, Jefferson, and John Adams served on the first committee. Years later, Charles Thomson finalized the design. His report explains the pyramid as strength and duration, and the eye as providence.",
+    "reason": "Thomson was not a member of the first committee.",
+    "source": "https://prologue.blogs.archives.gov/2015/06/20/the-great-seal-celebrating-233-years-of-a-national-emblem/"
+  },
+  {
+    "episode": "ep014",
+    "scene": 3,
+    "field": "text",
+    "before": "Where did the number come from? A misquoted news report that four thousand Israeli citizens were in the New York metropolitan area on any given day.",
+    "after": "The story distorted early efforts to locate Israelis thought to have been near the attack sites. A number connected to worried families became a fabricated list of workers supposedly warned to stay home.",
+    "reason": "Not an ordinary daily metropolitan census; distinguish search inquiries from absentees.",
+    "source": "https://www.adl.org/resources/news/4000-jews-absent-during-world-trade-center-attack"
+  },
+  {
+    "episode": "ep014",
+    "scene": 3,
+    "field": "on_screen",
+    "before": "ORIGIN: MISQUOTED CITIZEN CENSUS STATISTIC",
+    "after": "INQUIRIES ABOUT MISSING PEOPLE ≠ ABSENCE LIST",
+    "reason": "Remove census assertion.",
+    "source": "https://www.adl.org/resources/news/4000-jews-absent-during-world-trade-center-attack"
+  },
+  {
+    "episode": "ep014",
+    "scene": 4,
+    "field": "text",
+    "before": "And the claim is sickeningly false. The victims list at the World Trade Center includes hundreds of Jewish workers, traders, first responders, and visitors whose lives and deaths are documented.",
+    "after": "The claim is false. Jewish people were among those killed, and memorial records preserve their individual lives. Estimates of the Jewish death toll vary; the memorial itself does not classify every victim by religion.",
+    "reason": "Avoid implying memorial religion census or a precise official faith count.",
+    "source": "https://www.adl.org/resources/news/4000-jews-absent-during-world-trade-center-attack"
+  },
+  {
+    "episode": "ep014",
+    "scene": 4,
+    "field": "on_screen",
+    "before": "HUNDREDS OF JEWISH VICTIMS DOCUMENTED",
+    "after": "JEWISH VICTIMS ARE DOCUMENTED · REMEMBER INDIVIDUAL LIVES",
+    "reason": "Faith totals are estimates.",
+    "source": "https://www.adl.org/resources/news/4000-jews-absent-during-world-trade-center-attack"
+  },
+  {
+    "episode": "ep015",
+    "scene": 5,
+    "field": "text",
+    "before": "He pointed out the obvious logic: Jewish people were dying of the plague at the exact same rates, and in places where no Jewish communities existed, the plague raged just as hard.",
+    "after": "His decree pointed to places where the plague struck even though no Jewish communities lived there. That observation undermined the accusation; it was not a statistical study proving identical death rates.",
+    "reason": "The decree gives a counterexample, not measured identical rates.",
+    "source": "https://cojs.org/pope-clement-vi-1348-papal-document/"
+  },
+  {
+    "episode": "ep015",
+    "scene": 5,
+    "field": "on_screen",
+    "before": "IDENTICAL PLAGUE RATES REVEALED THE LIE",
+    "after": "PLAGUE ALSO STRUCK PLACES WITHOUT JEWISH COMMUNITIES",
+    "reason": "No precise epidemiological rates established.",
+    "source": "https://cojs.org/pope-clement-vi-1348-papal-document/"
+  },
+  {
+    "episode": "ep017",
+    "scene": 2,
+    "field": "text",
+    "before": "Starting in nineteen-twenty, Henry Ford used his wealth to buy a weekly newspaper: The Dearborn Independent. Over ninety-one issues, it published attacks based on the forged Protocols.",
+    "after": "In nineteen-twenty, Ford’s newspaper, The Dearborn Independent, began publishing a series of antisemitic articles. Across ninety-one installments, it promoted conspiracy claims drawing on the forged Protocols.",
+    "reason": "Ford had acquired the newspaper earlier, not in 1920.",
+    "source": "https://encyclopedia.ushmm.org/content/en/article/antisemitism-and-henry-fords-international-jew"
+  },
+  {
+    "episode": "ep017",
+    "scene": 2,
+    "field": "on_screen",
+    "before": "1920-1927: 91 ISSUES PROMOTING FORGERIES",
+    "after": "1920–1922: THE INTERNATIONAL JEW SERIES",
+    "reason": "Distinguish article series from newspaper ownership period.",
+    "source": "https://encyclopedia.ushmm.org/content/en/article/antisemitism-and-henry-fords-international-jew"
+  },
+  {
+    "episode": "ep017",
+    "scene": 5,
+    "field": "text",
+    "before": "Yet even today, people quote Ford’s articles without mentioning his own sworn retraction. Success in automotive manufacturing didn’t make him an expert in history.",
+    "after": "Yet people still quote those articles without mentioning the public apology issued in Ford’s name. His success in automotive manufacturing did not make those historical accusations true.",
+    "reason": "Public apology is not a sworn retraction.",
+    "source": "https://encyclopedia.ushmm.org/content/en/article/antisemitism-and-henry-fords-international-jew"
+  },
+  {
+    "episode": "ep018",
+    "scene": 2,
+    "field": "text",
+    "before": "In November nineteen-eighteen, Germany surrendered in World War One. Its armies were retreating, allies had collapsed, and frontlines were out of reserves.",
+    "after": "In November nineteen-eighteen, Germany accepted an armistice ending the fighting in World War One. Its armies had been retreating, its allies collapsing, and its military leadership seeking a way out.",
+    "reason": "Distinguish armistice from formal surrender.",
+    "source": "https://encyclopedia.ushmm.org/content/en/article/antisemitism-in-history-world-war-i"
+  },
+  {
+    "episode": "ep018",
+    "scene": 5,
+    "field": "source",
+    "before": "German War Ministry Census (Judenzählung)",
+    "after": "German Jewish wartime service · USHMM historical overview",
+    "reason": "Do not attribute final wartime deaths to a 1916 census.",
+    "source": "https://encyclopedia.ushmm.org/content/en/article/antisemitism-in-history-world-war-i"
+  },
+  {
+    "episode": "ep019",
+    "scene": 4,
+    "field": "text",
+    "before": "Before the nineteenth century, most European Jews did not use fixed hereditary surnames at all. They were mandated by secular laws like Napoleon’s decree of eighteen-oh-eight.",
+    "after": "Many Ashkenazi Jewish families adopted fixed hereditary surnames under state laws in the eighteenth and nineteenth centuries. Napoleon’s eighteen-oh-eight decree was one example. Other Jewish communities had used hereditary names much earlier.",
+    "reason": "Avoid treating all European Jewish communities as having one surname history.",
+    "source": "https://gedenkbuch.saarbruecken.de/fakten_und_erklaerungen/juden_in_saarbruecken/anfaenge_1750_1850/franzoesischer_revolution_judenemanzipation"
+  },
+  {
+    "episode": "ep019",
+    "scene": 5,
+    "field": "text",
+    "before": "Families adopted whatever common regional names were assigned by local civil clerks. A name tells you about regional language, not religious affiliation.",
+    "after": "Names could reflect occupations, places, family choices, or official requirements. Similar names were used across communities. A surname alone cannot reliably establish a person’s religion or ancestry.",
+    "reason": "Not every family was assigned an arbitrary name by a clerk.",
+    "source": "https://gedenkbuch.saarbruecken.de/fakten_und_erklaerungen/juden_in_saarbruecken/anfaenge_1750_1850/franzoesischer_revolution_judenemanzipation"
+  }
+]

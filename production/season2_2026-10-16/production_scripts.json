@@ -1,0 +1,770 @@
+{
+  "series_title": "Beyond The Myth: Big Claims, Actual Evidence",
+  "season": 2,
+  "total_episodes": 10,
+  "format": "Vertical 1080x1920 (9:16), 60.00s @ 30fps",
+  "core_philosophy": "What part actually happened? What part was added? Which document proves the difference?",
+  "skill_name": "cinematic-explainer-video",
+  "episodes": [
+    {
+      "episode_id": "ep011",
+      "episode_num": "01",
+      "title": "Who Owns the Bank of England?",
+      "hero_object": "Official 1946 Bank of England Nationalisation Act & Treasury Share Register",
+      "hook": "This bank’s owner isn’t a mystery. So why does this claim keep getting shared?",
+      "punchline": "A famous surname is not an ownership document.",
+      "visual_paradigm": "British Crown Treasury & Central Bank Registry (Deep Oxford Blue #0A192F, Gilded Gold #F59E0B, St. James Marble #F8FAFC)",
+      "total_duration": 60.0,
+      "scenes": [
+        {
+          "id": 1,
+          "speaker": "Alex",
+          "start": 0.25,
+          "end": 4.5,
+          "text": "This bank’s owner isn’t a mystery. So why does this claim keep getting shared?",
+          "on_screen": "WHO OWNS THE BANK OF ENGLAND?",
+          "source": "Bank of England (bankofengland.co.uk)"
+        },
+        {
+          "id": 2,
+          "speaker": "Maya",
+          "start": 4.8,
+          "end": 13.5,
+          "text": "You’ve seen the meme: claims that the Rothschild family privately owns the Bank of England and controls the currency.",
+          "on_screen": "THE VIRAL CLAIM: PRIVATE FAMILY OWNERSHIP",
+          "source": "Viral Conspiracy Tracking"
+        },
+        {
+          "id": 3,
+          "speaker": "Alex",
+          "start": 13.8,
+          "end": 22.9,
+          "text": "Here is the actual law. In nineteen-forty-six, the UK Parliament passed the Bank of England Act, transferring one hundred percent of capital stock to the British Treasury.",
+          "on_screen": "1946 NATIONALISATION ACT: 100% PUBLIC TREASURY",
+          "source": "UK National Archives & BOE Act 1946"
+        },
+        {
+          "id": 4,
+          "speaker": "Maya",
+          "start": 23.2,
+          "end": 33.4,
+          "text": "It is completely state-owned. Profits go to the public exchequer. The Governor is appointed by the Crown, not a private banking syndicate.",
+          "on_screen": "PUBLIC GOVERNANCE & HM TREASURY OVERSIGHT",
+          "source": "HM Treasury Annual Accounts"
+        },
+        {
+          "id": 5,
+          "speaker": "Alex",
+          "start": 33.8,
+          "end": 44.2,
+          "text": "You can debate government interest rate policy all day. That’s legitimate economic debate. But claiming a private dynasty owns the institution is demonstrably false.",
+          "on_screen": "POLICY DEBATE ≠ INVENTED OWNERSHIP",
+          "source": "Parliamentary Monetary Policy Committee"
+        },
+        {
+          "id": 6,
+          "speaker": "Maya",
+          "start": 44.8,
+          "end": 53.5,
+          "text": "Whenever someone connects a famous bank to a secret family, don’t look at red string on a pinboard. Check the statutory share registry.",
+          "on_screen": "CHECK STATUTORY SHARE REGISTRIES",
+          "source": "Official UK Public Records"
+        },
+        {
+          "id": 7,
+          "speaker": "Alex",
+          "start": 54.5,
+          "end": 59.0,
+          "text": "A famous surname is not an ownership document.",
+          "on_screen": "A FAMOUS SURNAME IS NOT AN OWNERSHIP DOCUMENT",
+          "source": "Beyond the Myth · Facts, not scapegoats"
+        }
+      ],
+      "primary_source_url": "https://www.bankofengland.co.uk/explainers/who-owns-the-bank-of-england"
+    },
+    {
+      "episode_id": "ep012",
+      "episode_num": "02",
+      "title": "The Brooklyn Synagogue Tunnel: Facts vs. Inventions",
+      "hero_object": "Official NYC Department of Buildings (DOB) Architectural Inspection Blueprint",
+      "hook": "The tunnel was real. That doesn’t make every story about it true.",
+      "punchline": "Investigate what happened. Don’t add what you can’t prove.",
+      "visual_paradigm": "Forensic Structural Blueprint & Urban Mapping (Architectural Navy #0B132B, Laser Cyan #00F0FF, Warning Coral #FF5757)",
+      "total_duration": 60.0,
+      "scenes": [
+        {
+          "id": 1,
+          "speaker": "Maya",
+          "start": 0.25,
+          "end": 4.2,
+          "text": "The tunnel was real. That doesn’t make every story about it true.",
+          "on_screen": "THE TUNNEL WAS REAL. THE RUMORS WEREN'T.",
+          "source": "FactCheck.org & NYC DOB"
+        },
+        {
+          "id": 2,
+          "speaker": "Alex",
+          "start": 4.5,
+          "end": 13.9,
+          "text": "In January twenty-twenty-four, an unauthorized underground passageway was uncovered beside a historic Brooklyn synagogue at seven-seventy Eastern Parkway.",
+          "on_screen": "JANUARY 2024: UNAUTHORIZED EXCAVATION",
+          "source": "NYC Department of Buildings Official Report"
+        },
+        {
+          "id": 3,
+          "speaker": "Maya",
+          "start": 14.2,
+          "end": 23.5,
+          "text": "Within hours, social media added wild claims: stories claiming it led to a children’s museum, or connected to global criminal networks.",
+          "on_screen": "UNVERIFIED CLAIMS ADDED TO REAL EVENT",
+          "source": "Social Media Rumor Tracking"
+        },
+        {
+          "id": 4,
+          "speaker": "Alex",
+          "start": 23.8,
+          "end": 34.1,
+          "text": "Here is what city inspectors actually reported: a sixty-foot unauthorized underground tunnel beneath a rear extension near the synagogue. Accounts linked the excavation to a dispute over expanding prayer space.",
+          "on_screen": "60-FOOT UNAUTHORIZED TUNNEL · BUILDING SAFETY VIOLATIONS",
+          "source": "NYC DOB Engineering Structural Order"
+        },
+        {
+          "id": 5,
+          "speaker": "Maya",
+          "start": 34.5,
+          "end": 44.8,
+          "text": "It did not connect to the children’s museum across the street. Chabad leadership condemned the excavation, and city officials ordered work to stabilize the affected buildings.",
+          "on_screen": "NO MUSEUM CONNECTION · LEADERSHIP CONDEMNED EXCAVATION",
+          "source": "Chabad-Lubavitch World HQ Statement"
+        },
+        {
+          "id": 6,
+          "speaker": "Alex",
+          "start": 45.2,
+          "end": 53.8,
+          "text": "A real municipal safety violation became fuel for unsupported accusations. Read the city’s documented findings, and separate what inspectors established from what people added online.",
+          "on_screen": "READ THE DOCUMENTED FINDINGS",
+          "source": "FactCheck.org Case Review"
+        },
+        {
+          "id": 7,
+          "speaker": "Maya",
+          "start": 54.4,
+          "end": 59.0,
+          "text": "Investigate what happened. Don’t add what you can’t prove.",
+          "on_screen": "DON'T ADD WHAT YOU CAN'T PROVE",
+          "source": "Beyond the Myth · Facts, not scapegoats"
+        }
+      ],
+      "primary_source_url": "https://www.factcheck.org/2024/01/what-we-know-about-the-brooklyn-synagogue-tunnel/"
+    },
+    {
+      "episode_id": "ep013",
+      "episode_num": "03",
+      "title": "The Dollar Bill and the Great Seal of 1782",
+      "hero_object": "1782 Great Seal of the United States Original Copper Engraving Plate",
+      "hook": "You found a triangle on a dollar. You haven’t found an owner.",
+      "punchline": "Drawing a connection isn’t proving one.",
+      "visual_paradigm": "Currency Engraving Bureau & Numismatic Macro (Bureau Mint Green #064E3B, Antique Parchment #FEF3C7, Ink Black #0F172A)",
+      "total_duration": 60.0,
+      "scenes": [
+        {
+          "id": 1,
+          "speaker": "Alex",
+          "start": 0.25,
+          "end": 4.1,
+          "text": "You found a triangle on a dollar. You haven’t found an owner.",
+          "on_screen": "SYMBOLS VS. OWNERSHIP PROOF",
+          "source": "Bureau of Engraving and Printing (bep.gov)"
+        },
+        {
+          "id": 2,
+          "speaker": "Maya",
+          "start": 4.4,
+          "end": 13.6,
+          "text": "Look closely at the back of a one-dollar bill. The pyramid, the Eye of Providence. For decades, posts have claimed these are secret codes proving hidden Jewish control.",
+          "on_screen": "THE CLAIM: SECRET BANKING CABAL CODES",
+          "source": "National Archives Historical Records"
+        },
+        {
+          "id": 3,
+          "speaker": "Alex",
+          "start": 13.9,
+          "end": 23.4,
+          "text": "Here is where the art actually comes from. The Continental Congress commissioned the Great Seal in seventeen-seventy-six, and officially adopted it in seventeen-eighty-two.",
+          "on_screen": "CONTINENTAL CONGRESS · ADOPTED JUNE 20, 1782",
+          "source": "Journals of the Continental Congress"
+        },
+        {
+          "id": 4,
+          "speaker": "Maya",
+          "start": 23.7,
+          "end": 34.0,
+          "text": "Franklin, Jefferson, and John Adams served on the first committee. Years later, Charles Thomson finalized the design. His report explains the pyramid as strength and duration, and the eye as providence.",
+          "on_screen": "OFFICIAL MEANING: STRENGTH, DURATION, PROVIDENCE",
+          "source": "Charles Thomson Report (1782)"
+        },
+        {
+          "id": 5,
+          "speaker": "Alex",
+          "start": 34.4,
+          "end": 44.5,
+          "text": "It wasn’t even added to the paper dollar until nineteen-thirty-five under Franklin Roosevelt. Anyone can doodle lines connecting arbitrary stars to draw a hexagram.",
+          "on_screen": "ADDED TO CURRENCY IN 1935 · NOT 1782",
+          "source": "U.S. Department of the Treasury"
+        },
+        {
+          "id": 6,
+          "speaker": "Maya",
+          "start": 44.9,
+          "end": 53.6,
+          "text": "Superimposing geometric lines over eighteenth-century civic art doesn’t reveal a conspiracy. It reveals active imagination.",
+          "on_screen": "SUPERIMPOSING LINES ≠ REVEALING EVIDENCE",
+          "source": "BEP Historical Currency Overview"
+        },
+        {
+          "id": 7,
+          "speaker": "Alex",
+          "start": 54.3,
+          "end": 59.0,
+          "text": "Drawing a connection isn’t proving one.",
+          "on_screen": "DRAWING A CONNECTION ISN'T PROVING ONE",
+          "source": "Beyond the Myth · Facts, not scapegoats"
+        }
+      ],
+      "primary_source_url": "https://prologue.blogs.archives.gov/2015/06/20/the-great-seal-celebrating-233-years-of-a-national-emblem/"
+    },
+    {
+      "episode_id": "ep014",
+      "episode_num": "04",
+      "title": "The 9/11 '4,000 Absentees' Myth Erases Real People",
+      "hero_object": "Bronze Inscriptions of the National 9/11 Memorial & Museum Wall of Names",
+      "hook": "This 9/11 rumor erases real people.",
+      "punchline": "Before you repeat the rumor, remember the people it erases.",
+      "visual_paradigm": "Solemn Memorial Bronze & Forensic Verification (Graphite Black #111827, Memorial Bronze #D97706, Pure White #FFFFFF)",
+      "total_duration": 60.0,
+      "scenes": [
+        {
+          "id": 1,
+          "speaker": "Maya",
+          "start": 0.25,
+          "end": 3.8,
+          "text": "This nine-eleven rumor erases real people.",
+          "on_screen": "THIS 9/11 RUMOR ERASES REAL PEOPLE",
+          "source": "National 9/11 Memorial & Museum"
+        },
+        {
+          "id": 2,
+          "speaker": "Alex",
+          "start": 4.1,
+          "end": 13.8,
+          "text": "Within days of the September eleventh attacks, a viral story began spreading: that four thousand Jewish workers stayed home because they were secretly warned.",
+          "on_screen": "THE MYTH: 4,000 STAYED HOME WITH ADVANCE WARNING",
+          "source": "ADL Archive (October 2001 Report)"
+        },
+        {
+          "id": 3,
+          "speaker": "Maya",
+          "start": 14.1,
+          "end": 23.5,
+          "text": "The story distorted early efforts to locate Israelis thought to have been near the attack sites. A number connected to worried families became a fabricated list of workers supposedly warned to stay home.",
+          "on_screen": "INQUIRIES ABOUT MISSING PEOPLE ≠ ABSENCE LIST",
+          "source": "FactCheck.org & US State Dept."
+        },
+        {
+          "id": 4,
+          "speaker": "Alex",
+          "start": 23.8,
+          "end": 34.6,
+          "text": "The claim is false. Jewish people were among those killed, and memorial records preserve their individual lives. Estimates of the Jewish death toll vary; the memorial itself does not classify every victim by religion.",
+          "on_screen": "JEWISH VICTIMS ARE DOCUMENTED · REMEMBER INDIVIDUAL LIVES",
+          "source": "Official 9/11 Victim Database"
+        },
+        {
+          "id": 5,
+          "speaker": "Maya",
+          "start": 35.0,
+          "end": 44.8,
+          "text": "Families held funerals. Colleagues mourned partners. A conspiracy theory took a tragedy that affected all backgrounds and tried to exploit human grief.",
+          "on_screen": "EXPLOITING TRAGEDY TO SPREAD PREJUDICE",
+          "source": "USHMM & Memorial Oral Histories"
+        },
+        {
+          "id": 6,
+          "speaker": "Alex",
+          "start": 45.2,
+          "end": 53.5,
+          "text": "Fact-checking isn’t just about debunking falsehoods. It’s about honoring the truth of innocent human lives.",
+          "on_screen": "HONORING INNOCENT HUMAN LIVES",
+          "source": "9/11 Memorial Registry"
+        },
+        {
+          "id": 7,
+          "speaker": "Maya",
+          "start": 54.1,
+          "end": 59.0,
+          "text": "Before you repeat the rumor, remember the people it erases.",
+          "on_screen": "REMEMBER THE PEOPLE IT ERASES",
+          "source": "Beyond the Myth · Facts, not scapegoats"
+        }
+      ],
+      "primary_source_url": "https://www.adl.org/resources/news/4000-jews-absent-during-world-trade-center-attack"
+    },
+    {
+      "episode_id": "ep015",
+      "episode_num": "05",
+      "title": "The Black Death (1348) and the Poisoned Well Myth",
+      "hero_object": "Papal Bull of Clement VI (Avignon, 1348) Sicut Judaeis",
+      "hook": "The accusation spread. That didn’t make it evidence.",
+      "punchline": "A thousand people repeating it is still not a source.",
+      "visual_paradigm": "Medieval Illuminated Manuscript & Papal Decree (Vellum Sepia #FEF3C7, Crimson Wax #991B1B, Iron Gall Ink #1F2937)",
+      "total_duration": 60.0,
+      "scenes": [
+        {
+          "id": 1,
+          "speaker": "Alex",
+          "start": 0.25,
+          "end": 3.9,
+          "text": "The accusation spread. That didn’t make it evidence.",
+          "on_screen": "RUMOR SPREAD ≠ HISTORICAL EVIDENCE",
+          "source": "USHMM Historical Timeline"
+        },
+        {
+          "id": 2,
+          "speaker": "Maya",
+          "start": 4.2,
+          "end": 13.8,
+          "text": "In thirteen-forty-eight, the Black Death swept across Europe. Terrified communities, lacking germ theory, looked for someone to blame.",
+          "on_screen": "1348 BLACK DEATH: CRISIS WITHOUT GERM THEORY",
+          "source": "Cambridge Medieval History"
+        },
+        {
+          "id": 3,
+          "speaker": "Alex",
+          "start": 14.1,
+          "end": 23.5,
+          "text": "The rumor spread that local Jewish families were poisoning village wells. Mobs attacked communities, extracting false confessions through torture.",
+          "on_screen": "WELL-POISONING RUMORS & FORCED CONFESSIONS",
+          "source": "Historical Source Criticism"
+        },
+        {
+          "id": 4,
+          "speaker": "Maya",
+          "start": 23.8,
+          "end": 34.2,
+          "text": "Even at the time, perceptive leaders saw through it. Pope Clement the Sixth issued two papal bulls in thirteen-forty-eight condemning the accusation as a lie.",
+          "on_screen": "POPE CLEMENT VI: CONDEMNED ACCUSATION IN 1348",
+          "source": "Papal Bull 'Quamvis Perfidiam' (1348)"
+        },
+        {
+          "id": 5,
+          "speaker": "Alex",
+          "start": 34.6,
+          "end": 44.8,
+          "text": "His decree pointed to places where the plague struck even though no Jewish communities lived there. That observation undermined the accusation; it was not a statistical study proving identical death rates.",
+          "on_screen": "PLAGUE ALSO STRUCK PLACES WITHOUT JEWISH COMMUNITIES",
+          "source": "Medieval Epidemiological Records"
+        },
+        {
+          "id": 6,
+          "speaker": "Maya",
+          "start": 45.2,
+          "end": 53.6,
+          "text": "When fear replaces investigation, scapegoats replace science. Repetition by a frightened crowd never turns a myth into fact.",
+          "on_screen": "FEAR REPLACES SCIENCE · MOB RUMORS ≠ FACTS",
+          "source": "USHMM Holocaust Encyclopedia"
+        },
+        {
+          "id": 7,
+          "speaker": "Alex",
+          "start": 54.2,
+          "end": 59.0,
+          "text": "A thousand people repeating it is still not a source.",
+          "on_screen": "A THOUSAND PEOPLE REPEATING IT IS NOT A SOURCE",
+          "source": "Beyond the Myth · Facts, not scapegoats"
+        }
+      ],
+      "primary_source_url": "https://cojs.org/pope-clement-vi-1348-papal-document/"
+    },
+    {
+      "episode_id": "ep016",
+      "episode_num": "06",
+      "title": "Blamed for Capitalism... and for Communism?",
+      "hero_object": "Contradictory Historical Propaganda Dossiers (Wall Street Ledger vs. Soviet Red Star)",
+      "hook": "Wait. The same community gets blamed for capitalism—and communism?",
+      "punchline": "If every outcome confirms your theory, what could ever prove it wrong?",
+      "visual_paradigm": "Propaganda Contradiction Matrix & Archival Deconstruction (Split Navy/Crimson #0F172A / #991B1B, Gold #FDE047)",
+      "total_duration": 60.0,
+      "scenes": [
+        {
+          "id": 1,
+          "speaker": "Maya",
+          "start": 0.25,
+          "end": 4.5,
+          "text": "Wait. The same community gets blamed for capitalism—and communism?",
+          "on_screen": "THE IMPOSSIBLE CONTRADICTION",
+          "source": "USHMM Holocaust Encyclopedia"
+        },
+        {
+          "id": 2,
+          "speaker": "Alex",
+          "start": 4.8,
+          "end": 14.1,
+          "text": "Open the history of political propaganda. In one pamphlet, Jewish people are depicted as greedy Wall Street bankers dominating global finance.",
+          "on_screen": "ACCUSATION A: RUTHLESS WALL STREET CAPITALISTS",
+          "source": "Historical Anti-Capitalist Propaganda"
+        },
+        {
+          "id": 3,
+          "speaker": "Maya",
+          "start": 14.4,
+          "end": 23.8,
+          "text": "Open another pamphlet from the exact same era. Now they’re accused of leading the Bolshevik revolution to overthrow private property.",
+          "on_screen": "ACCUSATION B: BOLSHEVIK COMMUNIST AGITATORS",
+          "source": "Historical Anti-Bolshevik Propaganda"
+        },
+        {
+          "id": 4,
+          "speaker": "Alex",
+          "start": 24.1,
+          "end": 34.6,
+          "text": "Stop and look at the contradiction. You cannot simultaneously run international private banking and be dedicated to abolishing private banking.",
+          "on_screen": "MUTUALLY EXCLUSIVE ECONOMIC SYSTEMS",
+          "source": "Economic History & Logic Analysis"
+        },
+        {
+          "id": 5,
+          "speaker": "Maya",
+          "start": 35.0,
+          "end": 44.8,
+          "text": "The reality? Jewish people, like any human population, span every political ideology: business owners, union organizers, conservatives, and socialists.",
+          "on_screen": "HUMAN PLURALISM: EVERY POLITICAL VIEWPOINT",
+          "source": "Sociological Pluralism Studies"
+        },
+        {
+          "id": 6,
+          "speaker": "Alex",
+          "start": 45.2,
+          "end": 53.8,
+          "text": "Conspiracy logic doesn’t care about consistency. It just changes the villain costume to match whatever you already fear.",
+          "on_screen": "THE CONSPIRACY SHIFTS TO MATCH ANY FEAR",
+          "source": "Cognitive Bias & Scapegoating Research"
+        },
+        {
+          "id": 7,
+          "speaker": "Maya",
+          "start": 54.3,
+          "end": 59.0,
+          "text": "If every outcome confirms your theory, what could ever prove it wrong?",
+          "on_screen": "WHAT COULD EVER PROVE IT WRONG?",
+          "source": "Beyond the Myth · Facts, not scapegoats"
+        }
+      ],
+      "primary_source_url": "https://encyclopedia.ushmm.org/content/en/article/antisemitism-in-history-world-war-i"
+    },
+    {
+      "episode_id": "ep017",
+      "episode_num": "07",
+      "title": "Henry Ford: When a Business Icon Spread Conspiracies",
+      "hero_object": "1920 Original Copy of The Dearborn Independent & 1927 Public Retraction Letter",
+      "hook": "Henry Ford didn’t just build cars. His newspaper spread antisemitic conspiracy theories.",
+      "punchline": "Being good at business doesn’t make every claim you publish true.",
+      "visual_paradigm": "1920s Industrial Press & Ford Motor Assembly (Industrial Charcoal #18181B, Model-T Black #09090B, Printing Brass #CA8A04)",
+      "total_duration": 60.0,
+      "scenes": [
+        {
+          "id": 1,
+          "speaker": "Alex",
+          "start": 0.25,
+          "end": 4.6,
+          "text": "Henry Ford didn’t just build cars. His newspaper spread antisemitic conspiracy theories.",
+          "on_screen": "HENRY FORD & THE DEARBORN INDEPENDENT",
+          "source": "USHMM (encyclopedia.ushmm.org)"
+        },
+        {
+          "id": 2,
+          "speaker": "Maya",
+          "start": 4.9,
+          "end": 14.2,
+          "text": "In nineteen-twenty, Ford’s newspaper, The Dearborn Independent, began publishing a series of antisemitic articles. Across ninety-one installments, it promoted conspiracy claims drawing on the forged Protocols.",
+          "on_screen": "1920–1922: THE INTERNATIONAL JEW SERIES",
+          "source": "Dearborn Independent Historical Archive"
+        },
+        {
+          "id": 3,
+          "speaker": "Alex",
+          "start": 14.5,
+          "end": 23.8,
+          "text": "Ford required every Ford car dealership to distribute copies to car buyers. Wealth and fame gave an exposed lie a massive corporate distribution channel.",
+          "on_screen": "MANDATORY DEALERSHIP DISTRIBUTION",
+          "source": "Ford Motor Company Historical Archives"
+        },
+        {
+          "id": 4,
+          "speaker": "Maya",
+          "start": 24.1,
+          "end": 34.5,
+          "text": "Here’s what happened next. Sued for defamation by Aaron Sapiro in nineteen-twenty-seven, Ford settled, closed the paper, and issued a formal public apology acknowledging the claims were completely untrue.",
+          "on_screen": "1927 DEFAMATION LAWSUIT & FORMAL RETRACTION",
+          "source": "Sapiro v. Ford (1927) & Public Retraction"
+        },
+        {
+          "id": 5,
+          "speaker": "Alex",
+          "start": 34.9,
+          "end": 44.8,
+          "text": "Yet people still quote those articles without mentioning the public apology issued in Ford’s name. His success in automotive manufacturing did not make those historical accusations true.",
+          "on_screen": "QUOTE FORD'S CLAIMS? QUOTE HIS APOLOGY TOO.",
+          "source": "Historical Record of 1927 Settlement"
+        },
+        {
+          "id": 6,
+          "speaker": "Maya",
+          "start": 45.2,
+          "end": 53.6,
+          "text": "Authority in one field doesn’t transfer to another. When a billionaire makes a massive historical claim, ask for evidence, not their net worth.",
+          "on_screen": "WEALTH & FAME DO NOT VALIDATE CLAIMS",
+          "source": "Critical Thinking & Epistemic Humility"
+        },
+        {
+          "id": 7,
+          "speaker": "Alex",
+          "start": 54.2,
+          "end": 59.0,
+          "text": "Being good at business doesn’t make every claim you publish true.",
+          "on_screen": "BUSINESS SKILL DOES NOT MAKE CLAIMS TRUE",
+          "source": "Beyond the Myth · Facts, not scapegoats"
+        }
+      ],
+      "primary_source_url": "https://encyclopedia.ushmm.org/content/en/article/antisemitism-and-henry-fords-international-jew"
+    },
+    {
+      "episode_id": "ep018",
+      "episode_num": "08",
+      "title": "The 'Stab in the Back' Myth: Blaming Defeat on Others",
+      "hero_object": "German General Staff Strategic Retreat Map (Western Front, Autumn 1918)",
+      "hook": "They lost the war. Then came a story blaming someone else.",
+      "punchline": "A scapegoat can explain away a failure. It can’t change the facts.",
+      "visual_paradigm": "WWI General Staff Cartography & Imperial Telegrams (Prussian Slate #1E293B, Field Olive #365314, Carmine Red #DC2626)",
+      "total_duration": 60.0,
+      "scenes": [
+        {
+          "id": 1,
+          "speaker": "Maya",
+          "start": 0.25,
+          "end": 4.2,
+          "text": "They lost the war. Then came a story blaming someone else.",
+          "on_screen": "MILITARY DEFEAT VS. CONSPIRACY MYTH",
+          "source": "USHMM Holocaust Encyclopedia"
+        },
+        {
+          "id": 2,
+          "speaker": "Alex",
+          "start": 4.5,
+          "end": 13.9,
+          "text": "In November nineteen-eighteen, Germany accepted an armistice ending the fighting in World War One. Its armies had been retreating, its allies collapsing, and its military leadership seeking a way out.",
+          "on_screen": "NOVEMBER 1918: MILITARY EXHAUSTION",
+          "source": "German Military Archives (Bundesarchiv)"
+        },
+        {
+          "id": 3,
+          "speaker": "Maya",
+          "start": 14.2,
+          "end": 23.6,
+          "text": "General Ludendorff had told the Kaiser two months earlier that military victory was impossible. But after the armistice, he and other generals invented an excuse.",
+          "on_screen": "LUDENDORFF DEMANDED ARMISTICE IN SEPT 1918",
+          "source": "Imperial War Cabinet Transcripts"
+        },
+        {
+          "id": 4,
+          "speaker": "Alex",
+          "start": 23.9,
+          "end": 34.6,
+          "text": "The Dolchstoßlegende: the stab-in-the-back myth. They claimed the army was undefeated in the field and betrayed only by traitors, socialists, and Jewish citizens at home.",
+          "on_screen": "THE 'STAB-IN-THE-BACK' (DOLCHSTOSSLEGENDE)",
+          "source": "Weimar Parliamentary Inquiry (1920s)"
+        },
+        {
+          "id": 5,
+          "speaker": "Maya",
+          "start": 35.0,
+          "end": 44.8,
+          "text": "It was completely false. Nearly one hundred thousand Jewish Germans served bravely in the German army, and twelve thousand died for their country.",
+          "on_screen": "100,000 JEWISH SOLDIERS SERVED · 12,000 DIED",
+          "source": "German Jewish wartime service · USHMM historical overview"
+        },
+        {
+          "id": 6,
+          "speaker": "Alex",
+          "start": 45.2,
+          "end": 53.6,
+          "text": "The generals invented a myth to protect their military reputations, with catastrophic consequences for European history.",
+          "on_screen": "GENERALS INVENTED A MYTH TO PROTECT PRIDE",
+          "source": "USHMM Timeline of Events"
+        },
+        {
+          "id": 7,
+          "speaker": "Maya",
+          "start": 54.2,
+          "end": 59.0,
+          "text": "A scapegoat can explain away a failure. It can’t change the facts.",
+          "on_screen": "A SCAPEGOAT CANNOT CHANGE FACTS",
+          "source": "Beyond the Myth · Facts, not scapegoats"
+        }
+      ],
+      "primary_source_url": "https://encyclopedia.ushmm.org/content/en/article/antisemitism-in-history-world-war-i"
+    },
+    {
+      "episode_id": "ep019",
+      "episode_num": "09",
+      "title": "The Fake Surname Lists: How Memes Invent Genealogies",
+      "hero_object": "1808 Napoleonic Surname Registry & Linguistic Etymology Lexicon",
+      "hook": "A meme gave you a list of surnames. Historical genealogy gives you something else.",
+      "punchline": "A viral graphic is not a family tree.",
+      "visual_paradigm": "Genealogical Archives & Civil Ledger Registry (Warm Parchment #FFFBEB, Sepia Ink #451A03, Archival Cyan #0284C7)",
+      "total_duration": 60.0,
+      "scenes": [
+        {
+          "id": 1,
+          "speaker": "Alex",
+          "start": 0.25,
+          "end": 4.4,
+          "text": "A meme gave you a list of surnames. Historical genealogy gives you something else.",
+          "on_screen": "VIRAL SURNAME LISTS VS. REAL GENEALOGY",
+          "source": "National Institute for Genealogical Studies"
+        },
+        {
+          "id": 2,
+          "speaker": "Maya",
+          "start": 4.7,
+          "end": 14.1,
+          "text": "You’ve seen posts circulating lists claiming that any name ending in '-man', '-stein', or geographic names like 'Frank' proves someone is secretly Jewish.",
+          "on_screen": "THE CLAIM: SPECIFIC SUFFIXES = SECRET IDENTITY",
+          "source": "Onomastics & Linguistics Research"
+        },
+        {
+          "id": 3,
+          "speaker": "Alex",
+          "start": 14.4,
+          "end": 23.7,
+          "text": "Here is the linguistic reality. Names like 'Hoffman', 'Schneider', or 'Berg' are standard German occupational and geographic words shared by millions of Christians and Jews alike.",
+          "on_screen": "COMMON GERMANIC OCCUPATIONAL & TOPONYMIC WORDS",
+          "source": "Dictionary of German Surnames"
+        },
+        {
+          "id": 4,
+          "speaker": "Maya",
+          "start": 24.0,
+          "end": 34.6,
+          "text": "Many Ashkenazi Jewish families adopted fixed hereditary surnames under state laws in the eighteenth and nineteenth centuries. Napoleon’s eighteen-oh-eight decree was one example. Other Jewish communities had used hereditary names much earlier.",
+          "on_screen": "1808 NAPOLEONIC DECREE MANDATED SURNAMES",
+          "source": "French Civil Registry Records (1808)"
+        },
+        {
+          "id": 5,
+          "speaker": "Alex",
+          "start": 35.0,
+          "end": 44.8,
+          "text": "Names could reflect occupations, places, family choices, or official requirements. Similar names were used across communities. A surname alone cannot reliably establish a person’s religion or ancestry.",
+          "on_screen": "CIVIL REGISTRY ASSIGNMENT ≠ IDENTITY CODE",
+          "source": "European Historical Demography Studies"
+        },
+        {
+          "id": 6,
+          "speaker": "Maya",
+          "start": 45.2,
+          "end": 53.6,
+          "text": "Classifying strangers by surname patterns is bad linguistics and lazy profiling. Real ancestry requires authentic archives, not a cropped graphic.",
+          "on_screen": "LAZY PROFILING VS. DOCUMENTED ARCHIVES",
+          "source": "Genealogical Method & Provenance"
+        },
+        {
+          "id": 7,
+          "speaker": "Alex",
+          "start": 54.2,
+          "end": 59.0,
+          "text": "A viral graphic is not a family tree.",
+          "on_screen": "A VIRAL GRAPHIC IS NOT A FAMILY TREE",
+          "source": "Beyond the Myth · Facts, not scapegoats"
+        }
+      ],
+      "primary_source_url": "https://gedenkbuch.saarbruecken.de/fakten_und_erklaerungen/juden_in_saarbruecken/anfaenge_1750_1850/franzoesischer_revolution_judenemanzipation"
+    },
+    {
+      "episode_id": "ep020",
+      "episode_num": "10",
+      "title": "The Cropped 1933 Headline: What Was on the Full Page?",
+      "hero_object": "Uncropped Full-Page Broadsheet of the London Daily Express (March 24, 1933)",
+      "hook": "They showed you a 1933 headline. Here’s what was on the rest of the page.",
+      "punchline": "Cropping out the context is just another way of lying.",
+      "visual_paradigm": "Full-Page Broadside Newsprint & Forensic Loupe (Newsprint Grey #F1F5F9, Ink Black #0F172A, Magnifier Amber #D97706)",
+      "total_duration": 60.0,
+      "scenes": [
+        {
+          "id": 1,
+          "speaker": "Maya",
+          "start": 0.25,
+          "end": 4.3,
+          "text": "They showed you a 1933 headline. Here’s what was on the rest of the page.",
+          "on_screen": "THE CROPPED 1933 HEADLINE DEBUNKED",
+          "source": "British Newspaper Archive & USHMM"
+        },
+        {
+          "id": 2,
+          "speaker": "Alex",
+          "start": 4.6,
+          "end": 14.1,
+          "text": "A frequent post shows a dramatic clipping from London’s Daily Express on March twenty-fourth, nineteen-thirty-three, screaming: 'Judea Declares War on Germany'.",
+          "on_screen": "DAILY EXPRESS · MARCH 24, 1933",
+          "source": "Daily Express Front Page Archive"
+        },
+        {
+          "id": 3,
+          "speaker": "Maya",
+          "start": 14.4,
+          "end": 23.8,
+          "text": "Conspiracy theorists claim this proves Jewish people started World War Two six years early. But look at what happens when you zoom out to the full newspaper page.",
+          "on_screen": "THE CLAIM: 'PROOF JEWS STARTED THE WAR'",
+          "source": "Historical Analysis & Media Literacy"
+        },
+        {
+          "id": 4,
+          "speaker": "Alex",
+          "start": 24.1,
+          "end": 34.6,
+          "text": "The actual article describes a proposed commercial boycott of German goods by private citizens—protesting Hitler’s newly established regime and state-sponsored violence.",
+          "on_screen": "PEACEFUL COMMERCIAL CONSUMER BOYCOTT",
+          "source": "USHMM Timeline: 1933 Boycott"
+        },
+        {
+          "id": 5,
+          "speaker": "Maya",
+          "start": 35.0,
+          "end": 44.8,
+          "text": "There was no army. No government. It was sensationalist British headline phrasing for a civilian consumer boycott against Nazi persecution.",
+          "on_screen": "NO MILITARY ACTION · SENSATIONALIST BRITISH JOURNALISM",
+          "source": "Press History & Historiography"
+        },
+        {
+          "id": 6,
+          "speaker": "Alex",
+          "start": 45.2,
+          "end": 53.6,
+          "text": "Cropping out the columns explaining a trade boycott turns historical context into disinformation. Always read the full page.",
+          "on_screen": "READ THE FULL PAGE · NEVER TRUST CROPPING",
+          "source": "Stanford Lateral Reading Framework"
+        },
+        {
+          "id": 7,
+          "speaker": "Maya",
+          "start": 54.2,
+          "end": 59.0,
+          "text": "Cropping out the context is just another way of lying.",
+          "on_screen": "CROPPING OUT CONTEXT IS JUST ANOTHER WAY OF LYING",
+          "source": "Beyond the Myth · Facts, not scapegoats"
+        }
+      ],
+      "primary_source_url": "https://encyclopedia.ushmm.org/content/en/article/the-united-states-and-the-nazi-threat-1933-37"
+    }
+  ]
+}

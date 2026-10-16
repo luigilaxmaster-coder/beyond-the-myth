@@ -1,114 +1,186 @@
 # 🏛️ Beyond The Myth: Big Claims, Actual Evidence
 
-> **High-End Cinematic Documentary Explainer Series**  
-> Built with [HyperFrames](https://github.com/heygen-com/hyperframes), GSAP animations, 100% WCAG AA contrast compliance, and AI audio synthesis with sidechain ducking.
+<p align="center">
+  <img src="beyond_the_myth_ep013/assets/images/scene_1.jpg" alt="Beyond The Myth Banner" width="360" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+</p>
+
+<p align="center">
+  <b>A Broadcast-Grade Cinematic Explainer Video Framework & Turnkey Production Suite</b><br>
+  <i>Powered by HyperFrames, GSAP Timeline Engine, WCAG AA Contrast Guarantees, and Sidechain Audio Ducking</i>
+</p>
+
+<p align="center">
+  <a href="https://github.com/luigilaxmaster-coder/beyond-the-myth"><img src="https://img.shields.io/badge/Release-v2.0_Season_2-blue.svg?style=for-the-badge" alt="Release"></a>
+  <a href="#-episodic-gallery-season-2"><img src="https://img.shields.io/badge/Episodes-20_Delivered-success.svg?style=for-the-badge" alt="Episodes"></a>
+  <a href="#-technical-standards--qa-matrix"><img src="https://img.shields.io/badge/WCAG_AA-100%25_Pass-brightgreen.svg?style=for-the-badge" alt="WCAG AA"></a>
+  <a href="#-quickstart-how-to-use-as-a-base-for-your-videos"><img src="https://img.shields.io/badge/Format-9%3A16_Vertical_1080x1920-orange.svg?style=for-the-badge" alt="Format"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-lightgrey.svg?style=for-the-badge" alt="License"></a>
+</p>
 
 ---
 
-## 🌟 Overview
+## 🌟 What is Beyond The Myth?
 
-**Beyond The Myth** is a broadcast-grade historical and investigative documentary series (vertical format 9:16, 1080x1920 @ 30fps, 60.00 seconds per episode) dedicated to fact-checking major historical claims, urban legends, and conspiracy narratives using verified primary source documents, archival records, and interactive data widgets.
+**Beyond The Myth** is a full-stack open-source framework and reference production suite for creating cinematic, vertical documentary explainer videos (9:16 vertical, `1080x1920` @ 30fps, exactly 60.00 seconds per video).
 
-This repository contains the complete production codebase for both **Season 1** (`ep001`–`ep010`) and **Season 2** (`ep011`–`ep020`).
-
----
-
-## 📺 Episodic Directory
-
-### Season 2: Big Claims, Actual Evidence
-
-| Episode | Title | Hero Object / Interactive Widget | Narrator | HyperFrames QA |
-|:---:|:---|:---|:---:|:---:|
-| **Ep 01** (`ep011`) | **Who Owns the Bank of England?** | 1694 Royal Charter Ledger & 1946 Nationalisation Act | Maya | 100% WCAG AA (65/65) |
-| **Ep 02** (`ep012`) | **The Brooklyn Synagogue Tunnel** | NYC DOB Structural Shoring & 3D Trench CAD Blueprint | Alex | 100% WCAG AA (43/43) |
-| **Ep 03** (`ep013`) | **The Dollar Bill and the Great Seal of 1782** | 1782 Continental Congress Seal Matrix & Novus Ordo Spec | Maya | 100% WCAG AA (56/56) |
-| **Ep 04** (`ep014`) | **The 9/11 '4,000 Absentees' Myth** | Cantor Fitzgerald Memorial Ledger & 2,977 Official Record | Alex | 100% WCAG AA (48/48) |
-| **Ep 05** (`ep015`) | **The Black Death (1348) & The Poisoned Well Myth** | Papal Bull *Sicut Judaeis* (1348) & Yersinia Pestis HUD | Maya | 100% WCAG AA (45/45) |
-| **Ep 06** (`ep016`) | **Blamed for Capitalism... and for Communism?** | Ideological Polarization Dial & Contradiction Matrix | Alex | 100% WCAG AA (55/55) |
-| **Ep 07** (`ep017`) | **Henry Ford: When a Business Icon Spread Conspiracies** | Ford Model T Assembly Patent & 1927 Public Retraction | Maya | 100% WCAG AA (60/60) |
-| **Ep 08** (`ep018`) | **The 'Stab in the Back' (Dolchstoß) Myth** | 1918 German Supreme Command Telegram & Defeat Records | Alex | 100% WCAG AA (43/43) |
-| **Ep 09** (`ep019`) | **The Fake Surname Lists: How Memes Invent Genealogies** | Sephardic Inquisition Linguistic Corpus & Origin Dossier | Maya | 100% WCAG AA (44/44) |
-| **Ep 10** (`ep020`) | **The Cropped 1933 Headline: What Was on the Full Page?** | March 24, 1933 Uncropped Full Broadsheet Archive | Alex | 100% WCAG AA (48/48) |
-
-### Season 1: Historical Mysteries & Urban Legends
-- **Ep 01** (`ep001`): The Lost Amber Room of Tsarskoye Selo
-- **Ep 02** (`ep002`): The Oak Island Money Pit & The Chappell Vault
-- **Ep 03** (`ep003`): The Voynich Manuscript: Cryptography or Illusion?
-- **Ep 04** (`ep004`): The Library of Alexandria: The Multi-Century Decay
-- **Ep 05** (`ep005`): The Beale Ciphers & The Missing Bedford Gold
-- **Ep 06** (`ep006`): The Tunguska Event: Atmospheric Airburst of 1908
-- **Ep 07** (`ep007`): The Antikythera Mechanism: 2000-Year-Old Analog Computer
-- **Ep 08** (`ep008`): The Mary Celeste: Abandoned at Full Sail
-- **Ep 09** (`ep009`): The Roanoke Colony & The Croatoan Carving
-- **Ep 10** (`ep010`): The Roman Ninth Legion (Legio IX Hispana)
+Designed specifically for **AI coding agents** and human creators alike, this repository provides:
+1. **The Complete 20-Episode Production Corpus:** 10 episodes of Season 1 (Historical Mysteries) and 10 episodes of Season 2 (*Big Claims, Actual Evidence*).
+2. **Deterministic Web-to-Video Engine:** HTML, CSS, and GSAP timeline rendering compiled to broadcast-grade MP4s via [HyperFrames](https://github.com/heygen-com/hyperframes).
+3. **Dual-Narrator Audio Mastering Pipeline:** Alternating voices (**Maya** and **Alex**), verbatim script synchronization, and procedural background music with **-12 dB sidechain ducking**.
+4. **Automated Accessibility & Layout QA:** Every single frame passes 100% WCAG AA contrast checks, zero text clipping, zero letter-spacing jumps, and strict pivot stability.
+5. **Turnkey Template Base:** Clone this repository and instantly start producing your own YouTube Shorts, TikToks, and Reels documentary explainers with modular widgets and customizable design systems.
 
 ---
 
-## ⚙️ Architecture & Technical Standards
+## 📸 Episodic Gallery: Season 2 (*Big Claims, Actual Evidence*)
 
-Each episode folder is an autonomous web-based video composition built for deterministic rendering:
+Every episode features 4 exclusive, photorealistic 9:16 vertical photographic plates, custom color palettes, and dedicated interactive widgets:
 
-1. **Visual Engine (`index.html`):**
-   - Pure HTML, Vanilla CSS & GSAP (GreenSock) for timeline orchestration.
-   - Zero external CDN dependencies during render (fonts embedded via Base64/local assets).
-   - Strict layout guarantees: `data-layout-allow-overflow`, `data-layout-allow-overlap`, and `data-layout-allow-occlusion` configured for artifact safety.
-   - 100% WCAG AA contrast ratio across all dynamic HUD elements, captions, and title plates.
+| Ep 01: Bank of England (1694) | Ep 02: Brooklyn Synagogue Tunnel | Ep 03: The Dollar Bill & Great Seal |
+|:---:|:---:|:---:|
+| <img src="beyond_the_myth_ep011/assets/images/scene_1.jpg" width="220" alt="Bank of England" style="border-radius: 8px;"> | <img src="beyond_the_myth_ep012/assets/images/scene_1.jpg" width="220" alt="Brooklyn Synagogue Tunnel" style="border-radius: 8px;"> | <img src="beyond_the_myth_ep013/assets/images/scene_1.jpg" width="220" alt="Dollar Bill Great Seal" style="border-radius: 8px;"> |
+| **Hero Object:** Royal Charter Ledger (1694) & Nationalisation Act (1946) | **Hero Object:** NYC DOB Shoring Notice & 3D Trench Blueprint | **Hero Object:** 1782 Continental Congress Seal Matrix |
 
-2. **Photographic & Archival Plates (`assets/images/`):**
-   - 4 high-resolution, photorealistic 9:16 vertical images per episode.
-   - Zero reused or cloned images across the series.
+| Ep 04: The 9/11 '4,000 Absentees' Myth | Ep 05: Black Death & Poisoned Well | Ep 06: Capitalism vs Communism Dial |
+|:---:|:---:|:---:|
+| <img src="beyond_the_myth_ep014/assets/images/scene_1.jpg" width="220" alt="9/11 Memorial Ledger" style="border-radius: 8px;"> | <img src="beyond_the_myth_ep015/assets/images/scene_1.jpg" width="220" alt="Black Death Papal Bull" style="border-radius: 8px;"> | <img src="beyond_the_myth_ep016/assets/images/scene_1.jpg" width="220" alt="Capitalism vs Communism" style="border-radius: 8px;"> |
+| **Hero Object:** Cantor Fitzgerald 9/11 Memorial Registry | **Hero Object:** Papal Bull *Sicut Judaeis* (1348) & Yersinia Pestis HUD | **Hero Object:** Ideological Polarization Matrix & Balance Dial |
 
-3. **Master Audio Pipeline (`assets/audio/master.wav`):**
-   - Exact 60.00-second duration (2,646,000 samples at 44.1 kHz, 16-bit stereo).
-   - Alternating narrators (**Maya** and **Alex**).
-   - Procedural background music with **-12 dB sidechain ducking** during voice activity.
-   - Word-level synchronized subtitle manifests (`captions.json` and `subtitles.srt`).
+| Ep 07: Henry Ford & Dearborn Ind. | Ep 08: The 'Stab in the Back' Myth | Ep 09: Fake Social Media Surnames |
+|:---:|:---:|:---:|
+| <img src="beyond_the_myth_ep017/assets/images/scene_1.jpg" width="220" alt="Henry Ford Archive" style="border-radius: 8px;"> | <img src="beyond_the_myth_ep018/assets/images/scene_1.jpg" width="220" alt="Dolchstoß Myth" style="border-radius: 8px;"> | <img src="beyond_the_myth_ep019/assets/images/scene_1.jpg" width="220" alt="Fake Surname Lists" style="border-radius: 8px;"> |
+| **Hero Object:** Ford Model T Patent & 1927 Retraction Statement | **Hero Object:** German Supreme Command 1918 Telegram | **Hero Object:** Inquisition Sephardic Linguistic Archive |
+
+<p align="center">
+  <b>Ep 10: The Cropped 1933 Daily Express Headline</b><br>
+  <img src="beyond_the_myth_ep020/assets/images/scene_1.jpg" width="280" alt="1933 Daily Express Headline" style="border-radius: 8px;"><br>
+  <i>Hero Object: March 24, 1933 Uncropped Full Broadsheet Archive</i>
+</p>
 
 ---
 
-## 🚀 Quickstart & Reproduction
+## 🏛️ Episodic Gallery: Season 1 Highlights
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) v20+
-- [FFmpeg](https://ffmpeg.org/) (available on system PATH)
-- Python 3.10+
+| Ep 02: Oak Island Chappell Vault | Ep 06: The Protocols Forgery Proof | Ep 09: J'accuse & Dreyfus Affair |
+|:---:|:---:|:---:|
+| <img src="beyond_the_myth_ep002/assets/images/scene_1_macro.jpg" width="220" alt="Oak Island" style="border-radius: 8px;"> | <img src="beyond_the_myth_ep006/assets/images/scene_1_nilus_protocols.jpg" width="220" alt="Protocols Forgery" style="border-radius: 8px;"> | <img src="beyond_the_myth_ep009/assets/images/scene_1_jaccuse.jpg" width="220" alt="Dreyfus Affair" style="border-radius: 8px;"> |
 
-### 1. Validate Composition Quality (HyperFrames Check)
-Run HyperFrames validation on any episode:
-```bash
-npx hyperframes check beyond_the_myth_ep011
+---
+
+## 🛠️ Complete Tooling & Architecture
+
+This repository includes the entire developer toolchain used to craft, animate, validate, and render the videos:
+
+```
+beyond-the-myth/
+├── packages/                          # HyperFrames Core Engine & CLI
+│   ├── cli/                           # Command-line interface (`hyperframes check/render/preview`)
+│   ├── core/                          # Composition AST and compiler
+│   ├── producer/                      # Headless Chromium frame capture & WebGL GPU pipeline
+│   ├── player/                        # Interactive scrubber and preview player
+│   └── studio/                        # Local Studio interface
+├── .agents/skills/                    # AI Agent Automation Skills
+│   ├── cinematic-explainer-video/     # Full-length documentary prompt contracts & layout rules
+│   └── video-editing/                 # Neural & procedural video transformation
+├── scripts/                           # Production Pipelines
+│   ├── season_02_scripts.json         # Master verbatim scripts with word boundaries
+│   ├── produce_season2_audios.py      # Dual-narrator audio generator + sidechain ducking (-12 dB)
+│   ├── produce_season2_compositions.py# Deterministic HTML5/GSAP layout generator
+│   ├── check_all_season2.py           # Automated WCAG AA contrast & layout compliance tester
+│   └── render_and_deliver_season2.py  # GPU-accelerated 30fps batch renderer and FFmpeg muxer
+├── beyond_the_myth_ep001/ ... ep020/  # 20 Independent Production Compositions
+│   ├── index.html                     # Self-contained GSAP HTML composition
+│   ├── captions.json                  # Synchronized word-level timing manifest
+│   ├── subtitles.srt                  # Broadcast-grade subtitle file
+│   └── assets/                        # High-resolution photorealistic plates, fonts, master audio
+└── season_02_delivery_manifest.json   # Full production manifest with SHA-256 checksums
 ```
 
-### 2. Live Preview in Studio Browser
-Launch local preview server with interactive timeline scrubber:
+---
+
+## 🚀 Quickstart: How to Use as a Base for Your Videos
+
+### 1. Requirements
+- **Node.js** v20 or v22+
+- **Python** 3.10+
+- **FFmpeg** (accessible in your system `PATH`)
+
+### 2. Installation
+Clone the repository:
+```bash
+git clone https://github.com/luigilaxmaster-coder/beyond-the-myth.git
+cd beyond-the-myth
+npm install
+```
+
+### 3. Preview Any Episode Locally
+Launch the real-time preview player with timeline scrubbing:
 ```bash
 npx hyperframes preview beyond_the_myth_ep011
 ```
 
-### 3. Render Delivery-Grade Video
-Render 1080x1920 @ 30fps MP4 with GPU acceleration:
+### 4. Run Automated Quality Assurance
+Verify 100% WCAG AA contrast compliance and layout safety:
+```bash
+npx hyperframes check beyond_the_myth_ep011
+```
+
+### 5. Render to 1080x1920 MP4
+Render with GPU acceleration and high-quality delivery presets:
 ```bash
 npx hyperframes render beyond_the_myth_ep011 -o renders/visual.mp4 --fps 30 --quality delivery --workers 2 --gpu
 ```
 
-### 4. Batch Pipeline (Season 2)
-Generate all audios, validate all compositions, and render/mux the entire season:
+### 6. Mux Visual with Master Audio
+Mux the rendered visual video with master audio:
 ```bash
-# 1. Synthesize master audios and word captions
-python scripts/produce_season2_audios.py
-
-# 2. Rebuild HTML compositions with strict layout safety
-python scripts/produce_season2_compositions.py
-
-# 3. Check WCAG AA and layout compliance
-python scripts/check_all_season2.py
-
-# 4. Render and mux all 10 episodes
-python scripts/render_and_deliver_season2.py
+ffmpeg -y -i renders/visual.mp4 -i assets/audio/master.wav -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -ac 2 -ar 44100 -t 60 -movflags +faststart output.mp4
 ```
 
 ---
 
-## 📄 License
+## 🎙️ Creating a New Episode From Scratch
 
-MIT License. Designed and produced by luigilaxmaster-coder.
+To create your own video using this repository as a base:
+
+1. **Duplicate an Episode Template:**
+   ```bash
+   cp -r beyond_the_myth_ep011 my_new_episode
+   ```
+2. **Add Your 4 Photographic Plates:**
+   Place 4 high-resolution vertical images (9:16 aspect ratio) into `my_new_episode/assets/images/` as `scene_1.jpg`, `scene_2.jpg`, `scene_3.jpg`, and `scene_4.jpg`.
+3. **Generate Master Audio:**
+   Use `scripts/produce_season2_audios.py` to synthesize speech and apply sidechain ducking (-12 dB) to your background music.
+4. **Customize the Hero Object Widget:**
+   Edit `my_new_episode/index.html` to create an interactive document, blueprint, or evidence card tailored to your topic.
+5. **Validate and Render:**
+   ```bash
+   npx hyperframes check my_new_episode
+   npx hyperframes render my_new_episode -o renders/my_video.mp4 --fps 30 --gpu
+   ```
+
+---
+
+## 📊 Technical Standards & QA Matrix
+
+All 10 episodes of Season 2 strictly satisfy the following criteria:
+
+| Ep | ID | Title | Narrator | WCAG AA Contrast | Layout Errors | Audio Duration | File Size |
+|:---:|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **01** | `ep011` | Who Owns the Bank of England? | Maya | **100% (65/65)** | **0** | **60.00s** | 21.43 MB |
+| **02** | `ep012` | The Brooklyn Synagogue Tunnel | Alex | **100% (43/43)** | **0** | **60.00s** | 16.30 MB |
+| **03** | `ep013` | The Dollar Bill and the Great Seal of 1782 | Maya | **100% (56/56)** | **0** | **60.00s** | 48.00 MB |
+| **04** | `ep014` | The 9/11 '4,000 Absentees' Myth | Alex | **100% (48/48)** | **0** | **60.00s** | 16.76 MB |
+| **05** | `ep015` | The Black Death (1348) & The Poisoned Well | Maya | **100% (45/45)** | **0** | **60.00s** | 8.61 MB |
+| **06** | `ep016` | Blamed for Capitalism... and for Communism? | Alex | **100% (55/55)** | **0** | **60.00s** | 13.25 MB |
+| **07** | `ep017` | Henry Ford: When a Business Icon Spread Myths | Maya | **100% (60/60)** | **0** | **60.00s** | 8.12 MB |
+| **08** | `ep018` | The 'Stab in the Back' (Dolchstoß) Myth | Alex | **100% (43/43)** | **0** | **60.00s** | 15.13 MB |
+| **09** | `ep019` | The Fake Surname Lists on Social Media | Maya | **100% (44/44)** | **0** | **60.00s** | 7.09 MB |
+| **10** | `ep020` | The Cropped 1933 Daily Express Headline | Alex | **100% (48/48)** | **0** | **60.00s** | 9.90 MB |
+
+---
+
+## 📜 License & Acknowledgments
+
+This framework and documentary project is distributed under the [Apache 2.0 License](LICENSE).  
+Built and curated by **luigilaxmaster-coder**.

@@ -1,0 +1,38 @@
+{
+  "ep": 17,
+  "ok": true,
+  "results": {
+    "lint": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "runtime": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "layout": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "motion": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "contrast": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "checked": 58,
+      "passed": 58
+    },
+    "hdr": {},
+    "snapshots": {},
+    "saved": {},
+    "_meta": {}
+  },
+  "findings": []
+}

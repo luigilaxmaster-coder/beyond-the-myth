@@ -1,0 +1,582 @@
+{
+  "episodes": [
+    {
+      "episode": 11,
+      "hyperframes": "0.8.164",
+      "errors": 0,
+      "warnings": 0,
+      "contrast_checked": 63,
+      "contrast_passed": 63,
+      "audio_peak_dbfs": -1.97,
+      "sample_rate": 44100,
+      "samples": 2646000,
+      "exact_script_cues": true
+    },
+    {
+      "episode": 12,
+      "hyperframes": "0.8.164",
+      "errors": 0,
+      "warnings": 0,
+      "contrast_checked": 43,
+      "contrast_passed": 43,
+      "audio_peak_dbfs": -1.98,
+      "sample_rate": 44100,
+      "samples": 2646000,
+      "exact_script_cues": true
+    },
+    {
+      "episode": 13,
+      "hyperframes": "0.8.164",
+      "errors": 0,
+      "warnings": 0,
+      "contrast_checked": 56,
+      "contrast_passed": 56,
+      "audio_peak_dbfs": -2.03,
+      "sample_rate": 44100,
+      "samples": 2646000,
+      "exact_script_cues": true
+    },
+    {
+      "episode": 14,
+      "hyperframes": "0.8.164",
+      "errors": 0,
+      "warnings": 0,
+      "contrast_checked": 48,
+      "contrast_passed": 48,
+      "audio_peak_dbfs": -2.03,
+      "sample_rate": 44100,
+      "samples": 2646000,
+      "exact_script_cues": true
+    },
+    {
+      "episode": 15,
+      "hyperframes": "0.8.164",
+      "errors": 0,
+      "warnings": 0,
+      "contrast_checked": 47,
+      "contrast_passed": 47,
+      "audio_peak_dbfs": -1.93,
+      "sample_rate": 44100,
+      "samples": 2646000,
+      "exact_script_cues": true
+    },
+    {
+      "episode": 16,
+      "hyperframes": "0.8.164",
+      "errors": 0,
+      "warnings": 0,
+      "contrast_checked": 53,
+      "contrast_passed": 53,
+      "audio_peak_dbfs": -1.96,
+      "sample_rate": 44100,
+      "samples": 2646000,
+      "exact_script_cues": true
+    },
+    {
+      "episode": 17,
+      "hyperframes": "0.8.164",
+      "errors": 0,
+      "warnings": 0,
+      "contrast_checked": 58,
+      "contrast_passed": 58,
+      "audio_peak_dbfs": -2.0,
+      "sample_rate": 44100,
+      "samples": 2646000,
+      "exact_script_cues": true
+    },
+    {
+      "episode": 18,
+      "hyperframes": "0.8.164",
+      "errors": 0,
+      "warnings": 0,
+      "contrast_checked": 43,
+      "contrast_passed": 43,
+      "audio_peak_dbfs": -2.02,
+      "sample_rate": 44100,
+      "samples": 2646000,
+      "exact_script_cues": true
+    },
+    {
+      "episode": 19,
+      "hyperframes": "0.8.164",
+      "errors": 0,
+      "warnings": 0,
+      "contrast_checked": 44,
+      "contrast_passed": 44,
+      "audio_peak_dbfs": -1.94,
+      "sample_rate": 44100,
+      "samples": 2646000,
+      "exact_script_cues": true
+    },
+    {
+      "episode": 20,
+      "hyperframes": "0.8.164",
+      "errors": 0,
+      "warnings": 0,
+      "contrast_checked": 44,
+      "contrast_passed": 44,
+      "audio_peak_dbfs": -2.02,
+      "sample_rate": 44100,
+      "samples": 2646000,
+      "exact_script_cues": true
+    }
+  ],
+  "unique_photographic_plates": 40,
+  "images": [
+    {
+      "episode": 11,
+      "scene": 1,
+      "sha256": "339c010e818d4f17fdf86f1b8d222f9ba5962f836e0d52928434da0f8c618fb7",
+      "dhash": "1011100100011100101001111011101111011100001101000001111001001101",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 11,
+      "scene": 2,
+      "sha256": "ea05913e7d183106d1943463bc5f949f5b9fb2406d8baff1f572e3530043f079",
+      "dhash": "0110000111000001001100010011100011110100110000010111111101110011",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 11,
+      "scene": 3,
+      "sha256": "f0f84704d7a09a1a6442b80133d445c1fe1c686285f12a08d9f19a71a97b7a75",
+      "dhash": "0110001001110001011100010111000101111001011100011111000110110001",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 11,
+      "scene": 4,
+      "sha256": "f9738f8535e1b18ee87e923df72a7e24b6fc2f1813297baff7ffdec14ecde79b",
+      "dhash": "0100101101000101010101101111100001111111111011110001001100001111",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 12,
+      "scene": 1,
+      "sha256": "4a1e90ca5debee4eb1fc9bc152ab05738f4122243d263a53776b82a8ff669456",
+      "dhash": "0101000101100101011000001110010011001000111001110011001000011010",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 12,
+      "scene": 2,
+      "sha256": "a56d53114bad46b9f59eb8313df457a6f8b40db08898aa1b506b23cb049a515f",
+      "dhash": "1000011010010110100101000011010011111100111001101100011111000111",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 12,
+      "scene": 3,
+      "sha256": "a456a3d041ebd7bddf9e84638fa25da832fd79341ef1ca8f643860c0ea724c48",
+      "dhash": "1000010010000111011101111111001011111110111110101110111101111110",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 12,
+      "scene": 4,
+      "sha256": "0761538403a22447917c01b91b923bedefe59cf504243a965046b51d3349129b",
+      "dhash": "0000111100011111001000010110001111110001111100010010000101000001",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 13,
+      "scene": 1,
+      "sha256": "4bb317d99952fd29bc9172ba1c7f00538f3094d6376c61ec8e2c51577e47abf2",
+      "dhash": "0111111111100000111100011111001011010000111010000001101000111110",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 13,
+      "scene": 2,
+      "sha256": "2c97725e3facdaa88f4bebd5b057efba5e085ab5df7bfab6e832df736443feea",
+      "dhash": "1110011110111101101110100111000011110111101100001001100000100000",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 13,
+      "scene": 3,
+      "sha256": "f1d2f5d3033443c64fb7b4985e64c9002592526fa7eff81b2a8747c0a3327e9a",
+      "dhash": "0011110100111100111001001001000011100100111101101101000011111100",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 13,
+      "scene": 4,
+      "sha256": "2a840f9a4c7cd8523905113449f71c9da75aeb151843b883cffd8e5385fc2cdd",
+      "dhash": "1010011011100110110001001101100010011101111111111111111000011110",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 14,
+      "scene": 1,
+      "sha256": "bf08305d8dca0a558bec15da791d7f1c5b926af989cc36caadc3399e68279477",
+      "dhash": "0011001000101010001010000010011100100010001100001000110010001100",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 14,
+      "scene": 2,
+      "sha256": "f220a0474a95fd1cf35871019df3c409221206958a5a5b40155eddb5a0ff7c5e",
+      "dhash": "1100011001010110110001111100010110010110101101100011001001110010",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 14,
+      "scene": 3,
+      "sha256": "f95ab0708eecf68c30df6b319fdfeb96dd761089af61a2a903c7a3a5b28d0b25",
+      "dhash": "1101011011110100111001000110111011011010111000111110010011100100",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 14,
+      "scene": 4,
+      "sha256": "4cc1895a52c9b76fe0f920eb79c151514a861b05a061d01c56519f33cf2e765d",
+      "dhash": "0110111011101011111011001110001011111000011001000110100011111000",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 15,
+      "scene": 1,
+      "sha256": "77a64415a56691cf5be1ac63cc1a8983ce2bb87914669e843ea58d1373e7264f",
+      "dhash": "1110011101111001101111001001101001100110100000011001001110010000",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 15,
+      "scene": 2,
+      "sha256": "917d4ea7f70da976981cd55e77d35ff3f2bedd6be90e5eed9b0f4b850d923bed",
+      "dhash": "1110110001101100001010001111100011110000111100101111001011111011",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 15,
+      "scene": 3,
+      "sha256": "011bdb5cdf300b8e526ea316d0115d3925f94fb5c76abc3bf4fd90c56144c08f",
+      "dhash": "0000101000000011000100010000110101000101110010111101101111111101",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 15,
+      "scene": 4,
+      "sha256": "6680a397b221b998b80c472bc74579ce04d7206fba05ee89fe60119de069226e",
+      "dhash": "0101110001001110111000110111000000100001110000001100000011011000",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 16,
+      "scene": 1,
+      "sha256": "23f718428e8e223b8753d8730f89e01a0600cd117fd829dc08f9ac7b8ad654bb",
+      "dhash": "0001100010011100000111000011100111000000001101101001100111011000",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 16,
+      "scene": 2,
+      "sha256": "fc62c18a25b0bb11e1df3be2b00df0600344c7f94ec99b6343cc53630c5f796e",
+      "dhash": "0101010001000100001100000001000010001110011011100100000111101001",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 16,
+      "scene": 3,
+      "sha256": "703b016887d6dbe8d9392f69ddb324d1682cdb6d9aabdb5d8fe736913b7b9298",
+      "dhash": "1000011101001011010011111100011101101101000111110000111011100000",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 16,
+      "scene": 4,
+      "sha256": "9655f39d8fb121009dfc2eadc4fe97036d87c92363456c5e604b18dd898b5d04",
+      "dhash": "0011000000110000100100101111000001111011111000101000001110010011",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 17,
+      "scene": 1,
+      "sha256": "1ccfafbcaaf544f613b55ab900c3e300299db0a73512ad796a39cf55f5ce8677",
+      "dhash": "0010100000100101001001011010000111010101110011011100000101100001",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 17,
+      "scene": 2,
+      "sha256": "f912c4eeb33944e7e1032591480881f7a456f31c74ef09d3423e83d227f3d76b",
+      "dhash": "1100110011001111000001110001111100011011010000100001100110100110",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 17,
+      "scene": 3,
+      "sha256": "c27d2899947d495dbdd4e9d3a81e2c986884003b98ad75404765c1a3ac7aba69",
+      "dhash": "1011001101101111001110110001101101110011011000000110011010010110",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 17,
+      "scene": 4,
+      "sha256": "21d9135593453e0ec23265165cdaa234815bff3477985006831e0442c675d4bf",
+      "dhash": "1001100000011000000011110011001111000000000000011000001101110011",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 18,
+      "scene": 1,
+      "sha256": "7f68c96c004b8f1990d2daa707282920a2cda38d84e4747770f67696c0e3545f",
+      "dhash": "1011101101001101010101001111001001111011111111000110110011110110",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 18,
+      "scene": 2,
+      "sha256": "93f93d61e9f6824fb170efbf3a776387f96a740071a4fb5c782622f9603c4209",
+      "dhash": "1110001111010101110011010000011000000110111000001110001010100100",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 18,
+      "scene": 3,
+      "sha256": "cafb57b19374d83501b24eb4ad8642cff018fc0a2957c0d608cbbb9fceaced8e",
+      "dhash": "1111000011110000011101000010101010011001011110000111000011110101",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 18,
+      "scene": 4,
+      "sha256": "29d64a43d9e420804cc744cb1bb25f92b5174d037b1f878e3096bb25e6a65403",
+      "dhash": "1101101100111001001111111011110000110010000100010111001000011010",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 19,
+      "scene": 1,
+      "sha256": "d28825145460d2deb2834639ccad554cb8c0ce4ab895b20184754922e43e132c",
+      "dhash": "0011011100110101101110000101100010100100101001001110011101101111",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 19,
+      "scene": 2,
+      "sha256": "de68d3c0ac09ea45c2d55d3c03c622bdd5c1e72595ac1ed54e3b17c1d054ff65",
+      "dhash": "0001101111111111110011111111100111001001110010001101110001111111",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 19,
+      "scene": 3,
+      "sha256": "b65ed05afd9b5fb11a9028ef10864870a0f70909790c885808b38920ce271809",
+      "dhash": "1001000110010100110001010001100001101010110001101001010101110001",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 19,
+      "scene": 4,
+      "sha256": "51446a858ffa2b487988923c005aa0fc0f331ffe93e9589397263fd73dfb139e",
+      "dhash": "1000011011000111100010001011100010011101011110110111100010111100",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 20,
+      "scene": 1,
+      "sha256": "89be012f1a8b32f4ba2519f7b3d48a8812ff768ea71bed99187f6aacd4cfc36b",
+      "dhash": "1000111111011100111110101111111011111000011011011000110010011110",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 20,
+      "scene": 2,
+      "sha256": "3f50f9f3e738498300eda2efec91d325d4f9998aec59bfb2623b1126564e994e",
+      "dhash": "0111011011110000000011001001001011000111110010011100000011001000",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 20,
+      "scene": 3,
+      "sha256": "c6e7df0d622ae50892bc08119a909498b7dfd14240b4ce499c1983165b8e432d",
+      "dhash": "1011000000110001011010010110100111110110111100001111100010111000",
+      "size": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "episode": 20,
+      "scene": 4,
+      "sha256": "cf4bdd3a06111a4dc5ca867a45e7cb5afbe478815b6e1e1921d4efb7cdeaeb9a",
+      "dhash": "0110100000010110011101001011111111111001111111111111001111100111",
+      "size": [
+        1080,
+        1920
+      ]
+    }
+  ],
+  "distinct_motion_programs": [
+    {
+      "episode": 11,
+      "sha256": "da5838a1eee253d18f5e86a9675988ffbccc1ed7f19ff334a0c4344eec322611"
+    },
+    {
+      "episode": 12,
+      "sha256": "2bfd56f175e38c552878963af2aa8db67bbe8a9c1d8600c12e705bedff4e45a6"
+    },
+    {
+      "episode": 13,
+      "sha256": "f804875dd6cb0c4ebc40078afd0b06a0f54f82edcf14ed9742fb4dc25f29cedd"
+    },
+    {
+      "episode": 14,
+      "sha256": "db9eb353b0b512a4f693265944f7480053f957255986dabc9657fd5b3da7e0d8"
+    },
+    {
+      "episode": 15,
+      "sha256": "7e71f7d0f3a7eb1e52d84eed837b2bb5f959caf5661e0a0500e3c8ad6a83cac1"
+    },
+    {
+      "episode": 16,
+      "sha256": "dfdb1a08f7bf2027dfa66e95293ecd94af374798d5d5ce54c0017545264ea396"
+    },
+    {
+      "episode": 17,
+      "sha256": "a5a1c7ca9a286b00ad1f661d87c1935c7047d534c3127c14a7d5e755c6000495"
+    },
+    {
+      "episode": 18,
+      "sha256": "87dc82d403d3208251796dd0efec8ffba0f6a722437ba9679bff2378c1e03ebd"
+    },
+    {
+      "episode": 19,
+      "sha256": "1b473ffa0a028a8c3aefb049826d0c6cde5d400f3ae8fb9c7a08acd7f4e7de8c"
+    },
+    {
+      "episode": 20,
+      "sha256": "3ea1f3b843aaa89bda107c855554717b99638160de9d791c9b4f5ccf878c2418"
+    }
+  ],
+  "closest_dhash_pair": [
+    16,
+    13,
+    4,
+    19,
+    4
+  ],
+  "notes": [
+    "Shared GSAP engine and subtitle timing mechanics are infrastructure. Each episode has a separately authored visual structure and motion program.",
+    "Contrast percentage describes all sampled text checks, not a claim that every encoded pixel at every instant was measured.",
+    "AI images are illustrations, not original historical records.",
+    "MP4 interactions are demonstrated automatically; the buttons are available in editable HyperFrames compositions."
+  ]
+}

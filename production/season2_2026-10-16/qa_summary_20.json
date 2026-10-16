@@ -1,0 +1,189 @@
+{
+  "ep": 20,
+  "ok": true,
+  "results": {
+    "lint": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "runtime": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "layout": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 3
+    },
+    "motion": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "contrast": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "checked": 48,
+      "passed": 48
+    },
+    "hdr": {},
+    "snapshots": {},
+    "saved": {},
+    "_meta": {}
+  },
+  "findings": [
+    [
+      "layout",
+      {
+        "code": "canvas_overflow",
+        "severity": "warning",
+        "time": 0.5,
+        "selector": "article.context > h3:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1060,
+          "top": 1050,
+          "right": 1641.3,
+          "bottom": 1127,
+          "width": 581.3,
+          "height": 77
+        },
+        "containerSelector": "#stage",
+        "text": "A consumer boycott.",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 561.3
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1060,
+          "y": 1050,
+          "width": 581.3,
+          "height": 77
+        },
+        "firstSeen": 0.5,
+        "lastSeen": 18,
+        "occurrences": 4,
+        "heldMs": 0,
+        "times": [
+          0.5,
+          2,
+          8,
+          18
+        ]
+      }
+    ],
+    [
+      "layout",
+      {
+        "code": "canvas_overflow",
+        "severity": "warning",
+        "time": 0.5,
+        "selector": "article.context > p:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1060,
+          "top": 1150,
+          "right": 1758.98,
+          "bottom": 1229.19,
+          "width": 698.98,
+          "height": 79.19
+        },
+        "containerSelector": "#stage",
+        "text": "The article concerned commercial protest against persecution \u2014 not a military declaration.",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 678.98
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1060,
+          "y": 1150,
+          "width": 698.98,
+          "height": 79.19
+        },
+        "firstSeen": 0.5,
+        "lastSeen": 18,
+        "occurrences": 4,
+        "heldMs": 0,
+        "times": [
+          0.5,
+          2,
+          8,
+          18
+        ]
+      }
+    ],
+    [
+      "layout",
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "warning",
+        "time": 0.5,
+        "selector": "article.context",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": 1020,
+          "top": 1000,
+          "right": 1860,
+          "bottom": 1273.38,
+          "width": 840,
+          "height": 273.38
+        },
+        "containerSelector": "#stage",
+        "text": "A consumer boycott. The article concerned commer",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 780
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1020,
+          "y": 1000,
+          "width": 840,
+          "height": 273.38
+        },
+        "firstSeen": 0.5,
+        "lastSeen": 18,
+        "occurrences": 4,
+        "heldMs": 0,
+        "times": [
+          0.5,
+          2,
+          8,
+          18
+        ]
+      }
+    ]
+  ]
+}

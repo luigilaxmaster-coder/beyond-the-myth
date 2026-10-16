@@ -1,0 +1,118 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 60,
+    "samples": [
+      0.5,
+      2,
+      8,
+      18,
+      28,
+      39,
+      49,
+      57,
+      59.966
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": false,
+    "errorCount": 1,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 1.77:1; WCAG AA requires 3:1.",
+        "text": "1946",
+        "fg": "rgb(248,250,252)",
+        "bg": "rgb(205,187,177)",
+        "ratio": 1.77,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(103,104,105)",
+        "large": true,
+        "selector": "div > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 45.65997314453125,
+          "y": 455,
+          "width": 988.6801147460938,
+          "height": 150
+        },
+        "time": 59.966,
+        "times": [
+          49,
+          59.966
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      0.5,
+      8,
+      28,
+      49,
+      59.966
+    ],
+    "checked": 63,
+    "passed": 61
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "27c4b7c2-a13d-47de-9208-0f2e9f184493",
+    "revision": "4a909e00-5b5c-47d6-b6e2-f7c3ec0ceb73",
+    "report": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep011\\.hyperframes\\artifacts\\checks\\27c4b7c2-a13d-47de-9208-0f2e9f184493.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.8.164",
+    "latestVersion": "0.8.162",
+    "updateAvailable": false
+  }
+}

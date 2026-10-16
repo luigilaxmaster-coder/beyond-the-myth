@@ -1,0 +1,662 @@
+[
+  {
+    "ep": 11,
+    "ok": true,
+    "results": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "checked": 63,
+        "passed": 63
+      },
+      "hdr": {},
+      "snapshots": {},
+      "saved": {},
+      "_meta": {}
+    },
+    "findings": []
+  },
+  {
+    "ep": 12,
+    "ok": true,
+    "results": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "checked": 43,
+        "passed": 43
+      },
+      "hdr": {},
+      "snapshots": {},
+      "saved": {},
+      "_meta": {}
+    },
+    "findings": []
+  },
+  {
+    "ep": 13,
+    "ok": false,
+    "results": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": false,
+        "errorCount": 1,
+        "warningCount": 1
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "checked": 58,
+        "passed": 58
+      },
+      "hdr": {},
+      "snapshots": {},
+      "saved": {},
+      "_meta": {}
+    },
+    "findings": [
+      [
+        "layout",
+        {
+          "code": "text_occluded",
+          "severity": "error",
+          "time": 0.5,
+          "selector": "div.numismatic",
+          "message": "Text is hidden beneath an opaque element.",
+          "rect": {
+            "left": 219.2,
+            "top": 1079.52,
+            "right": 747.91,
+            "bottom": 1087.69,
+            "width": 528.7,
+            "height": 8.17
+          },
+          "containerSelector": "img.p.p1",
+          "text": "Strength \u00b7 Duration \u00b7 Providence",
+          "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+          "coveredFraction": 0.33,
+          "dataAttributes": {},
+          "sourceFile": "index.html",
+          "bbox": {
+            "x": 219.2,
+            "y": 1079.52,
+            "width": 528.7,
+            "height": 8.17
+          },
+          "firstSeen": 0.5,
+          "lastSeen": 18,
+          "occurrences": 4,
+          "heldMs": 0,
+          "times": [
+            0.5,
+            2,
+            8,
+            18
+          ]
+        }
+      ],
+      [
+        "layout",
+        {
+          "code": "panel_out_of_canvas",
+          "severity": "warning",
+          "time": 18,
+          "selector": "div.orbit",
+          "message": "Painted panel extends outside the composition canvas.",
+          "rect": {
+            "left": -89.48,
+            "top": 295.52,
+            "right": 1169.48,
+            "bottom": 1554.48,
+            "width": 1258.96,
+            "height": 1258.96
+          },
+          "containerSelector": "#stage",
+          "text": "",
+          "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+          "containerRect": {
+            "left": 0,
+            "top": 0,
+            "right": 1080,
+            "bottom": 1920,
+            "width": 1080,
+            "height": 1920
+          },
+          "overflow": {
+            "left": 89.48,
+            "right": 89.48
+          },
+          "dataAttributes": {},
+          "sourceFile": "index.html",
+          "bbox": {
+            "x": -89.48,
+            "y": 295.52,
+            "width": 1258.96,
+            "height": 1258.96
+          },
+          "firstSeen": 18,
+          "lastSeen": 59.966,
+          "occurrences": 6,
+          "heldMs": 0,
+          "times": [
+            18,
+            28,
+            39,
+            49,
+            57,
+            59.966
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "ep": 14,
+    "ok": true,
+    "results": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "checked": 48,
+        "passed": 48
+      },
+      "hdr": {},
+      "snapshots": {},
+      "saved": {},
+      "_meta": {}
+    },
+    "findings": []
+  },
+  {
+    "ep": 15,
+    "ok": true,
+    "results": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 1
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "checked": 47,
+        "passed": 47
+      },
+      "hdr": {},
+      "snapshots": {},
+      "saved": {},
+      "_meta": {}
+    },
+    "findings": [
+      [
+        "layout",
+        {
+          "code": "rotation_pivot_drift",
+          "severity": "warning",
+          "time": 59.966,
+          "selector": "div.wax",
+          "dataAttributes": {},
+          "sourceFile": "index.html",
+          "bbox": {
+            "x": 790,
+            "y": 900,
+            "width": 190,
+            "height": 190
+          },
+          "rect": {
+            "left": 790,
+            "top": 900,
+            "right": 980,
+            "bottom": 1090,
+            "width": 190,
+            "height": 190
+          },
+          "message": "Rotating element's bounding-box center drifts 110px across rotation \u2014 it is not spinning about its own center (check transformOrigin/svgOrigin).",
+          "fixHint": "The bounding-box center should stay fixed while the element spins; check its transformOrigin/svgOrigin so rotation pivots about the element's own center rather than a point in a coordinate space it was resized out of.",
+          "firstSeen": 59.966,
+          "lastSeen": 59.966,
+          "occurrences": 1,
+          "heldMs": 0,
+          "times": [
+            59.966
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "ep": 16,
+    "ok": true,
+    "results": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "checked": 53,
+        "passed": 53
+      },
+      "hdr": {},
+      "snapshots": {},
+      "saved": {},
+      "_meta": {}
+    },
+    "findings": []
+  },
+  {
+    "ep": 17,
+    "ok": true,
+    "results": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "checked": 58,
+        "passed": 58
+      },
+      "hdr": {},
+      "snapshots": {},
+      "saved": {},
+      "_meta": {}
+    },
+    "findings": []
+  },
+  {
+    "ep": 18,
+    "ok": true,
+    "results": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "checked": 43,
+        "passed": 43
+      },
+      "hdr": {},
+      "snapshots": {},
+      "saved": {},
+      "_meta": {}
+    },
+    "findings": []
+  },
+  {
+    "ep": 19,
+    "ok": true,
+    "results": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "checked": 44,
+        "passed": 44
+      },
+      "hdr": {},
+      "snapshots": {},
+      "saved": {},
+      "_meta": {}
+    },
+    "findings": []
+  },
+  {
+    "ep": 20,
+    "ok": true,
+    "results": {
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "runtime": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "layout": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 3
+      },
+      "motion": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "contrast": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "checked": 48,
+        "passed": 48
+      },
+      "hdr": {},
+      "snapshots": {},
+      "saved": {},
+      "_meta": {}
+    },
+    "findings": [
+      [
+        "layout",
+        {
+          "code": "canvas_overflow",
+          "severity": "warning",
+          "time": 0.5,
+          "selector": "article.context > h3:nth-of-type(1)",
+          "message": "Text extends outside the composition canvas.",
+          "rect": {
+            "left": 1060,
+            "top": 1050,
+            "right": 1641.3,
+            "bottom": 1127,
+            "width": 581.3,
+            "height": 77
+          },
+          "containerSelector": "#stage",
+          "text": "A consumer boycott.",
+          "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+          "containerRect": {
+            "left": 0,
+            "top": 0,
+            "right": 1080,
+            "bottom": 1920,
+            "width": 1080,
+            "height": 1920
+          },
+          "overflow": {
+            "right": 561.3
+          },
+          "dataAttributes": {},
+          "sourceFile": "index.html",
+          "bbox": {
+            "x": 1060,
+            "y": 1050,
+            "width": 581.3,
+            "height": 77
+          },
+          "firstSeen": 0.5,
+          "lastSeen": 18,
+          "occurrences": 4,
+          "heldMs": 0,
+          "times": [
+            0.5,
+            2,
+            8,
+            18
+          ]
+        }
+      ],
+      [
+        "layout",
+        {
+          "code": "canvas_overflow",
+          "severity": "warning",
+          "time": 0.5,
+          "selector": "article.context > p:nth-of-type(1)",
+          "message": "Text extends outside the composition canvas.",
+          "rect": {
+            "left": 1060,
+            "top": 1150,
+            "right": 1758.98,
+            "bottom": 1229.19,
+            "width": 698.98,
+            "height": 79.19
+          },
+          "containerSelector": "#stage",
+          "text": "The article concerned commercial protest against persecution \u2014 not a military declaration.",
+          "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+          "containerRect": {
+            "left": 0,
+            "top": 0,
+            "right": 1080,
+            "bottom": 1920,
+            "width": 1080,
+            "height": 1920
+          },
+          "overflow": {
+            "right": 678.98
+          },
+          "dataAttributes": {},
+          "sourceFile": "index.html",
+          "bbox": {
+            "x": 1060,
+            "y": 1150,
+            "width": 698.98,
+            "height": 79.19
+          },
+          "firstSeen": 0.5,
+          "lastSeen": 18,
+          "occurrences": 4,
+          "heldMs": 0,
+          "times": [
+            0.5,
+            2,
+            8,
+            18
+          ]
+        }
+      ],
+      [
+        "layout",
+        {
+          "code": "panel_out_of_canvas",
+          "severity": "warning",
+          "time": 0.5,
+          "selector": "article.context",
+          "message": "Painted panel extends outside the composition canvas.",
+          "rect": {
+            "left": 1020,
+            "top": 1000,
+            "right": 1860,
+            "bottom": 1273.38,
+            "width": 840,
+            "height": 273.38
+          },
+          "containerSelector": "#stage",
+          "text": "A consumer boycott. The article concerned commer",
+          "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+          "containerRect": {
+            "left": 0,
+            "top": 0,
+            "right": 1080,
+            "bottom": 1920,
+            "width": 1080,
+            "height": 1920
+          },
+          "overflow": {
+            "right": 780
+          },
+          "dataAttributes": {},
+          "sourceFile": "index.html",
+          "bbox": {
+            "x": 1020,
+            "y": 1000,
+            "width": 840,
+            "height": 273.38
+          },
+          "firstSeen": 0.5,
+          "lastSeen": 18,
+          "occurrences": 4,
+          "heldMs": 0,
+          "times": [
+            0.5,
+            2,
+            8,
+            18
+          ]
+        }
+      ]
+    ]
+  }
+]

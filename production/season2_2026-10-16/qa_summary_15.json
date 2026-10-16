@@ -1,0 +1,73 @@
+{
+  "ep": 15,
+  "ok": true,
+  "results": {
+    "lint": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "runtime": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "layout": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 1
+    },
+    "motion": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "contrast": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "checked": 47,
+      "passed": 47
+    },
+    "hdr": {},
+    "snapshots": {},
+    "saved": {},
+    "_meta": {}
+  },
+  "findings": [
+    [
+      "layout",
+      {
+        "code": "rotation_pivot_drift",
+        "severity": "warning",
+        "time": 59.966,
+        "selector": "div.wax",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 790,
+          "y": 900,
+          "width": 190,
+          "height": 190
+        },
+        "rect": {
+          "left": 790,
+          "top": 900,
+          "right": 980,
+          "bottom": 1090,
+          "width": 190,
+          "height": 190
+        },
+        "message": "Rotating element's bounding-box center drifts 110px across rotation \u2014 it is not spinning about its own center (check transformOrigin/svgOrigin).",
+        "fixHint": "The bounding-box center should stay fixed while the element spins; check its transformOrigin/svgOrigin so rotation pivots about the element's own center rather than a point in a coordinate space it was resized out of.",
+        "firstSeen": 59.966,
+        "lastSeen": 59.966,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          59.966
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOSEAME · Comercial 30s Master · ¿Tienes algo que resolver? (Video 1 de 3)</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFB;
+      --surface: #FFFFFF;
+      --primary-cyan: #00C9B7;
+      --primary-mid: #00B875;
+      --primary-lime: #22C55E;
+      --primary-gradient: linear-gradient(135deg, #00C9B7 0%, #00B875 50%, #22C55E 100%);
+      --text-dark: #0F172A;
+      --text-muted: #64748B;
+      --text-green: #008272;
+      --card-shadow: 0 24px 50px rgba(0, 184, 117, 0.15), 0 10px 24px rgba(15, 23, 42, 0.06);
+      --font-brand: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: #080c14;
+      color: var(--text-dark);
+      font-family: var(--font-body);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* 9:16 Vertical Video Frame (1080x1920) */
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      background-color: var(--bg);
+      overflow: hidden;
+      box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6);
+    }
+
+    .clip {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    /* Ambient Background Glow */
+    .ambient-mesh {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 15%, rgba(0, 201, 183, 0.14) 0%, transparent 60%),
+                  radial-gradient(circle at 85% 70%, rgba(0, 184, 117, 0.10) 0%, transparent 55%),
+                  radial-gradient(circle at 15% 85%, rgba(34, 197, 94, 0.08) 0%, transparent 50%),
+                  #F8FAFB;
+      z-index: 1;
+    }
+
+    /* Kinetic Typography */
+    .k-title {
+      font-family: var(--font-brand);
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    .k-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-family: var(--font-brand);
+      font-weight: 800;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* JOSEAME Three Circles Logo */
+    .brand-three-circles {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+    .brand-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: relative;
+    }
+    .circle-left {
+      border: 8px solid #00C9B7;
+      background: transparent;
+    }
+    .circle-center {
+      background: var(--primary-gradient);
+      box-shadow: 0 10px 28px rgba(0, 184, 117, 0.45);
+    }
+    .circle-right {
+      border: 8px solid #00B875;
+      background: transparent;
+    }
+
+    .brand-wordmark {
+      font-family: var(--font-brand);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* =========================================================================
+       ESCENA 1: Hook / Problema Real (0.00 - 4.40s)
+       ========================================================================= */
+    #shot1 {
+      z-index: 10;
+    }
+    .s1-container {
+      position: relative;
+      width: 1000px;
+      height: 1650px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .s1-banner {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      z-index: 20;
+    }
+    .s1-tag {
+      background: #FEE2E2;
+      color: #EF4444;
+      font-size: 26px;
+      padding: 8px 26px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-family: var(--font-brand);
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+    }
+    .s1-headline {
+      font-size: 88px;
+      color: #0F172A;
+      font-weight: 900;
+    }
+    .s1-sub {
+      font-size: 48px;
+      color: #EF4444;
+      font-weight: 800;
+    }
+    .s1-visual {
+      position: relative;
+      width: 940px;
+      height: 1220px;
+      border-radius: 48px;
+      overflow: hidden;
+      margin-top: 30px;
+      background: #FFFFFF;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+      border: 4px solid rgba(0, 201, 183, 0.25);
+    }
+    .s1-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .s1-heat-waves {
+      position: absolute;
+      top: 240px;
+      right: 220px;
+      display: flex;
+      gap: 14px;
+      z-index: 25;
+    }
+    .s1-spark {
+      position: absolute;
+      top: 190px;
+      right: 380px;
+      color: #EF4444;
+      font-size: 44px;
+      font-weight: 900;
+      z-index: 25;
+    }
+
+    /* =========================================================================
+       ESCENA 2: Ampliar el Problema (4.20 - 7.60s)
+       ========================================================================= */
+    #shot2 {
+      z-index: 12;
+      opacity: 0;
+    }
+    .s2-headline {
+      font-size: 78px;
+      color: #0F172A;
+      margin-top: 100px;
+      margin-bottom: 45px;
+    }
+    .s2-grid {
+      position: relative;
+      width: 960px;
+      height: 1080px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .problem-card {
+      background: #FFFFFF;
+      border-radius: 40px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--card-shadow);
+      border: 3px solid rgba(0, 184, 117, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+    .problem-card img {
+      width: 85%;
+      height: 72%;
+      object-fit: contain;
+      border-radius: 24px;
+    }
+    .problem-card span {
+      margin-top: 20px;
+      font-family: var(--font-brand);
+      font-weight: 800;
+      font-size: 32px;
+      color: #0F172A;
+    }
+
+    /* =========================================================================
+       ESCENA 3: Entrada de la Marca (7.40 - 11.60s)
+       ========================================================================= */
+    #shot3 {
+      z-index: 14;
+      opacity: 0;
+    }
+    .s3-lead {
+      font-size: 56px;
+      color: #64748B;
+      font-weight: 800;
+      margin-bottom: 50px;
+    }
+    .s3-hero-circles {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    .s3-hero-circles .c-big {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+    }
+    .s3-c1 {
+      border: 18px solid #00C9B7;
+      background: transparent;
+    }
+    .s3-c2 {
+      background: var(--primary-gradient);
+      box-shadow: 0 25px 70px rgba(0, 184, 117, 0.55);
+    }
+    .s3-c3 {
+      border: 18px solid #00B875;
+      background: transparent;
+    }
+    .s3-logo-text {
+      font-size: 155px;
+      font-family: var(--font-brand);
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 24px;
+    }
+    .s3-tagline {
+      font-size: 38px;
+      font-family: var(--font-brand);
+      font-weight: 800;
+      color: #008272;
+      background: rgba(0, 201, 183, 0.14);
+      padding: 14px 44px;
+      border-radius: 999px;
+    }
+
+    /* =========================================================================
+       ESCENA 4: Descubrimiento & Categorías (11.40 - 16.00s)
+       ========================================================================= */
+    #shot4 {
+      z-index: 16;
+      opacity: 0;
+    }
+    .s4-container {
+      position: relative;
+      width: 1000px;
+      height: 1680px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .s4-bg-illustration {
+      position: absolute;
+      top: 40px;
+      width: 940px;
+      height: 820px;
+      border-radius: 44px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    .s4-bg-illustration img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .s4-phone {
+      position: absolute;
+      top: 380px;
+      width: 800px;
+      height: 1260px;
+      background: #FFFFFF;
+      border-radius: 64px;
+      box-shadow: 0 45px 100px rgba(0, 184, 117, 0.25), 0 15px 35px rgba(15, 23, 42, 0.12);
+      border: 8px solid #0F172A;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      z-index: 20;
+    }
+    .phone-header {
+      height: 96px;
+      padding: 0 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #F1F5F9;
+    }
+    .phone-body {
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      background: #FAFDFB;
+      flex: 1;
+    }
+    .phone-search {
+      background: #FFFFFF;
+      border: 2px solid #E2E8F0;
+      border-radius: 22px;
+      padding: 22px 26px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 28px;
+      color: #64748B;
+      font-weight: 600;
+    }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .cat-item {
+      background: #FFFFFF;
+      border-radius: 26px;
+      padding: 26px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      border: 2px solid #F1F5F9;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+    }
+    .cat-item.active {
+      border: 4px solid #00C9B7;
+      background: rgba(0, 201, 183, 0.09);
+      transform: scale(1.05);
+    }
+    .cat-icon {
+      font-size: 52px;
+    }
+    .cat-name {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .tap-ripple {
+      position: absolute;
+      top: 680px;
+      left: 190px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(0, 201, 183, 0.45);
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(0);
+      z-index: 35;
+    }
+
+    /* =========================================================================
+       ESCENA 5: Formulario & Publicación (15.80 - 20.80s)
+       ========================================================================= */
+    #shot5 {
+      z-index: 18;
+      opacity: 0;
+    }
+    .form-phone {
+      width: 800px;
+      height: 1260px;
+      background: #FFFFFF;
+      border-radius: 64px;
+      border: 8px solid #0F172A;
+      box-shadow: 0 45px 100px rgba(0, 184, 117, 0.25);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+    .form-header {
+      padding: 30px 36px;
+      font-size: 34px;
+      font-family: var(--font-brand);
+      font-weight: 800;
+      color: #0F172A;
+      border-bottom: 2px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .form-body {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      flex: 1;
+      background: #FCFDFD;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .input-label {
+      font-size: 24px;
+      font-weight: 800;
+      color: #64748B;
+      font-family: var(--font-brand);
+    }
+    .input-field {
+      background: #FFFFFF;
+      border: 2px solid #E2E8F0;
+      border-radius: 22px;
+      padding: 24px 26px;
+      font-size: 30px;
+      font-weight: 600;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .input-field.typed {
+      border-color: #00C9B7;
+      background: #F0FDFA;
+    }
+    .btn-publish {
+      margin-top: 24px;
+      padding: 28px;
+      border-radius: 28px;
+      background: var(--primary-gradient);
+      color: #FFFFFF;
+      font-family: var(--font-brand);
+      font-weight: 900;
+      font-size: 36px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(0, 184, 117, 0.38);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .floating-joseo-card {
+      position: absolute;
+      width: 740px;
+      padding: 40px 44px;
+      background: #FFFFFF;
+      border-radius: 40px;
+      box-shadow: 0 40px 90px rgba(0, 184, 117, 0.28), 0 12px 35px rgba(0, 0, 0, 0.09);
+      border: 4px solid #00C9B7;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 50;
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    .card-badge-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .badge-nuevo {
+      background: var(--primary-gradient);
+      color: #FFFFFF;
+      font-family: var(--font-brand);
+      font-weight: 900;
+      font-size: 22px;
+      padding: 8px 22px;
+      border-radius: 999px;
+      letter-spacing: 0.06em;
+    }
+    .card-title {
+      font-size: 38px;
+      font-family: var(--font-brand);
+      font-weight: 900;
+      color: #0F172A;
+    }
+    .card-meta {
+      display: flex;
+      gap: 26px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #64748B;
+    }
+    .card-meta b {
+      color: #008272;
+    }
+
+    /* =========================================================================
+       ESCENA 6: Distribución Local en Mapa (20.60 - 24.80s)
+       ========================================================================= */
+    #shot7 {
+      z-index: 22;
+      opacity: 0;
+    }
+    .s7-headline {
+      font-size: 64px;
+      color: #0F172A;
+      margin-top: 100px;
+      margin-bottom: 30px;
+      padding: 0 40px;
+      text-align: center;
+    }
+    .map-container {
+      position: relative;
+      width: 980px;
+      height: 1200px;
+      border-radius: 54px;
+      overflow: hidden;
+      background: #E8F4F8;
+      border: 5px solid #FFFFFF;
+      box-shadow: 0 30px 80px rgba(0, 184, 117, 0.18);
+    }
+    .map-svg {
+      width: 100%;
+      height: 100%;
+    }
+    .radar-wave {
+      position: absolute;
+      top: 600px;
+      left: 490px;
+      border-radius: 50%;
+      border: 4px solid rgba(0, 201, 183, 0.65);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .center-pin {
+      position: absolute;
+      top: 600px;
+      left: 490px;
+      transform: translate(-50%, -100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 30;
+    }
+    .pin-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #00C9B7;
+      border: 6px solid #FFFFFF;
+      box-shadow: 0 12px 24px rgba(0, 201, 183, 0.55);
+    }
+    .joseador-pin {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 25;
+    }
+    .j-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 5px solid #00B875;
+      box-shadow: 0 12px 28px rgba(0, 184, 117, 0.45);
+      background: #FFFFFF;
+      overflow: hidden;
+    }
+    .j-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* =========================================================================
+       ESCENA 7: Joseadores Reciben Notificación (24.60 - 27.40s)
+       ========================================================================= */
+    #shot8 {
+      z-index: 24;
+      opacity: 0;
+    }
+    .s8-headline {
+      font-size: 78px;
+      color: #0F172A;
+      margin-top: 80px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .joseadores-stage {
+      position: relative;
+      width: 980px;
+      height: 1300px;
+      border-radius: 48px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+      border: 4px solid rgba(0, 184, 117, 0.25);
+    }
+    .joseadores-stage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* =========================================================================
+       ESCENA 8: Cliffhanger & Transición a Video 2 (27.20 - 30.00s)
+       ========================================================================= */
+    #shot9 {
+      z-index: 26;
+      opacity: 0;
+    }
+    .s9-phone {
+      width: 820px;
+      height: 1260px;
+      background: #FFFFFF;
+      border-radius: 64px;
+      border: 8px solid #0F172A;
+      box-shadow: 0 45px 110px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      padding: 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .s9-btn-aplicar {
+      margin-top: auto;
+      padding: 32px;
+      background: var(--primary-gradient);
+      border-radius: 30px;
+      color: #FFFFFF;
+      font-family: var(--font-brand);
+      font-weight: 900;
+      font-size: 42px;
+      text-align: center;
+      box-shadow: 0 22px 55px rgba(0, 184, 117, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      position: relative;
+    }
+    .finger-pointer {
+      position: absolute;
+      bottom: -150px;
+      right: 190px;
+      width: 150px;
+      height: 230px;
+      z-index: 50;
+      pointer-events: none;
+    }
+    .s9-freeze-text {
+      position: absolute;
+      top: 280px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 96px;
+      font-family: var(--font-brand);
+      font-weight: 900;
+      color: #EF4444;
+      text-shadow: 0 12px 35px rgba(239, 68, 68, 0.35);
+      z-index: 60;
+      opacity: 0;
+    }
+
+    #shot10 {
+      z-index: 30;
+      opacity: 0;
+    }
+    .s10-container {
+      position: relative;
+      width: 1000px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .piquete-coin {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00C9B7 0%, #00B875 50%, #22C55E 100%);
+      box-shadow: 0 30px 80px rgba(0, 184, 117, 0.55), inset 0 10px 20px rgba(255, 255, 255, 0.65), inset 0 -10px 20px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 9px solid #FFFFFF;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .coin-letter {
+      font-size: 140px;
+      font-family: var(--font-brand);
+      font-weight: 900;
+      color: #FFFFFF;
+      text-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
+    }
+    .s10-v2-tag {
+      background: #0F172A;
+      color: #00C9B7;
+      font-size: 30px;
+      font-family: var(--font-brand);
+      font-weight: 800;
+      padding: 12px 36px;
+      border-radius: 999px;
+      letter-spacing: 0.1em;
+      margin-bottom: 22px;
+    }
+    .s10-question {
+      font-size: 78px;
+      font-family: var(--font-brand);
+      font-weight: 900;
+      color: #0F172A;
+      margin-bottom: 34px;
+    }
+    .s10-next-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--primary-gradient);
+      color: #FFFFFF;
+      padding: 22px 52px;
+      border-radius: 999px;
+      font-size: 34px;
+      font-family: var(--font-brand);
+      font-weight: 800;
+      box-shadow: 0 16px 45px rgba(0, 184, 117, 0.45);
+      margin-bottom: 60px;
+    }
+    .s10-footer-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .s10-tagline {
+      font-size: 38px;
+      font-family: var(--font-brand);
+      font-weight: 800;
+      color: #008272;
+    }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="main" data-start="0" data-duration="30" data-width="1080" data-height="1920">
+    <!-- Ambient Background -->
+    <div class="ambient-mesh"></div>
+
+    <!-- Master Synchronized 30s Audio Track -->
+    <audio
+      id="master-audio"
+      src="assets/audio/joseame_commercial_30s_master.mp3"
+      data-start="0"
+      data-duration="30"
+      data-volume="1.0"
+    ></audio>
+
+    <!-- ==========================================
+         ESCENA 1: 0.00 - 4.40s (Hook: El aire se dañó)
+         ========================================== -->
+    <div id="shot1" class="clip" data-start="0" data-duration="4.6">
+      <div class="s1-container">
+        <div class="s1-banner">
+          <div class="s1-tag">PROBLEMA REAL EN SANTO DOMINGO</div>
+          <div class="s1-headline k-title">Se dañó el aire.</div>
+          <div class="s1-sub k-title">¿Y ahora con este calor?</div>
+        </div>
+        <div class="s1-visual">
+          <img src="assets/storyboard/s1_woman_ac_hd.jpg" alt="Se dañó el aire acondicionado en Santo Domingo">
+          <div class="s1-heat-waves">
+            <svg width="140" height="90" viewBox="0 0 140 90" fill="none">
+              <path class="heat-line-1" d="M12 80C28 55 18 35 34 10" stroke="#EF4444" stroke-width="9" stroke-linecap="round"/>
+              <path class="heat-line-2" d="M58 80C74 55 64 35 80 10" stroke="#F97316" stroke-width="9" stroke-linecap="round"/>
+              <path class="heat-line-3" d="M104 80C120 55 110 35 126 10" stroke="#EF4444" stroke-width="9" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="s1-spark">⚡</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         ESCENA 2: 4.20 - 7.60s (Ampliar el Problema)
+         ========================================== -->
+    <div id="shot2" class="clip" data-start="4.1" data-duration="3.6">
+      <div class="k-title s2-headline">Siempre hay algo<br>que resolver.</div>
+      <div class="s2-grid">
+        <div class="problem-card pc-1">
+          <img src="assets/storyboard/card_ac.png" alt="Aire Acondicionado">
+          <span>Reparaciones</span>
+        </div>
+        <div class="problem-card pc-2">
+          <img src="assets/storyboard/card_delivery.png" alt="Delivery">
+          <span>Delivery</span>
+        </div>
+        <div class="problem-card pc-3">
+          <img src="assets/storyboard/card_cleaning.png" alt="Limpieza">
+          <span>Limpieza</span>
+        </div>
+        <div class="problem-card pc-4">
+          <img src="assets/storyboard/card_technician.png" alt="Instalaciones">
+          <span>Instalaciones</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         ESCENA 3: 7.40 - 11.60s (Entrada de la Marca)
+         ========================================== -->
+    <div id="shot3" class="clip" data-start="7.3" data-duration="4.3">
+      <div class="k-title s3-lead">Cuando hay que resolver...</div>
+      <div class="s3-hero-circles">
+        <div class="c-big s3-c1"></div>
+        <div class="c-big s3-c2"></div>
+        <div class="c-big s3-c3"></div>
+      </div>
+      <div class="s3-logo-text">JOSEAME</div>
+      <div class="s3-tagline">Conectamos soluciones reales</div>
+    </div>
+
+    <!-- ==========================================
+         ESCENA 4: 11.40 - 16.00s (Descubrimiento & Categorías)
+         ========================================== -->
+    <div id="shot4" class="clip" data-start="11.3" data-duration="4.7">
+      <div class="s4-container">
+        <div class="s4-bg-illustration">
+          <img src="assets/storyboard/s4_woman_phone_hd.jpg" alt="Descubriendo JOSEAME">
+        </div>
+        <div class="s4-phone">
+          <div class="phone-header">
+            <div class="brand-three-circles">
+              <div class="brand-circle circle-left" style="width:38px;height:38px;border-width:6px;"></div>
+              <div class="brand-circle circle-center" style="width:38px;height:38px;"></div>
+              <div class="brand-circle circle-right" style="width:38px;height:38px;border-width:6px;"></div>
+            </div>
+            <div class="brand-wordmark" style="font-size:34px;">JOSEAME</div>
+            <div style="font-size:30px;">🔔</div>
+          </div>
+          <div class="phone-body">
+            <div class="phone-search">
+              <span>🔍</span>
+              <span>¿Qué necesitas resolver?</span>
+            </div>
+            <div class="cat-grid">
+              <div class="cat-item active" id="cat-rep">
+                <div class="cat-icon">🔧</div>
+                <div class="cat-name">Reparaciones</div>
+              </div>
+              <div class="cat-item">
+                <div class="cat-icon">🧹</div>
+                <div class="cat-name">Limpieza</div>
+              </div>
+              <div class="cat-item">
+                <div class="cat-icon">❄️</div>
+                <div class="cat-name">Instalación</div>
+              </div>
+              <div class="cat-item">
+                <div class="cat-icon">📦</div>
+                <div class="cat-name">Delivery</div>
+              </div>
+              <div class="cat-item">
+                <div class="cat-icon">🚚</div>
+                <div class="cat-name">Mudanza</div>
+              </div>
+              <div class="cat-item">
+                <div class="cat-icon">💬</div>
+                <div class="cat-name">Otros</div>
+              </div>
+            </div>
+          </div>
+          <div class="tap-ripple" id="tapRipple"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         ESCENA 5: 15.80 - 20.80s (Publicación & Tarjeta Flotante)
+         ========================================== -->
+    <div id="shot5" class="clip" data-start="15.7" data-duration="5.1">
+      <div class="form-phone" id="formPhone">
+        <div class="form-header">
+          <span>‹</span>
+          <span>Publicar joseo</span>
+        </div>
+        <div class="form-body">
+          <div class="input-group">
+            <div class="input-label">¿Qué necesitas?</div>
+            <div class="input-field typed" id="fieldTask">
+              <span id="typeTarget">Instalar / revisar aire acondicionado</span>
+              <span id="cursor" style="color:#00C9B7;font-weight:900;">|</span>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="input-label">Ubicación</div>
+            <div class="input-field">
+              <span>📍 Santo Domingo</span>
+              <span style="color:#64748B;">▾</span>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="input-label">Presupuesto estimado (DOP)</div>
+            <div class="input-field" style="color:#008272;font-weight:700;">
+              <span>RD$ 2,000 – 4,000</span>
+              <span>💵</span>
+            </div>
+          </div>
+          <div class="btn-publish" id="btnPublish">
+            <span id="btnText">PUBLICAR JOSEO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Joseo Card -->
+      <div class="floating-joseo-card" id="floatingCard">
+        <div class="card-badge-row">
+          <span class="badge-nuevo">NUEVO JOSEO</span>
+          <span style="font-size:28px;">❄️</span>
+        </div>
+        <div class="card-title">Instalar / revisar aire acondicionado</div>
+        <div class="card-meta">
+          <span>📍 Santo Domingo</span>
+          <span>•</span>
+          <b>RD$ 2,000 – 4,000</b>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         ESCENA 6: 20.60 - 24.80s (Distribución Local en Mapa)
+         ========================================== -->
+    <div id="shot7" class="clip" data-start="20.5" data-duration="4.3">
+      <div class="k-title s7-headline">Tu necesidad llega a<br>Joseadores cerca de ti.</div>
+      <div class="map-container">
+        <!-- Stylized Santo Domingo SVG Map -->
+        <svg class="map-svg" viewBox="0 0 980 1200" fill="none">
+          <!-- Coastline Caribbean Sea -->
+          <path d="M0 920 C220 890, 520 950, 980 880 L980 1200 L0 1200 Z" fill="#BAE6FD" opacity="0.65"/>
+          <path d="M0 940 C270 910, 620 970, 980 900 L980 1200 L0 1200 Z" fill="#7DD3FC" opacity="0.55"/>
+          <!-- City Blocks & Avenues -->
+          <rect x="80" y="100" width="230" height="150" rx="18" fill="#FFFFFF" opacity="0.85"/>
+          <rect x="350" y="80" width="310" height="190" rx="18" fill="#FFFFFF" opacity="0.85"/>
+          <rect x="700" y="120" width="210" height="250" rx="18" fill="#FFFFFF" opacity="0.85"/>
+          <rect x="100" y="320" width="270" height="210" rx="18" fill="#FFFFFF" opacity="0.85"/>
+          <rect x="430" y="340" width="210" height="190" rx="18" fill="#FFFFFF" opacity="0.85"/>
+          <rect x="680" y="440" width="230" height="230" rx="18" fill="#FFFFFF" opacity="0.85"/>
+          <rect x="120" y="600" width="290" height="230" rx="18" fill="#FFFFFF" opacity="0.85"/>
+          <rect x="460" y="620" width="330" height="190" rx="18" fill="#FFFFFF" opacity="0.85"/>
+          <!-- Main Arterial Lines (Avenidas) -->
+          <line x1="0" y1="300" x2="980" y2="300" stroke="#CBD5E1" stroke-width="9" stroke-dasharray="18 18"/>
+          <line x1="0" y1="560" x2="980" y2="560" stroke="#CBD5E1" stroke-width="11"/>
+          <line x1="410" y1="0" x2="410" y2="920" stroke="#CBD5E1" stroke-width="11"/>
+          <line x1="660" y1="0" x2="660" y2="920" stroke="#CBD5E1" stroke-width="9" stroke-dasharray="18 18"/>
+        </svg>
+
+        <!-- Radar Waves expanding from client location -->
+        <div class="radar-wave r-wave-1" style="width:130px;height:130px;"></div>
+        <div class="radar-wave r-wave-2" style="width:280px;height:280px;"></div>
+        <div class="radar-wave r-wave-3" style="width:450px;height:450px;"></div>
+        <div class="radar-wave r-wave-4" style="width:660px;height:660px;"></div>
+
+        <!-- Center Client Pin -->
+        <div class="center-pin">
+          <div class="pin-circle"></div>
+        </div>
+
+        <!-- Nearby Joseadores Pins -->
+        <div class="joseador-pin jp-1" style="top:360px;left:250px;">
+          <div class="j-avatar"><img src="assets/storyboard/joseador_1.png" alt="Joseador 1"></div>
+        </div>
+        <div class="joseador-pin jp-2" style="top:440px;left:770px;">
+          <div class="j-avatar"><img src="assets/storyboard/joseador_2.png" alt="Joseador 2"></div>
+        </div>
+        <div class="joseador-pin jp-3" style="top:760px;left:350px;">
+          <div class="j-avatar"><img src="assets/storyboard/joseador_3.png" alt="Joseador 3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         ESCENA 7: 24.60 - 27.40s (Joseadores Reciben Oportunidad)
+         ========================================== -->
+    <div id="shot8" class="clip" data-start="24.5" data-duration="2.9">
+      <div class="k-title s8-headline">Ellos lo ven al instante.</div>
+      <div class="joseadores-stage">
+        <img src="assets/storyboard/s7_joseadores_hd.jpg" alt="Tres Joseadores Dominicanos">
+      </div>
+    </div>
+
+    <!-- ==========================================
+         ESCENA 8: 27.20 - 30.00s (Cliffhanger & Transición a Video 2)
+         ========================================== -->
+    <div id="shot9" class="clip" data-start="27.1" data-duration="1.1">
+      <div class="s9-phone" id="s9Phone">
+        <div style="font-size:28px;color:#00B875;font-weight:800;font-family:var(--font-brand);">DETALLES DEL JOSEO</div>
+        <div style="font-size:44px;font-weight:900;font-family:var(--font-brand);color:#0F172A;margin-top:12px;">Instalar / revisar aire acondicionado</div>
+        <div style="font-size:30px;color:#64748B;font-weight:600;margin-top:16px;">📍 Santo Domingo • Presupuesto: RD$ 2,000 – 4,000</div>
+        
+        <div class="s9-btn-aplicar" id="s9Btn">
+          <span>APLICAR</span>
+          <span>•</span>
+          <span style="display:inline-flex;align-items:center;gap:10px;">
+            <span style="background:#FFFFFF;color:#008272;width:48px;height:48px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:26px;">P</span>
+            <span>5 Piquetes</span>
+          </span>
+        </div>
+
+        <svg class="finger-pointer" id="finger" viewBox="0 0 100 160">
+          <path d="M50 10 C35 10 30 25 30 40 L30 110 C30 135 70 135 70 110 L70 40 C70 25 65 10 50 10 Z" fill="#FBBF24" stroke="#D97706" stroke-width="4"/>
+          <path d="M40 25 C40 18 45 15 50 15 C55 15 60 18 60 25" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+
+        <div class="s9-freeze-text" id="freezeText">Pero…<br>¿cómo aplica?</div>
+      </div>
+    </div>
+
+    <!-- Transición Final a Video 2 -->
+    <div id="shot10" class="clip" data-start="28.1" data-duration="1.9">
+      <div class="s10-container">
+        <!-- 3D Piquete Token -->
+        <div class="piquete-coin" id="piqueteCoin">
+          <div class="coin-letter">P</div>
+        </div>
+        <div class="s10-v2-tag">VIDEO 2</div>
+        <div class="s10-question">¿QUÉ SON LOS<br>PIQUETES?</div>
+        <div class="s10-next-btn">
+          <span>Continúa...</span>
+          <span>➔</span>
+        </div>
+        <div class="s10-footer-brand">
+          <div class="brand-three-circles">
+            <div class="brand-circle circle-left" style="width:52px;height:52px;border-width:7px;"></div>
+            <div class="brand-circle circle-center" style="width:52px;height:52px;"></div>
+            <div class="brand-circle circle-right" style="width:52px;height:52px;border-width:7px;"></div>
+          </div>
+          <div class="brand-wordmark" style="font-size:56px;">JOSEAME</div>
+          <div class="s10-tagline">Cuando hay que resolver, JOSEAME.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Register Root Timeline with HyperFrames
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines["main"] = tl;
+
+    const springEase = "back.out(1.7)";
+    const popEase = "back.out(2.2)";
+
+    // =========================================================================
+    // ESCENA 1: 0.00 - 4.40s (Hook / Problema Real)
+    // =========================================================================
+    tl.fromTo("#shot1 .s1-visual", 
+      { scale: 0.94, y: 50, opacity: 0 }, 
+      { scale: 1.0, y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 0.0);
+
+    tl.fromTo("#shot1 .s1-headline", 
+      { y: 40, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.6, ease: popEase }, 0.2);
+
+    tl.fromTo("#shot1 .s1-sub", 
+      { scale: 0.8, opacity: 0 }, 
+      { scale: 1.0, opacity: 1, duration: 0.6, ease: popEase }, 0.9);
+
+    // Heat waves emission
+    tl.fromTo(".heat-line-1, .heat-line-2, .heat-line-3",
+      { strokeDasharray: 90, strokeDashoffset: 90, opacity: 0 },
+      { strokeDashoffset: 0, opacity: 1, stagger: 0.15, duration: 0.7, ease: "sine.inOut" }, 0.4);
+
+    // Gentle camera drift
+    tl.to("#shot1 .s1-container", { scale: 1.06, duration: 3.5, ease: "power1.inOut" }, 0.5);
+
+    // Fade/scale out into problem card
+    tl.to("#shot1", { scale: 0.75, opacity: 0, duration: 0.45, ease: "power2.in" }, 4.1);
+
+    // =========================================================================
+    // ESCENA 2: 4.20 - 7.60s (Ampliar el Problema)
+    // =========================================================================
+    tl.set("#shot2", { opacity: 1 }, 4.1);
+    tl.fromTo("#shot2 .s2-headline", 
+      { y: -40, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 4.2);
+
+    tl.fromTo(".problem-card", 
+      { scale: 0.6, y: 80, opacity: 0 }, 
+      { scale: 1.0, y: 0, opacity: 1, stagger: 0.2, duration: 0.6, ease: springEase }, 4.3);
+
+    // Converge cards toward center to form 3 circles
+    tl.to(".problem-card", 
+      { scale: 0.2, x: 0, y: 0, opacity: 0.3, stagger: 0.08, duration: 0.5, ease: "power2.in" }, 7.0);
+    tl.to("#shot2", { opacity: 0, duration: 0.3 }, 7.3);
+
+    // =========================================================================
+    // ESCENA 3: 7.40 - 11.60s (Entrada de la Marca - 3 Círculos)
+    // =========================================================================
+    tl.set("#shot3", { opacity: 1 }, 7.3);
+    tl.fromTo("#shot3 .s3-lead", 
+      { y: 30, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 7.4);
+
+    tl.fromTo(".s3-hero-circles .c-big", 
+      { scale: 0, rotation: -90 }, 
+      { scale: 1, rotation: 0, stagger: 0.14, duration: 0.7, ease: popEase }, 7.5);
+
+    tl.fromTo("#shot3 .s3-logo-text", 
+      { scale: 0.7, opacity: 0, y: 50 }, 
+      { scale: 1.0, opacity: 1, y: 0, duration: 0.7, ease: springEase }, 7.9);
+
+    tl.fromTo("#shot3 .s3-tagline", 
+      { opacity: 0, y: 30 }, 
+      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 8.3);
+
+    // Morph to smartphone
+    tl.to("#shot3", { y: -100, scale: 0.85, opacity: 0, duration: 0.45, ease: "power2.in" }, 11.2);
+
+    // =========================================================================
+    // ESCENA 4: 11.40 - 16.00s (Descubrimiento & Categorías)
+    // =========================================================================
+    tl.set("#shot4", { opacity: 1 }, 11.3);
+    tl.fromTo("#shot4 .s4-bg-illustration", 
+      { opacity: 0, scale: 0.95 }, 
+      { opacity: 0.95, scale: 1.0, duration: 0.6, ease: "power2.out" }, 11.4);
+
+    tl.fromTo("#shot4 .s4-phone", 
+      { y: 300, opacity: 0, scale: 0.85 }, 
+      { y: 0, opacity: 1, scale: 1.0, duration: 0.8, ease: springEase }, 11.5);
+
+    tl.fromTo(".cat-item", 
+      { scale: 0.8, opacity: 0 }, 
+      { scale: 1.0, opacity: 1, stagger: 0.1, duration: 0.5, ease: "power2.out" }, 12.0);
+
+    // Tap Ripple on "Reparaciones" at 14.2s
+    tl.fromTo("#tapRipple", 
+      { scale: 0, opacity: 0.85 }, 
+      { scale: 2.8, opacity: 0, duration: 0.5, ease: "power2.out" }, 14.15);
+
+    tl.to("#cat-rep", { scale: 1.15, duration: 0.16, yoyo: true, repeat: 1 }, 14.2);
+
+    tl.to("#shot4", { opacity: 0, scale: 0.9, duration: 0.35, ease: "power2.in" }, 15.6);
+
+    // =========================================================================
+    // ESCENA 5: 15.80 - 20.80s (Publicación & Tarjeta Flotante)
+    // =========================================================================
+    tl.set("#shot5", { opacity: 1 }, 15.7);
+    tl.fromTo("#formPhone", 
+      { scale: 0.92, y: 70, opacity: 0 }, 
+      { scale: 1.0, y: 0, opacity: 1, duration: 0.6, ease: springEase }, 15.8);
+
+    // Typing effect on task
+    tl.fromTo("#typeTarget", 
+      { width: 0, opacity: 0 }, 
+      { width: "auto", opacity: 1, duration: 1.2, ease: "steps(32)" }, 16.6);
+
+    tl.fromTo("#cursor", 
+      { opacity: 0 }, 
+      { opacity: 1, repeat: 9, yoyo: true, duration: 0.14 }, 16.6);
+
+    // Button click "PUBLICAR JOSEO"
+    tl.to("#btnPublish", { scale: 0.92, duration: 0.16, ease: "power2.in" }, 18.7);
+    tl.to("#btnPublish", { scale: 1.05, duration: 0.22, ease: "back.out(2)" }, 18.88);
+
+    // Transform button text
+    tl.call(() => {
+      const el = document.getElementById("btnText");
+      if (el) el.innerHTML = "✓ Joseo publicado";
+      const btn = document.getElementById("btnPublish");
+      if (btn) btn.style.background = "linear-gradient(135deg, #10B981, #059669)";
+    }, null, 19.05);
+
+    // Form contracts into Floating 3D Card
+    tl.to("#formPhone", { scale: 0.6, opacity: 0, duration: 0.5, ease: "power2.in" }, 19.2);
+    tl.to("#floatingCard", { opacity: 1, scale: 1.0, y: -50, duration: 0.6, ease: popEase }, 19.35);
+
+    // Floating card shoots toward the map
+    tl.to("#floatingCard", { scale: 0.3, y: 250, opacity: 0, duration: 0.45, ease: "power2.in" }, 20.3);
+    tl.to("#shot5", { opacity: 0, duration: 0.25 }, 20.45);
+
+    // =========================================================================
+    // ESCENA 6: 20.60 - 24.80s (Distribución Local en Mapa)
+    // =========================================================================
+    tl.set("#shot7", { opacity: 1 }, 20.5);
+    tl.fromTo("#shot7 .s7-headline", 
+      { y: 40, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 20.6);
+
+    tl.fromTo(".map-container", 
+      { scale: 0.88, opacity: 0 }, 
+      { scale: 1.0, opacity: 1, duration: 0.6, ease: springEase }, 20.6);
+
+    tl.fromTo(".center-pin", 
+      { scale: 0, y: -50 }, 
+      { scale: 1.0, y: 0, duration: 0.5, ease: popEase }, 20.8);
+
+    // Sonar Radar Waves
+    tl.fromTo(".r-wave-1", { scale: 0, opacity: 0.9 }, { scale: 2.6, opacity: 0, duration: 1.1, ease: "power1.out" }, 21.0);
+    tl.fromTo(".r-wave-2", { scale: 0, opacity: 0.8 }, { scale: 2.3, opacity: 0, duration: 1.2, ease: "power1.out" }, 21.6);
+    tl.fromTo(".r-wave-3", { scale: 0, opacity: 0.7 }, { scale: 2.0, opacity: 0, duration: 1.3, ease: "power1.out" }, 22.2);
+
+    // Joseadores Pins Pop on the Map
+    tl.fromTo(".joseador-pin", 
+      { scale: 0, opacity: 0 }, 
+      { scale: 1.0, opacity: 1, stagger: 0.22, duration: 0.55, ease: popEase }, 21.4);
+
+    tl.to("#shot7", { scale: 1.08, opacity: 0, duration: 0.4, ease: "power2.in" }, 24.3);
+
+    // =========================================================================
+    // ESCENA 7: 24.60 - 27.40s (Joseadores Reciben Oportunidad)
+    // =========================================================================
+    tl.set("#shot8", { opacity: 1 }, 24.5);
+    tl.fromTo("#shot8 .s8-headline", 
+      { y: 40, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }, 24.6);
+
+    tl.fromTo(".joseadores-stage", 
+      { y: 150, opacity: 0, scale: 0.92 }, 
+      { y: 0, opacity: 1, scale: 1.0, duration: 0.65, ease: springEase }, 24.7);
+
+    // Zoom into center Joseador's phone
+    tl.to("#shot8 .joseadores-stage", { scale: 1.2, duration: 0.5, ease: "power2.in" }, 26.8);
+    tl.to("#shot8", { opacity: 0, duration: 0.25 }, 27.05);
+
+    // =========================================================================
+    // ESCENA 8: 27.20 - 30.00s (Cliffhanger & Transición a Video 2)
+    // =========================================================================
+    tl.set("#shot9", { opacity: 1 }, 27.1);
+    tl.fromTo("#s9Phone", 
+      { scale: 0.88, opacity: 0 }, 
+      { scale: 1.0, opacity: 1, duration: 0.35, ease: "power2.out" }, 27.15);
+
+    // Finger moves down toward the "APLICAR" button
+    tl.fromTo("#finger", 
+      { x: 40, y: 130, opacity: 0 }, 
+      { x: 0, y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }, 27.2);
+
+    // FREEZE DINÁMICO at 27.70s! Stop finger at 1mm distance!
+    tl.to("#finger", { y: -8, duration: 0.05, ease: "none" }, 27.68);
+
+    // Glitch freeze text
+    tl.to("#freezeText", { opacity: 1, scale: 1.06, duration: 0.08, ease: "power2.out" }, 27.70);
+
+    // Hold freeze until 28.1s
+    tl.to("#shot9", { opacity: 0, scale: 0.8, duration: 0.22, ease: "power2.in" }, 28.05);
+
+    // Transición a Video 2
+    tl.set("#shot10", { opacity: 1 }, 28.1);
+    
+    // 3D Piquete Coin Spins into view
+    tl.fromTo("#piqueteCoin", 
+      { scale: 0, rotationY: 360, opacity: 0 }, 
+      { scale: 1.0, rotationY: 0, opacity: 1, duration: 0.5, ease: popEase }, 28.15);
+
+    tl.fromTo(".s10-v2-tag", 
+      { scale: 0.7, opacity: 0 }, 
+      { scale: 1.0, opacity: 1, duration: 0.3, ease: "power2.out" }, 28.3);
+
+    tl.fromTo(".s10-question", 
+      { y: 30, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.4, ease: popEase }, 28.4);
+
+    tl.fromTo(".s10-next-btn", 
+      { scale: 0.85, opacity: 0 }, 
+      { scale: 1.0, opacity: 1, duration: 0.4, ease: springEase }, 28.6);
+
+    tl.fromTo(".s10-footer-brand", 
+      { opacity: 0, y: 20 }, 
+      { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 28.9);
+
+    tl.to("#root", { filter: "brightness(1.02)", duration: 0.05 }, 29.95);
+  </script>
+</body>
+</html>

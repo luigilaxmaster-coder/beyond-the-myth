@@ -1,12 +1,21 @@
 {
   "name": "beyond-the-myth",
   "version": "2.0.0",
-  "description": "Beyond The Myth: Big Claims, Actual Evidence \u2014 High-End Cinematic Documentary Explainer Series (Seasons 1 & 2) powered by HyperFrames",
+  "description": "Beyond The Myth: Big Claims, Actual Evidence — High-End Cinematic Documentary Explainer Series (Seasons 1 & 2) powered by HyperFrames",
   "type": "module",
   "scripts": {
+    "preview": "hyperframes preview",
+    "check": "hyperframes check",
+    "render": "hyperframes render",
     "check:s2": "python scripts/check_all_season2.py",
     "audio:s2": "python scripts/produce_season2_audios.py",
     "render:s2": "python scripts/render_and_deliver_season2.py"
+  },
+  "dependencies": {
+    "hyperframes": "latest"
+  },
+  "devDependencies": {
+    "gsap": "^3.12.5"
   },
   "keywords": [
     "hyperframes",
@@ -18,5 +27,5 @@
     "wcag-aa"
   ],
   "author": "luigilaxmaster-coder",
-  "license": "MIT"
+  "license": "Apache-2.0"
 }

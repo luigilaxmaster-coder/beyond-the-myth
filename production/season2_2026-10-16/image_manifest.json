@@ -1,0 +1,322 @@
+[
+  {
+    "episode_id": "ep011",
+    "scene": 1,
+    "prompt": "Bank of England Threadneedle Street neoclassical stone facade London evening Oxford blue and gold",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_1.jpg"
+  },
+  {
+    "episode_id": "ep011",
+    "scene": 2,
+    "prompt": "Macro gloved archivist opening a mid twentieth century British parliamentary bound statute volume on oak table, no legible text, brass book weights Oxford blue background",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_2.jpg"
+  },
+  {
+    "episode_id": "ep011",
+    "scene": 3,
+    "prompt": "British Treasury Whitehall stone architecture seen through wrought iron gates in early morning, blue and gold restrained palette",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_3.jpg"
+  },
+  {
+    "episode_id": "ep011",
+    "scene": 4,
+    "prompt": "Closeup a fountain pen and heavy official share register ledger on navy felt, shallow focus ink and paper, no legible words",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_4.jpg"
+  },
+  {
+    "episode_id": "ep012",
+    "scene": 1,
+    "prompt": "Brooklyn Crown Heights brick streetscape near Eastern Parkway winter daylight, empty street, realistic urban documentary",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_1.jpg"
+  },
+  {
+    "episode_id": "ep012",
+    "scene": 2,
+    "prompt": "Structural engineer hands measuring a brick basement wall with steel measuring tape and flashlight, cyan practical lighting, no damage dramatization",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_2.jpg"
+  },
+  {
+    "episode_id": "ep012",
+    "scene": 3,
+    "prompt": "Architect desk showing a rolled blueprint, steel ruler and inspection notes, no legible text, deep navy cyan lighting",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_3.jpg"
+  },
+  {
+    "episode_id": "ep012",
+    "scene": 4,
+    "prompt": "Macro masonry junction in an old New York basement, rough brick mortar and joists, calm forensic flashlight scene",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_4.jpg"
+  },
+  {
+    "episode_id": "ep013",
+    "scene": 1,
+    "prompt": "Macro reverse of a real US one dollar bill, pyramid and eye detail, numismatic documentary photography, green and parchment",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_1.jpg"
+  },
+  {
+    "episode_id": "ep013",
+    "scene": 2,
+    "prompt": "Copper engraving plate and burin tools on green felt workbench, fine crosshatched incisions, no invented legible seal",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_2.jpg"
+  },
+  {
+    "episode_id": "ep013",
+    "scene": 3,
+    "prompt": "White cotton gloved hands examining early American archival papers, warm parchment and mint green backdrop, no legible writing",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_3.jpg"
+  },
+  {
+    "episode_id": "ep013",
+    "scene": 4,
+    "prompt": "Historic intaglio printing press rollers and banknote sheets in shallow focus, deep green industrial heritage museum",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_4.jpg"
+  },
+  {
+    "episode_id": "ep014",
+    "scene": 1,
+    "prompt": "White rose laid in a bronze engraved memorial parapet near reflecting pool in New York, respectful quiet photography, avoid legible invented names",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_1.jpg"
+  },
+  {
+    "episode_id": "ep014",
+    "scene": 2,
+    "prompt": "Vertical reflective water cascade of National September 11 Memorial pool and surrounding stone, restrained graphite bronze palette",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_2.jpg"
+  },
+  {
+    "episode_id": "ep014",
+    "scene": 3,
+    "prompt": "Close view of visitors adult hands holding a single white flower at memorial, no face closeups, gentle morning light",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_3.jpg"
+  },
+  {
+    "episode_id": "ep014",
+    "scene": 4,
+    "prompt": "New York memorial grove with sun filtering through trees and a quiet empty bench, contemplative bronze light",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_4.jpg"
+  },
+  {
+    "episode_id": "ep015",
+    "scene": 1,
+    "prompt": "Medieval stone village well in a deserted southern French courtyard, morning mist, muted warm vellum crimson palette",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_1.jpg"
+  },
+  {
+    "episode_id": "ep015",
+    "scene": 2,
+    "prompt": "Unrolled medieval parchment and red wax seal on dark oak, dramatic raking light, no readable invented historic words",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_2.jpg"
+  },
+  {
+    "episode_id": "ep015",
+    "scene": 3,
+    "prompt": "Palais des Papes Avignon massive stone architecture in early daylight, warm ivory limestone, historical documentary",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_3.jpg"
+  },
+  {
+    "episode_id": "ep015",
+    "scene": 4,
+    "prompt": "An archivist's gloved hands carefully examining an old vellum manuscript with magnifying glass, warm amber light crimson cloth",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_4.jpg"
+  },
+  {
+    "episode_id": "ep016",
+    "scene": 1,
+    "prompt": "A 1920s Wall Street ledger with fountain pen on a dark navy desk, cream pages, no legible invented writing",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_1.jpg"
+  },
+  {
+    "episode_id": "ep016",
+    "scene": 2,
+    "prompt": "Historic industrial workers factory floor interior with huge machinery, documentary museum reconstruction, crimson warm light, no political symbols",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_2.jpg"
+  },
+  {
+    "episode_id": "ep016",
+    "scene": 3,
+    "prompt": "Two different old political pamphlets lying apart on an archival reading table, no legible slogans no hateful imagery, navy crimson split light",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_3.jpg"
+  },
+  {
+    "episode_id": "ep016",
+    "scene": 4,
+    "prompt": "Diverse adult hands sorting neutral blank archival index cards across a library reading table, warm gold accent",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_4.jpg"
+  },
+  {
+    "episode_id": "ep017",
+    "scene": 1,
+    "prompt": "A pristine black Ford Model T displayed in industrial heritage workshop, 1920s period setting, charcoal brass light",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_1.jpg"
+  },
+  {
+    "episode_id": "ep017",
+    "scene": 2,
+    "prompt": "Macro letterpress metal type and ink roller in a vintage printing shop, industrial charcoal warm brass",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_2.jpg"
+  },
+  {
+    "episode_id": "ep017",
+    "scene": 3,
+    "prompt": "1920s small automobile showroom with classic cars and bundled unmarked newspapers near door, historically plausible reconstruction",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_3.jpg"
+  },
+  {
+    "episode_id": "ep017",
+    "scene": 4,
+    "prompt": "Folded formal letter beside fountain pen on dark wood desk, no legible invented text, brass lamp dramatic light",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_4.jpg"
+  },
+  {
+    "episode_id": "ep018",
+    "scene": 1,
+    "prompt": "World War One era military map with wooden map markers on a field desk, no readable invented labels, prussian slate olive palette",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_1.jpg"
+  },
+  {
+    "episode_id": "ep018",
+    "scene": 2,
+    "prompt": "Authentic early twentieth century field telephone and telegraph apparatus on a campaign table, olive canvas background",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_2.jpg"
+  },
+  {
+    "episode_id": "ep018",
+    "scene": 3,
+    "prompt": "Muddy empty Western Front trench landscape at dawn after fighting, no bodies no active violence, grey slate olive atmosphere",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_3.jpg"
+  },
+  {
+    "episode_id": "ep018",
+    "scene": 4,
+    "prompt": "Weathered European military memorial with poppies in foreground, avoid legible invented names, respectful documentary light",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_4.jpg"
+  },
+  {
+    "episode_id": "ep019",
+    "scene": 1,
+    "prompt": "Open nineteenth century civil registry ledger with elaborate handwritten columns, archival gloves, warm parchment sepia cyan ribbon, no legible invented names",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_1.jpg"
+  },
+  {
+    "episode_id": "ep019",
+    "scene": 2,
+    "prompt": "Macro German-language dictionary page edges with a brass magnifier, paper texture, no readable invented entries",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_2.jpg"
+  },
+  {
+    "episode_id": "ep019",
+    "scene": 3,
+    "prompt": "Quiet European municipal archive shelves with bound civil registers and card catalog drawers, cream sepia palette",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_3.jpg"
+  },
+  {
+    "episode_id": "ep019",
+    "scene": 4,
+    "prompt": "Adult researcher hands arranging anonymous old family photographs beside archive folders, no legible names, warm window light",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_4.jpg"
+  },
+  {
+    "episode_id": "ep020",
+    "scene": 1,
+    "prompt": "An entire unmarked 1930s British broadsheet newspaper laid flat on grey desk, all page edges visible, no legible fabricated headlines, amber lamp",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_1.jpg"
+  },
+  {
+    "episode_id": "ep020",
+    "scene": 2,
+    "prompt": "Macro magnifying glass over newspaper columns, physical glass refraction, newsprint grey black amber, no readable text",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_2.jpg"
+  },
+  {
+    "episode_id": "ep020",
+    "scene": 3,
+    "prompt": "1930s British newsstand bundles of newspapers on wooden table, documentary historical reconstruction, no legible fabricated headlines",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_3.jpg"
+  },
+  {
+    "episode_id": "ep020",
+    "scene": 4,
+    "prompt": "Archival researcher hands opening a full bound newspaper volume on a bright reading desk, entire page visible, grey and amber palette",
+    "source": "OpenAI image generation",
+    "kind": "AI illustrative reconstruction",
+    "file": "assets/images/scene_4.jpg"
+  }
+]

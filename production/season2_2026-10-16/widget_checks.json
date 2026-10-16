@@ -1,0 +1,62 @@
+[
+  {
+    "episode": "ep011",
+    "button": true,
+    "proof_seconds": 20,
+    "seek": true
+  },
+  {
+    "episode": "ep012",
+    "button": true,
+    "proof_seconds": 28,
+    "seek": true
+  },
+  {
+    "episode": "ep013",
+    "button": true,
+    "proof_seconds": 36,
+    "seek": true
+  },
+  {
+    "episode": "ep014",
+    "button": true,
+    "proof_seconds": 31,
+    "seek": true
+  },
+  {
+    "episode": "ep015",
+    "button": true,
+    "proof_seconds": 39,
+    "seek": true
+  },
+  {
+    "episode": "ep016",
+    "button": true,
+    "proof_seconds": 36.2,
+    "seek": true
+  },
+  {
+    "episode": "ep017",
+    "button": true,
+    "proof_seconds": 29,
+    "seek": true
+  },
+  {
+    "episode": "ep018",
+    "button": true,
+    "proof_seconds": 29,
+    "seek": true
+  },
+  {
+    "episode": "ep019",
+    "button": true,
+    "proof_seconds": 38,
+    "seek": true
+  },
+  {
+    "episode": "ep020",
+    "button": true,
+    "proof_seconds": 31,
+    "seek": true
+  }
+]

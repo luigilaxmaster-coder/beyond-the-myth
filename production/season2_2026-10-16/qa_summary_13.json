@@ -1,0 +1,132 @@
+{
+  "ep": 13,
+  "ok": false,
+  "results": {
+    "lint": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "runtime": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "layout": {
+      "ok": false,
+      "errorCount": 1,
+      "warningCount": 1
+    },
+    "motion": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "contrast": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "checked": 58,
+      "passed": 58
+    },
+    "hdr": {},
+    "snapshots": {},
+    "saved": {},
+    "_meta": {}
+  },
+  "findings": [
+    [
+      "layout",
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 0.5,
+        "selector": "div.numismatic",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 219.2,
+          "top": 1079.52,
+          "right": 747.91,
+          "bottom": 1087.69,
+          "width": 528.7,
+          "height": 8.17
+        },
+        "containerSelector": "img.p.p1",
+        "text": "Strength \u00b7 Duration \u00b7 Providence",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 219.2,
+          "y": 1079.52,
+          "width": 528.7,
+          "height": 8.17
+        },
+        "firstSeen": 0.5,
+        "lastSeen": 18,
+        "occurrences": 4,
+        "heldMs": 0,
+        "times": [
+          0.5,
+          2,
+          8,
+          18
+        ]
+      }
+    ],
+    [
+      "layout",
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "warning",
+        "time": 18,
+        "selector": "div.orbit",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": -89.48,
+          "top": 295.52,
+          "right": 1169.48,
+          "bottom": 1554.48,
+          "width": 1258.96,
+          "height": 1258.96
+        },
+        "containerSelector": "#stage",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 89.48,
+          "right": 89.48
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -89.48,
+          "y": 295.52,
+          "width": 1258.96,
+          "height": 1258.96
+        },
+        "firstSeen": 18,
+        "lastSeen": 59.966,
+        "occurrences": 6,
+        "heldMs": 0,
+        "times": [
+          18,
+          28,
+          39,
+          49,
+          57,
+          59.966
+        ]
+      }
+    ]
+  ]
+}
