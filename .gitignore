@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.venv*/
+venv/
+ENV/
+
+# Renders & Video Deliverables (hosted on Google Drive)
+**/renders/
+renders/
+*.mp4
+*.mov
+
+# HyperFrames Engine cache and artifacts
+**/.hyperframes/
+.hyperframes/
+
+# Operating System & Logs
+.DS_Store
+Thumbs.db
+*.tmp
+*.log

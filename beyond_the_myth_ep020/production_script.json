@@ -1,0 +1,75 @@
+{
+  "episode_id": "ep020",
+  "episode_num": "10",
+  "title": "The Cropped 1933 Headline: What Was on the Full Page?",
+  "hero_object": "Uncropped Full-Page Broadsheet of the London Daily Express (March 24, 1933)",
+  "hook": "They showed you a 1933 headline. Here’s what was on the rest of the page.",
+  "punchline": "Cropping out the context is just another way of lying.",
+  "visual_paradigm": "Full-Page Broadside Newsprint & Forensic Loupe (Newsprint Grey #F1F5F9, Ink Black #0F172A, Magnifier Amber #D97706)",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Maya",
+      "start": 0.25,
+      "end": 4.3,
+      "text": "They showed you a 1933 headline. Here’s what was on the rest of the page.",
+      "on_screen": "THE CROPPED 1933 HEADLINE DEBUNKED",
+      "source": "British Newspaper Archive & USHMM"
+    },
+    {
+      "id": 2,
+      "speaker": "Alex",
+      "start": 4.6,
+      "end": 14.1,
+      "text": "A frequent post shows a dramatic clipping from London’s Daily Express on March twenty-fourth, nineteen-thirty-three, screaming: 'Judea Declares War on Germany'.",
+      "on_screen": "DAILY EXPRESS · MARCH 24, 1933",
+      "source": "Daily Express Front Page Archive"
+    },
+    {
+      "id": 3,
+      "speaker": "Maya",
+      "start": 14.4,
+      "end": 23.8,
+      "text": "Conspiracy theorists claim this proves Jewish people started World War Two six years early. But look at what happens when you zoom out to the full newspaper page.",
+      "on_screen": "THE CLAIM: 'PROOF JEWS STARTED THE WAR'",
+      "source": "Historical Analysis & Media Literacy"
+    },
+    {
+      "id": 4,
+      "speaker": "Alex",
+      "start": 24.1,
+      "end": 34.6,
+      "text": "The actual article describes a proposed commercial boycott of German goods by private citizens—protesting Hitler’s newly established regime and state-sponsored violence.",
+      "on_screen": "PEACEFUL COMMERCIAL CONSUMER BOYCOTT",
+      "source": "USHMM Timeline: 1933 Boycott"
+    },
+    {
+      "id": 5,
+      "speaker": "Maya",
+      "start": 35.0,
+      "end": 44.8,
+      "text": "There was no army. No government. It was sensationalist British headline phrasing for a civilian consumer boycott against Nazi persecution.",
+      "on_screen": "NO MILITARY ACTION · SENSATIONALIST BRITISH JOURNALISM",
+      "source": "Press History & Historiography"
+    },
+    {
+      "id": 6,
+      "speaker": "Alex",
+      "start": 45.2,
+      "end": 53.6,
+      "text": "Cropping out the columns explaining a trade boycott turns historical context into disinformation. Always read the full page.",
+      "on_screen": "READ THE FULL PAGE · NEVER TRUST CROPPING",
+      "source": "Stanford Lateral Reading Framework"
+    },
+    {
+      "id": 7,
+      "speaker": "Maya",
+      "start": 54.2,
+      "end": 59.0,
+      "text": "Cropping out the context is just another way of lying.",
+      "on_screen": "CROPPING OUT CONTEXT IS JUST ANOTHER WAY OF LYING",
+      "source": "Beyond the Myth · Facts, not scapegoats"
+    }
+  ]
+}

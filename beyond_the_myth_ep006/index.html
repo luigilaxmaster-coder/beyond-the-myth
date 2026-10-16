@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond The Myth - Ep 06: The Protocols Forgery Plagiarism</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    :root {
+      --bg-dark: #0D1117;
+      --card-bg: rgba(22, 27, 34, 0.92);
+      --card-border: rgba(56, 189, 248, 0.25);
+      --accent-cyan: #56D5FF;
+      --accent-red: #FFA4A4;
+      --accent-amber: #FDE047;
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-color: var(--bg-dark);
+      font-family: var(--font-body);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #stage {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    /* Photographic Plates Layer */
+    .plate-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      transform-origin: center center;
+    }
+
+    .plate-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.38) contrast(1.18) sepia(0.2);
+    }
+
+    /* Forensic Grid Overlay */
+    .forensic-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(circle at 50% 40%, rgba(13, 17, 23, 0.2) 0%, rgba(13, 17, 23, 0.85) 75%, rgba(8, 10, 14, 0.98) 100%);
+      pointer-events: none;
+    }
+
+    /* Top Archival Header Bar */
+    .header-bar {
+      position: absolute;
+      top: 60px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 28px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 12px;
+      backdrop-filter: blur(16px);
+      z-index: 50;
+    }
+
+    .series-tag {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .series-tag::before {
+      content: 'ARCHIVE //';
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .badge-dossier {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--accent-amber);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Main Center Container */
+    .center-card-container {
+      position: absolute;
+      top: 220px;
+      left: 54px;
+      width: 972px;
+      z-index: 40;
+    }
+
+    .dossier-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      background: rgba(248, 113, 113, 0.15);
+      border: 1px solid var(--accent-red);
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent-red);
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    .main-headline {
+      font-family: var(--font-display);
+      font-size: 54px;
+      line-height: 1.18;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      margin-bottom: 26px;
+    }
+
+    .main-headline span {
+      color: var(--accent-cyan);
+    }
+
+    /* Scene 1: Stamp Banner */
+    .stamp-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 30px;
+      position: relative;
+    }
+
+    .stamp-desc {
+      font-size: 24px;
+      line-height: 1.4;
+      color: var(--text-main);
+      max-width: 650px;
+    }
+
+    .stamp-badge {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      padding: 12px 24px;
+      background: rgba(220, 38, 38, 0.9);
+      border: 2px dashed #EF4444;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 2px;
+      transform: rotate(6deg) scale(0);
+      opacity: 0;
+    }
+
+    /* Scene 3: Side-by-side Plagiarism Compare Table */
+    .comparison-grid {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      opacity: 0;
+    }
+
+    .compare-col {
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .col-header {
+      font-family: var(--font-mono);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent-amber);
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 8px;
+    }
+
+    .col-source {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .col-excerpt {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      line-height: 1.45;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.35);
+      padding: 12px;
+      border-radius: 6px;
+      border-left: 3px solid var(--accent-cyan);
+    }
+
+    .col-excerpt mark {
+      background: rgba(56, 189, 248, 0.35);
+      color: #FFFFFF;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    /* Plagiarism Match Indicator */
+    .match-banner {
+      margin-top: 18px;
+      background: rgba(10, 15, 25, 0.96);
+      border: 1px solid var(--accent-cyan);
+      border-radius: 10px;
+      padding: 14px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      opacity: 0;
+    }
+
+    /* Scene 4: 1921 Times of London Newspaper Card */
+    .times-expose-card {
+      margin-top: 26px;
+      background: rgba(15, 23, 42, 0.94);
+      border: 2px solid var(--accent-amber);
+      border-radius: 14px;
+      padding: 30px;
+      opacity: 0;
+    }
+
+    .times-header {
+      font-family: var(--font-display);
+      font-size: 26px;
+      letter-spacing: 3px;
+      color: var(--accent-amber);
+      border-bottom: 2px solid var(--accent-amber);
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .times-headline {
+      font-family: var(--font-display);
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+    }
+
+    .times-meta {
+      font-family: var(--font-mono);
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Scene 7: Final Punchline Card */
+    .punchline-card {
+      margin-top: 26px;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.96), rgba(15, 23, 42, 0.96));
+      border: 2px solid var(--accent-cyan);
+      border-radius: 18px;
+      padding: 40px;
+      opacity: 0;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .punchline-text {
+      font-family: var(--font-display);
+      font-size: 42px;
+      line-height: 1.25;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .punchline-text span {
+      color: var(--accent-cyan);
+    }
+
+    .punchline-sub {
+      font-size: 22px;
+      color: var(--accent-amber);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    /* Subtitles (Bottom) */
+    .subtitles-container {
+      position: absolute;
+      bottom: 110px;
+      left: 54px;
+      width: 972px;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .speaker-pill {
+      display: inline-block;
+      padding: 6px 18px;
+      background: var(--accent-cyan);
+      color: #0F172A;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle-text {
+      font-size: 34px;
+      line-height: 1.35;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+      background: rgba(15, 23, 42, 0.88);
+      padding: 16px 28px;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent-cyan);
+      max-width: 940px;
+    }
+
+    /* Source Citation Line */
+    .source-citation-line {
+      position: absolute;
+      bottom: 40px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 14px;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="ep006-protocols" data-width="1080" data-height="1920" data-duration="60">
+    <!-- Photographic Plates Layer -->
+    <div id="plate-1" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_1_nilus_protocols.jpg" class="plate-img" alt="Protocols 1903 Archival Document">
+    </div>
+    <div id="plate-2" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_2_maurice_joly.jpg" class="plate-img" alt="Maurice Joly 1864 Satire">
+    </div>
+    <div id="plate-3" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_3_parallel_forgery.jpg" class="plate-img" alt="Textual Comparison Evidence">
+    </div>
+    <div id="plate-4" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_4_times.jpg" class="plate-img" alt="The Times 1921 Exposé">
+    </div>
+
+    <!-- Forensic Vignette -->
+    <div class="forensic-grid" data-layout-allow-overlap="true"></div>
+
+    <!-- Header Bar -->
+    <div class="header-bar" data-layout-allow-overlap="true">
+      <div class="series-tag">HISTORICAL FORENSICS</div>
+      <div class="badge-dossier">EP 06 // ARCHIVAL PROOF</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="center-card-container" data-layout-allow-overlap="true">
+      <div class="dossier-tag">TEXTUAL PLAGIARISM EXPOSED</div>
+      <h1 class="main-headline">The Antisemitic Forgery<br>That <span>Copied Another Book</span></h1>
+
+      <!-- Scene 1: Stamp Banner -->
+      <div id="stamp-card" class="stamp-container" data-layout-allow-overlap="true">
+        <div class="stamp-desc">The supposed 1903 secret conspiracy meeting records were completely fabricated and lifted from an unrelated work.</div>
+        <div id="plagiarism-stamp" class="stamp-badge">PROVEN FORGERY</div>
+      </div>
+
+      <!-- Scene 3: Comparison Columns -->
+      <div id="compare-grid" class="comparison-grid" data-layout-allow-overlap="true">
+        <div class="compare-col">
+          <div class="col-header">ORIGINAL WORK (1864)</div>
+          <div class="col-source">Maurice Joly</div>
+          <div class="col-excerpt">
+            French political satire targeting Napoleon III. <mark>Contains identical rhetorical structure.</mark>
+          </div>
+        </div>
+        <div class="compare-col">
+          <div class="col-header">PLAGIARIZED FORGERY (1903)</div>
+          <div class="col-source">Tsarist Secret Police</div>
+          <div class="col-excerpt">
+            Russian Okhrana agent fabricated text by <mark>recycling Joly’s exact paragraphs verbatim.</mark>
+          </div>
+        </div>
+      </div>
+      <div id="match-banner" class="match-banner" data-layout-allow-overlap="true">
+        <span>OVER 40% VERBATIM TEXTUAL PARALLELS</span>
+        <span style="color: var(--accent-red);">&#9888; ZERO ORIGINALITY</span>
+      </div>
+
+      <!-- Scene 4: The Times 1921 Card -->
+      <div id="times-card" class="times-expose-card" data-layout-allow-overlap="true">
+        <div class="times-header">THE TIMES (LONDON, AUGUST 1921)</div>
+        <div class="times-headline">&ldquo;The Truth About The Protocols: A Literary Forgery&rdquo;</div>
+        <div class="times-meta">Philip Graves, foreign correspondent, definitively proved the Russian secret police plagiarized Maurice Joly’s satire page for page.</div>
+      </div>
+
+      <!-- Scene 7: Final Punchline Card -->
+      <div id="punchline-card" class="punchline-card" data-layout-allow-overlap="true">
+        <div class="punchline-text">An old lie doesn’t become true<br><span>in high definition.</span></div>
+        <div class="punchline-sub">NEW PACKAGING &ne; NEW EVIDENCE</div>
+      </div>
+    </div>
+
+    <!-- Subtitles Overlay -->
+    <div class="subtitles-container" data-layout-allow-overlap="true">
+      <div id="speaker-badge" class="speaker-pill">ALEX</div>
+      <div id="sub-line" class="subtitle-text">The supposed secret document was fake. And partly copied.</div>
+    </div>
+
+    <!-- Source Citation Footer -->
+    <div class="source-citation-line" data-layout-allow-overlap="true">
+      <span id="footer-source">United States Holocaust Memorial Museum (ushmm.org)</span>
+      <span>EP 06 / 10 &middot; 60.00S MASTER</span>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["ep006-protocols"] = tl;
+
+    // Scene 1: Plate 1 (0s - 5.21s)
+    tl.to("#plate-1", { opacity: 1, duration: 0.8, ease: "power2.out" }, 0);
+    tl.fromTo("#plate-1 img", { scale: 1.0 }, { scale: 1.08, duration: 5.2, ease: "none" }, 0);
+    tl.to("#plagiarism-stamp", { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.7)" }, 2.0);
+
+    // Subtitle 1 (0.25s - 4.86s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "The supposed secret document was fake. And partly copied.";
+      document.getElementById("footer-source").innerText = "USHMM (ushmm.org)";
+    }, null, 0.25);
+
+    // Scene 2: Plate 2 (5.21s - 13.0s)
+    tl.to("#plate-1", { opacity: 0, duration: 0.8 }, 5.21);
+    tl.to("#plate-2", { opacity: 1, duration: 0.8 }, 5.21);
+    tl.fromTo("#plate-2 img", { scale: 1.04 }, { scale: 1.12, duration: 7.8, ease: "none" }, 5.21);
+
+    // Subtitle 2 (5.21s - 12.48s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "It’s called The Protocols of the Elders of Zion. First published in nineteen-oh-three, it pretended to reveal secret Jewish plans.";
+      document.getElementById("footer-source").innerText = "Holocaust Encyclopedia";
+    }, null, 5.21);
+
+    // Scene 3: Plate 3 & Comparison Grid (13.0s - 24.5s)
+    tl.to("#plate-2", { opacity: 0, duration: 0.8 }, 13.0);
+    tl.to("#plate-3", { opacity: 1, duration: 0.8 }, 13.0);
+    tl.fromTo("#plate-3 img", { scale: 1.0 }, { scale: 1.08, duration: 11.5, ease: "none" }, 13.0);
+    tl.to("#stamp-card", { opacity: 0, y: -20, duration: 0.4 }, 13.0);
+
+    tl.fromTo("#compare-grid", 
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, 
+      13.5
+    );
+    tl.to("#match-banner", { opacity: 1, duration: 0.5 }, 15.0);
+
+    // Subtitle 3 (13.0s - 21.93s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "But those meeting records were invented. And here’s the giveaway: large sections came from an earlier French political satire that wasn’t even about Jewish people.";
+      document.getElementById("footer-source").innerText = "Maurice Joly Textual Comparison";
+    }, null, 13.0);
+
+    // Scene 4: Plate 4 & The Times (24.5s - 36.2s)
+    tl.to("#plate-3", { opacity: 0, duration: 0.8 }, 24.5);
+    tl.to("#plate-4", { opacity: 1, duration: 0.8 }, 24.5);
+    tl.fromTo("#plate-4 img", { scale: 1.05 }, { scale: 1.14, duration: 11.7, ease: "none" }, 24.5);
+    tl.to("#compare-grid", { opacity: 0, duration: 0.4 }, 24.5);
+    tl.to("#match-banner", { opacity: 0, duration: 0.4 }, 24.5);
+
+    tl.fromTo("#times-card",
+      { opacity: 0, scale: 0.95 },
+      { opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" },
+      25.0
+    );
+
+    // Subtitle 4 (24.5s - 34.08s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "In nineteen-twenty-one, The Times of London exposed the copying. The United States Holocaust Memorial Museum documents the forgery and how it kept spreading afterward.";
+      document.getElementById("footer-source").innerText = "The Times (1921) & USHMM Archive";
+    }, null, 24.5);
+
+    // Scene 5: Back to Plate 1 with historical analysis (36.2s - 47.5s)
+    tl.to("#plate-4", { opacity: 0, duration: 0.8 }, 36.2);
+    tl.to("#plate-1", { opacity: 1, duration: 0.8 }, 36.2);
+    tl.to("#times-card", { opacity: 0, duration: 0.4 }, 36.2);
+
+    // Subtitle 5 (36.2s - 46.02s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "So this wasn’t a hidden truth finally uncovered. It was a fabricated accusation dressed up as an insider document. A dramatic cover didn’t make it evidence.";
+      document.getElementById("footer-source").innerText = "Historical Source Criticism";
+    }, null, 36.2);
+
+    // Scene 6 & 7: Final Punchline (47.5s - 60.0s)
+    tl.fromTo("#punchline-card",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+      47.5
+    );
+
+    // Subtitle 6 (47.5s - 53.98s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "That matters when a post recycles the same story with new graphics. New packaging doesn’t repair false evidence.";
+      document.getElementById("footer-source").innerText = "Media History & Misinformation";
+    }, null, 47.5);
+
+    // Subtitle 7 (55.2s - 58.44s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "An old lie doesn’t become true in high definition.";
+      document.getElementById("footer-source").innerText = "Beyond the Myth · Facts, not scapegoats";
+    }, null, 55.2);
+
+    // Fade to black at 59.2s
+    tl.to("#stage", { opacity: 0, duration: 0.8, ease: "power2.in" }, 59.2);
+
+    // Driver hook
+    window.__seekFrame = (seconds) => {
+      tl.seek(seconds);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "episode_id": "ep009",
+  "episode_num": "09",
+  "title": "The Spy Case That Convicted the Wrong Man",
+  "cover_text": "CONVICTED. THEN CLEARED.",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Maya",
+      "start": 0.25,
+      "end": 3.39,
+      "text": "He was convicted as a spy. He was innocent.",
+      "on_screen": "WRONGFULLY CONVICTED \u00b7 PROVEN INNOCENT",
+      "source": "USHMM Historical Archives"
+    },
+    {
+      "id": 2,
+      "speaker": "Alex",
+      "start": 4.3,
+      "end": 12.65,
+      "text": "Meet Alfred Dreyfus, a Jewish officer in the French army. In eighteen-ninety-four, he was wrongly convicted of treason and sent to prison.",
+      "on_screen": "ALFRED DREYFUS \u00b7 1894 TREASON CONVICTION",
+      "source": "Dreyfus Affair Records"
+    },
+    {
+      "id": 3,
+      "speaker": "Maya",
+      "start": 13.0,
+      "end": 23.13,
+      "text": "The case involved secret evidence, forged documents, and anti-Jewish prejudice. His family and supporters kept challenging it. Later evidence pointed to a different officer.",
+      "on_screen": "FORGED EVIDENCE & FABRICATED FILES",
+      "source": "French Military Historical Review"
+    },
+    {
+      "id": 4,
+      "speaker": "Alex",
+      "start": 24.5,
+      "end": 35.59,
+      "text": "But correcting the case took years. Dreyfus was finally cleared in nineteen-oh-six. This wasn\u2019t just an argument in a newspaper. A real person lost years of freedom.",
+      "on_screen": "1894 \u2192 1906: FULLY EXONERATED",
+      "source": "French Cour de Cassation (1906)"
+    },
+    {
+      "id": 5,
+      "speaker": "Maya",
+      "start": 36.2,
+      "end": 44.6,
+      "text": "The lesson is not that every accusation is false. It\u2019s that someone\u2019s Jewish identity is not proof that they\u2019re disloyal. You still need reliable evidence.",
+      "on_screen": "IDENTITY IS NEVER PROOF OF DISLOYALTY",
+      "source": "Legal Evidence Standards"
+    },
+    {
+      "id": 6,
+      "speaker": "Alex",
+      "start": 47.5,
+      "end": 54.17,
+      "text": "If a case depends on prejudice instead of facts, looking confident doesn\u2019t fix it. Neither does a crowd.",
+      "on_screen": "FACTS OVER PREJUDICE & MOBS",
+      "source": "Principles of Due Process"
+    },
+    {
+      "id": 7,
+      "speaker": "Maya",
+      "start": 55.2,
+      "end": 58.97,
+      "text": "A label is not evidence. Ask what actually happened.",
+      "on_screen": "A LABEL IS NOT EVIDENCE",
+      "source": "Beyond the Myth \u00b7 Facts, not scapegoats"
+    }
+  ]
+}

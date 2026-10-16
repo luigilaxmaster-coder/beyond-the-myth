@@ -1,0 +1,75 @@
+{
+  "episode_id": "ep014",
+  "episode_num": "04",
+  "title": "The 9/11 '4,000 Absentees' Myth Erases Real People",
+  "hero_object": "Bronze Inscriptions of the National 9/11 Memorial & Museum Wall of Names",
+  "hook": "This 9/11 rumor erases real people.",
+  "punchline": "Before you repeat the rumor, remember the people it erases.",
+  "visual_paradigm": "Solemn Memorial Bronze & Forensic Verification (Graphite Black #111827, Memorial Bronze #D97706, Pure White #FFFFFF)",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Maya",
+      "start": 0.25,
+      "end": 3.8,
+      "text": "This nine-eleven rumor erases real people.",
+      "on_screen": "THIS 9/11 RUMOR ERASES REAL PEOPLE",
+      "source": "National 9/11 Memorial & Museum"
+    },
+    {
+      "id": 2,
+      "speaker": "Alex",
+      "start": 4.1,
+      "end": 13.8,
+      "text": "Within days of the September eleventh attacks, a viral story began spreading: that four thousand Jewish workers stayed home because they were secretly warned.",
+      "on_screen": "THE MYTH: 4,000 STAYED HOME WITH ADVANCE WARNING",
+      "source": "ADL Archive (October 2001 Report)"
+    },
+    {
+      "id": 3,
+      "speaker": "Maya",
+      "start": 14.1,
+      "end": 23.5,
+      "text": "Where did the number come from? A misquoted news report that four thousand Israeli citizens were in the New York metropolitan area on any given day.",
+      "on_screen": "ORIGIN: MISQUOTED CITIZEN CENSUS STATISTIC",
+      "source": "FactCheck.org & US State Dept."
+    },
+    {
+      "id": 4,
+      "speaker": "Alex",
+      "start": 23.8,
+      "end": 34.6,
+      "text": "And the claim is sickeningly false. The victims list at the World Trade Center includes hundreds of Jewish workers, traders, first responders, and visitors whose lives and deaths are documented.",
+      "on_screen": "HUNDREDS OF JEWISH VICTIMS DOCUMENTED",
+      "source": "Official 9/11 Victim Database"
+    },
+    {
+      "id": 5,
+      "speaker": "Maya",
+      "start": 35.0,
+      "end": 44.8,
+      "text": "Families held funerals. Colleagues mourned partners. A conspiracy theory took a tragedy that affected all backgrounds and tried to exploit human grief.",
+      "on_screen": "EXPLOITING TRAGEDY TO SPREAD PREJUDICE",
+      "source": "USHMM & Memorial Oral Histories"
+    },
+    {
+      "id": 6,
+      "speaker": "Alex",
+      "start": 45.2,
+      "end": 53.5,
+      "text": "Fact-checking isn’t just about debunking falsehoods. It’s about honoring the truth of innocent human lives.",
+      "on_screen": "HONORING INNOCENT HUMAN LIVES",
+      "source": "9/11 Memorial Registry"
+    },
+    {
+      "id": 7,
+      "speaker": "Maya",
+      "start": 54.1,
+      "end": 59.0,
+      "text": "Before you repeat the rumor, remember the people it erases.",
+      "on_screen": "REMEMBER THE PEOPLE IT ERASES",
+      "source": "Beyond the Myth · Facts, not scapegoats"
+    }
+  ]
+}

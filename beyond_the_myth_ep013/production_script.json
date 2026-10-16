@@ -1,0 +1,75 @@
+{
+  "episode_id": "ep013",
+  "episode_num": "03",
+  "title": "The Dollar Bill and the Great Seal of 1782",
+  "hero_object": "1782 Great Seal of the United States Original Copper Engraving Plate",
+  "hook": "You found a triangle on a dollar. You haven’t found an owner.",
+  "punchline": "Drawing a connection isn’t proving one.",
+  "visual_paradigm": "Currency Engraving Bureau & Numismatic Macro (Bureau Mint Green #064E3B, Antique Parchment #FEF3C7, Ink Black #0F172A)",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 4.1,
+      "text": "You found a triangle on a dollar. You haven’t found an owner.",
+      "on_screen": "SYMBOLS VS. OWNERSHIP PROOF",
+      "source": "Bureau of Engraving and Printing (bep.gov)"
+    },
+    {
+      "id": 2,
+      "speaker": "Maya",
+      "start": 4.4,
+      "end": 13.6,
+      "text": "Look closely at the back of a one-dollar bill. The pyramid, the Eye of Providence. For decades, posts have claimed these are secret codes proving hidden Jewish control.",
+      "on_screen": "THE CLAIM: SECRET BANKING CABAL CODES",
+      "source": "National Archives Historical Records"
+    },
+    {
+      "id": 3,
+      "speaker": "Alex",
+      "start": 13.9,
+      "end": 23.4,
+      "text": "Here is where the art actually comes from. The Continental Congress commissioned the Great Seal in seventeen-seventy-six, and officially adopted it in seventeen-eighty-two.",
+      "on_screen": "CONTINENTAL CONGRESS · ADOPTED JUNE 20, 1782",
+      "source": "Journals of the Continental Congress"
+    },
+    {
+      "id": 4,
+      "speaker": "Maya",
+      "start": 23.7,
+      "end": 34.0,
+      "text": "The design committee included Benjamin Franklin, Thomas Jefferson, and Charles Thomson. Thomson’s official report explains the pyramid stands for strength and duration. The eye represents providence.",
+      "on_screen": "OFFICIAL MEANING: STRENGTH, DURATION, PROVIDENCE",
+      "source": "Charles Thomson Report (1782)"
+    },
+    {
+      "id": 5,
+      "speaker": "Alex",
+      "start": 34.4,
+      "end": 44.5,
+      "text": "It wasn’t even added to the paper dollar until nineteen-thirty-five under Franklin Roosevelt. Anyone can doodle lines connecting arbitrary stars to draw a hexagram.",
+      "on_screen": "ADDED TO CURRENCY IN 1935 · NOT 1782",
+      "source": "U.S. Department of the Treasury"
+    },
+    {
+      "id": 6,
+      "speaker": "Maya",
+      "start": 44.9,
+      "end": 53.6,
+      "text": "Superimposing geometric lines over eighteenth-century civic art doesn’t reveal a conspiracy. It reveals active imagination.",
+      "on_screen": "SUPERIMPOSING LINES ≠ REVEALING EVIDENCE",
+      "source": "BEP Historical Currency Overview"
+    },
+    {
+      "id": 7,
+      "speaker": "Alex",
+      "start": 54.3,
+      "end": 59.0,
+      "text": "Drawing a connection isn’t proving one.",
+      "on_screen": "DRAWING A CONNECTION ISN'T PROVING ONE",
+      "source": "Beyond the Myth · Facts, not scapegoats"
+    }
+  ]
+}

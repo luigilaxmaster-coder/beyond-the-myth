@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0">
+  <title>Cinematic Explainer Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ink-black: #0E0B12;
+      --ink-dark: #1A1624;
+      --ink-muted: #3D374D;
+      --paper-cream: #FFF9F5;
+      --gold-accent: #E5A93C;
+      --gold-bright: #F5C542;
+      --teal-accent: #1D8A78;
+      --rust-accent: #C24128;
+      --coral-accent: #E0533C;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-display: 'Cinzel', serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: var(--ink-black);
+      font-family: var(--font-sans);
+      color: #FFFFFF;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: var(--ink-black);
+    }
+
+    /* Photographic Background Plates */
+    .plate-container {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .plate-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transform-origin: center center;
+    }
+
+    /* Single Global Theatrical Spotlight */
+    .theatrical-spotlight {
+      position: absolute;
+      top: -60px;
+      left: 140px;
+      width: 800px;
+      height: 2040px;
+      background: linear-gradient(180deg, rgba(245, 197, 66, 0.16) 0%, rgba(245, 197, 66, 0.05) 50%, rgba(0,0,0,0) 100%);
+      clip-path: polygon(32% 0%, 68% 0%, 96% 100%, 4% 100%);
+      pointer-events: none;
+      z-index: 5;
+      mix-blend-mode: screen;
+    }
+
+    /* Single Global Dark Ambient Vignette */
+    .global-vignette {
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 160px rgba(0, 0, 0, 0.75), inset 0 -180px 140px rgba(10, 8, 15, 0.9);
+      pointer-events: none;
+      z-index: 6;
+    }
+
+    /* Persistent Top Show Header (Centered Brand Pill - No Episode Badge) */
+    .show-header {
+      position: absolute;
+      top: 48px;
+      left: 60px;
+      right: 60px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+
+    .brand-pill {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(18, 15, 24, 0.95);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      border-radius: 40px;
+      padding: 10px 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+
+    .pulse-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--gold-accent);
+      box-shadow: 0 0 12px var(--gold-accent);
+    }
+
+    .brand-name {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      color: rgba(255, 255, 255, 0.75);
+      text-transform: uppercase;
+      border-left: 1.5px solid rgba(255, 255, 255, 0.3);
+      padding-left: 14px;
+      margin-left: 4px;
+    }
+
+    /* Scene Eyebrow Banner */
+    .scene-eyebrow {
+      position: absolute;
+      top: 140px;
+      left: 60px;
+      right: 60px;
+      z-index: 45;
+      display: flex;
+      justify-content: center;
+    }
+
+    .eyebrow-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(14, 11, 18, 0.92);
+      border: 2px solid var(--gold-accent);
+      border-radius: 30px;
+      padding: 8px 26px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    }
+
+    .eyebrow-icon {
+      font-size: 18px;
+      color: var(--gold-bright);
+    }
+
+    .eyebrow-text {
+      font-family: var(--font-mono);
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+
+    /* Scene Viewports */
+    .scene-viewport {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      display: none;
+    }
+
+    .scene-content {
+      position: absolute;
+      top: 240px;
+      left: 60px;
+      right: 60px;
+      bottom: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+    }
+
+    /* Persistent Subtitles & Sources Layer */
+    .subtitles-container {
+      position: absolute;
+      bottom: 60px;
+      left: 60px;
+      right: 60px;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .subtitles-card {
+      background: rgba(14, 11, 18, 0.96);
+      border: 2.5px solid rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      padding: 24px 32px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .subtitles-text {
+      font-size: 32px;
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #FFFFFF;
+    }
+
+    .hl-gold { color: var(--gold-bright); font-weight: 800; }
+    .hl-teal { color: #4EE0C8; font-weight: 800; }
+    .hl-coral { color: #FF7B60; font-weight: 800; }
+
+    .source-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: center;
+      background: rgba(18, 15, 24, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 14px;
+      padding: 6px 16px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+    }
+
+    .source-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold-accent);
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-layout-allow-overflow="true">
+    <!-- Single Theatrical Spotlight & Dark Vignette -->
+    <div class="theatrical-spotlight" data-layout-allow-overlap="true"></div>
+    <div class="global-vignette" data-layout-allow-overlap="true"></div>
+
+    <!-- Centered Brand Header (Clean, No Episode Badge) -->
+    <header class="show-header" data-layout-allow-overlap="true">
+      <div class="brand-pill">
+        <div class="pulse-dot"></div>
+        <span class="brand-name">Beyond The Myth</span>
+        <span class="brand-tagline">Civic Knowledge · Evidence Over Rumor</span>
+      </div>
+    </header>
+
+    <!-- Eyebrow Category Banner -->
+    <div class="scene-eyebrow" data-layout-allow-overlap="true">
+      <div class="eyebrow-chip" id="eyebrow-chip">
+        <span class="eyebrow-icon" id="eyebrow-icon">✦</span>
+        <span class="eyebrow-text" id="eyebrow-text">TOPIC HIGHLIGHT</span>
+      </div>
+    </div>
+
+    <!-- Scene Viewports (Populate per episode) -->
+    <section class="scene-viewport" id="scene-1" data-layout-allow-overlap="true">
+      <div class="plate-container">
+        <img class="plate-img" id="plate-1" src="assets/images/scene_1.jpg" alt="Scene 1 Plate">
+      </div>
+      <div class="scene-content">
+        <!-- Editorial Tactical Card Here -->
+      </div>
+    </section>
+
+    <!-- Subtitles & Source Provenance -->
+    <footer class="subtitles-container" data-layout-allow-overlap="true">
+      <div class="subtitles-card">
+        <p class="subtitles-text" id="subtitles-text">Narration line goes here with <span class="hl-gold">highlights</span>.</p>
+      </div>
+      <div class="source-tag">
+        <span class="source-bullet"></span>
+        <span id="source-text">SOURCE CITATION</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // HyperFrames Composition Timeline Registration
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines["main"] = tl;
+
+    // Timeline cues definition
+    // Register scene transitions, slow plate zooms, and card reveals here
+  </script>
+</body>
+</html>

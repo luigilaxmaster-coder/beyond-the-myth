@@ -1,0 +1,72 @@
+{
+  "episode_id": "ep004",
+  "episode_num": "04",
+  "title": "A List of CEOs Is Not an Ownership Map",
+  "cover_text": "NAMES AREN\u2019T A CONTROL MAP",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 3.49,
+      "text": "A list of CEOs is not an ownership map.",
+      "on_screen": "A LIST OF NAMES \u2260 OWNERSHIP MAP",
+      "source": "SEC EDGAR Disclosures"
+    },
+    {
+      "id": 2,
+      "speaker": "Maya",
+      "start": 4.21,
+      "end": 10.31,
+      "text": "Picture a post showing media executives with one thing in common. Then it jumps to a claim about an entire community.",
+      "on_screen": "THE JUMP FROM NAMES TO CONSPIRACY",
+      "source": "Corporate Governance Principles"
+    },
+    {
+      "id": 3,
+      "speaker": "Alex",
+      "start": 12.82,
+      "end": 21.43,
+      "text": "Hold on. Even a completely accurate list would not show who owns the shares, who has voting power, or who made a particular editorial decision.",
+      "on_screen": "SHARES \u00b7 VOTING RIGHTS \u00b7 DECISIONS",
+      "source": "SEC Form 10-K & DEF 14A"
+    },
+    {
+      "id": 4,
+      "speaker": "Maya",
+      "start": 24.23,
+      "end": 33.47,
+      "text": "For a public company, start with official filings. Look for major shareholders, voting rights, and the board. Then investigate the decision you\u2019re actually questioning.",
+      "on_screen": "OFFICIAL FILINGS: BOARD & SHAREHOLDERS",
+      "source": "SEC Investor.gov Guide"
+    },
+    {
+      "id": 5,
+      "speaker": "Alex",
+      "start": 35.84,
+      "end": 46.21,
+      "text": "Yes, a business can have conflicts of interest. Yes, powerful people deserve scrutiny. But being Jewish is not evidence of collusion with other Jewish people.",
+      "on_screen": "SCRUTINIZE POWER \u00b7 NOT IDENTITY",
+      "source": "Public Corporate Accountability"
+    },
+    {
+      "id": 6,
+      "speaker": "Maya",
+      "start": 47.05,
+      "end": 53.6,
+      "text": "An identity match isn\u2019t a paper trail. A real investigation connects actions with evidence, not just names.",
+      "on_screen": "CONNECT ACTIONS WITH EVIDENCE",
+      "source": "Investigative Methodology"
+    },
+    {
+      "id": 7,
+      "speaker": "Alex",
+      "start": 54.66,
+      "end": 59.0,
+      "text": "Investigate the company. Don\u2019t turn a community into one.",
+      "on_screen": "INVESTIGATE THE COMPANY \u00b7 NOT A COMMUNITY",
+      "source": "Beyond the Myth \u00b7 Facts, not scapegoats"
+    }
+  ]
+}

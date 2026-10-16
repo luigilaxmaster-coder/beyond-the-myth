@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "exitCode": 0,
+  "contrast": {
+    "passed": 48,
+    "checked": 48
+  },
+  "output": "\u00e2\u2014\u2020  Checking beyond_the_myth_ep014\n\nLint\n  \u00e2\u2014\u2021 0 errors, 0 warnings\n\nRuntime\n  \u00e2\u2014\u2021 0 errors, 0 warnings\n\nLayout\n  \u00e2\u2014\u2021 0 issues across 9 sample(s)\n\nMotion\n  \u00e2\u2014\u2021 0 errors, 0 warnings\n\nContrast\n  \u00e2\u2014\u2021 48/48 text checks pass WCAG AA\n\nSnapshots\n  \u00e2\u2014\u2021 disabled\n\n\u00e2\u2014\u2021  Check passed\nReport: C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep014\\.hyperframes\\artifacts\\checks\\b3fad510-c712-4611-8d2e-3d39c4a23e38.json\nRevision: ba79d220-7391-40d7-8d52-650d2a594f52 (recorded-revision)\n\n[hyperframes] browserGpuMode probe \u00e2\u2020\u2019 hardware (WebGL renderer vendor=\"Google Inc. (NVIDIA)\" renderer=\"ANGLE (NVIDIA, NVIDIA GeForce RTX 3050 (0x00002507) Direct3D11 vs_5_0 ps_5_0, D3D11)\")\n"
+}

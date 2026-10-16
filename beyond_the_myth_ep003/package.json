@@ -1,0 +1,8 @@
+{
+  "name": "beyond_the_myth_ep003",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "hyperframes": "0.8.152"
+  }
+}

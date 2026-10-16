@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond The Myth - Ep 08: The Catholic Church and Nostra Aetate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    :root {
+      --bg-dark: #0D080A;
+      --card-bg: rgba(35, 15, 20, 0.92);
+      --card-border: rgba(245, 158, 11, 0.35);
+      --accent-gold: #F59E0B;
+      --accent-gold-light: #FDE68A;
+      --accent-cardinal: #DC2626;
+      --text-main: #FBF7F0;
+      --text-muted: #D1C5B8;
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-color: var(--bg-dark);
+      font-family: var(--font-body);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #stage {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    /* Photographic Plates Layer */
+    .plate-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      transform-origin: center center;
+    }
+
+    .plate-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.38) contrast(1.18) sepia(0.25);
+    }
+
+    /* Roman Basilica Vignette */
+    .basilica-vignette {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(circle at 50% 38%, rgba(13, 8, 10, 0.2) 0%, rgba(13, 8, 10, 0.85) 75%, rgba(6, 4, 5, 0.98) 100%);
+      pointer-events: none;
+    }
+
+    /* Top Papal Header Bar */
+    .header-bar {
+      position: absolute;
+      top: 60px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 28px;
+      background: rgba(30, 12, 17, 0.88);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 12px;
+      backdrop-filter: blur(16px);
+      z-index: 50;
+    }
+
+    .series-tag {
+      font-family: var(--font-display);
+      font-size: 19px;
+      letter-spacing: 2.5px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .series-tag::before {
+      content: '✠';
+      color: var(--accent-gold);
+      font-size: 22px;
+    }
+
+    .topic-badge {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--accent-gold-light);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Center Container */
+    .center-card-container {
+      position: absolute;
+      top: 220px;
+      left: 54px;
+      width: 972px;
+      z-index: 40;
+    }
+
+    .papal-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--accent-gold);
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    .main-headline {
+      font-family: var(--font-display);
+      font-size: 56px;
+      line-height: 1.16;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      margin-bottom: 26px;
+    }
+
+    .main-headline span {
+      color: var(--accent-gold);
+    }
+
+    /* Scene 1: Rejection Banner */
+    .decree-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .decree-text {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--text-main);
+      max-width: 650px;
+    }
+
+    .conciliar-seal {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      padding: 12px 24px;
+      background: rgba(185, 28, 28, 0.9);
+      border: 2px solid #EF4444;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 2px;
+      transform: rotate(4deg) scale(0);
+      opacity: 0;
+    }
+
+    /* Scene 2: Conciliar Vote Tally Card */
+    .vote-card {
+      margin-top: 26px;
+      background: rgba(28, 12, 16, 0.95);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      opacity: 0;
+    }
+
+    .vote-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .vote-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    .vote-date {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+
+    .vote-row {
+      margin-bottom: 18px;
+    }
+
+    .vote-label-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .vote-track {
+      width: 100%;
+      height: 22px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 11px;
+      overflow: hidden;
+      padding: 2px;
+    }
+
+    .vote-fill {
+      height: 100%;
+      border-radius: 9px;
+      width: 0%;
+      background: linear-gradient(90deg, #D97706, #F59E0B);
+    }
+
+    /* Scene 3: Latin Text Excerpt Card */
+    .excerpt-card {
+      margin-top: 26px;
+      background: rgba(25, 10, 14, 0.96);
+      border: 2px solid var(--accent-gold);
+      border-radius: 16px;
+      padding: 34px;
+      opacity: 0;
+    }
+
+    .excerpt-latin {
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: var(--accent-gold);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .excerpt-quote {
+      font-size: 24px;
+      line-height: 1.45;
+      color: #FFFFFF;
+      font-weight: 600;
+      border-left: 4px solid var(--accent-gold);
+      padding-left: 18px;
+      margin-bottom: 16px;
+    }
+
+    .excerpt-citation {
+      font-family: var(--font-mono);
+      font-size: 17px;
+      color: var(--text-muted);
+    }
+
+    /* Scene 7: Solemn Outro Card */
+    .outro-card {
+      margin-top: 26px;
+      background: linear-gradient(135deg, rgba(42, 16, 22, 0.98), rgba(20, 8, 11, 0.98));
+      border: 2px solid var(--accent-gold);
+      border-radius: 18px;
+      padding: 40px;
+      opacity: 0;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .outro-title {
+      font-family: var(--font-display);
+      font-size: 40px;
+      line-height: 1.25;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+    }
+
+    .outro-title span {
+      color: var(--accent-gold);
+    }
+
+    .outro-sub {
+      font-size: 22px;
+      color: var(--accent-gold-light);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    /* Subtitles (Bottom) */
+    .subtitles-container {
+      position: absolute;
+      bottom: 110px;
+      left: 54px;
+      width: 972px;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .speaker-pill {
+      display: inline-block;
+      padding: 6px 18px;
+      background: var(--accent-gold);
+      color: #0D080A;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle-text {
+      font-size: 34px;
+      line-height: 1.35;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+      background: rgba(20, 8, 11, 0.88);
+      padding: 16px 28px;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent-gold);
+      max-width: 940px;
+    }
+
+    /* Source Citation Line */
+    .source-citation-line {
+      position: absolute;
+      bottom: 40px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 14px;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="ep008-nostra" data-width="1080" data-height="1920" data-duration="60">
+    <!-- Photographic Plates Layer -->
+    <div id="plate-1" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_1_vatican_council.jpg" class="plate-img" alt="Second Vatican Council 1965">
+    </div>
+    <div id="plate-2" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_2_stpeters_interior.jpg" class="plate-img" alt="St Peters Basilica Interior">
+    </div>
+    <div id="plate-3" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_3_pope_paul_vi.jpg" class="plate-img" alt="Pope Paul VI Promulgation">
+    </div>
+    <div id="plate-4" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_4_vatican_archives.jpg" class="plate-img" alt="Vatican Archives Nostra Aetate">
+    </div>
+
+    <!-- Vignette -->
+    <div class="basilica-vignette" data-layout-allow-overlap="true"></div>
+
+    <!-- Header Bar -->
+    <div class="header-bar" data-layout-allow-overlap="true">
+      <div class="series-tag">SACROSANCTUM CONCILIUM</div>
+      <div class="topic-badge">EP 08 // OFFICIAL DECREE</div>
+    </div>
+
+    <!-- Center Container -->
+    <div class="center-card-container" data-layout-allow-overlap="true">
+      <div class="papal-tag">SECOND VATICAN COUNCIL (1965)</div>
+      <h1 class="main-headline">The Catholic Document That<br><span>Rejects Collective Blame</span></h1>
+
+      <!-- Scene 1: Initial Decree -->
+      <div id="decree-box" class="decree-box" data-layout-allow-overlap="true">
+        <div class="decree-text">The Catholic Church formally and authoritative repudiates blaming the Jewish people for Jesus’s death.</div>
+        <div id="conciliar-seal" class="conciliar-seal">OFFICIAL TEACHING</div>
+      </div>
+
+      <!-- Scene 2: Conciliar Vote Tally Card -->
+      <div id="vote-card" class="vote-card" data-layout-allow-overlap="true">
+        <div class="vote-header">
+          <div class="vote-title">COUNCIL VOTE ON NOSTRA AETATE</div>
+          <div class="vote-date">OCTOBER 28, 1965</div>
+        </div>
+        <div class="vote-row">
+          <div class="vote-label-row">
+            <span>In Favor (Placet)</span>
+            <span style="color: var(--accent-gold); font-weight:700;">2,221 (96.2%)</span>
+          </div>
+          <div class="vote-track">
+            <div id="vote-fill" class="vote-fill"></div>
+          </div>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 16px; color: var(--text-muted); display:flex; justify-content:space-between;">
+          <span>Opposed (Non Placet): 88</span>
+          <span style="color: var(--accent-gold-light);">Overwhelming Conciliar Mandate</span>
+        </div>
+      </div>
+
+      <!-- Scene 3: Latin Text Excerpt Card -->
+      <div id="excerpt-card" class="excerpt-card" data-layout-allow-overlap="true">
+        <div class="excerpt-latin">Nostra Aetate &middot; Section 4</div>
+        <div class="excerpt-quote">&ldquo;What happened in His passion cannot be charged against all the Jews, without distinction, then alive, nor against the Jews of today.&rdquo;</div>
+        <div class="excerpt-citation">Vatican II Conciliar Declaration &middot; Vatican.va</div>
+      </div>
+
+      <!-- Scene 7: Solemn Outro Card -->
+      <div id="outro-card" class="outro-card" data-layout-allow-overlap="true">
+        <div class="outro-title">You don’t inherit guilt<br><span>from a stranger’s history.</span></div>
+        <div class="outro-sub">CHECK THE ORIGINAL DOCUMENT &middot; NOSTRA AETATE (1965)</div>
+      </div>
+    </div>
+
+    <!-- Subtitles Overlay -->
+    <div class="subtitles-container" data-layout-allow-overlap="true">
+      <div id="speaker-badge" class="speaker-pill">ALEX</div>
+      <div id="sub-line" class="subtitle-text">The Catholic Church rejects blaming all Jews for Jesus’s death.</div>
+    </div>
+
+    <!-- Footer Source Citation -->
+    <div class="source-citation-line" data-layout-allow-overlap="true">
+      <span id="footer-source">Vatican II (vatican.va)</span>
+      <span>EP 08 / 10 &middot; 60.00S MASTER</span>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["ep008-nostra"] = tl;
+
+    // Scene 1: Plate 1 (0s - 4.66s)
+    tl.to("#plate-1", { opacity: 1, duration: 0.8, ease: "power2.out" }, 0);
+    tl.fromTo("#plate-1 img", { scale: 1.0 }, { scale: 1.08, duration: 4.7, ease: "none" }, 0);
+    tl.to("#conciliar-seal", { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.7)" }, 2.0);
+
+    // Subtitle 1 (0.25s - 4.31s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "The Catholic Church rejects blaming all Jews for Jesus’s death.";
+      document.getElementById("footer-source").innerText = "Vatican II (vatican.va)";
+    }, null, 0.25);
+
+    // Scene 2: Plate 2 & Vote Card (4.66s - 14.94s)
+    tl.to("#plate-1", { opacity: 0, duration: 0.8 }, 4.66);
+    tl.to("#plate-2", { opacity: 1, duration: 0.8 }, 4.66);
+    tl.fromTo("#plate-2 img", { scale: 1.04 }, { scale: 1.13, duration: 10.3, ease: "none" }, 4.66);
+    tl.to("#decree-box", { opacity: 0, y: -20, duration: 0.4 }, 4.66);
+
+    tl.fromTo("#vote-card",
+      { opacity: 0, y: 25 },
+      { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+      5.2
+    );
+    tl.fromTo("#vote-fill", { width: "0%" }, { width: "96.2%", duration: 1.5, ease: "power2.out" }, 5.8);
+
+    // Subtitle 2 (4.66s - 14.59s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "There’s an official document: Nostra aetate, issued in nineteen-sixty-five. Its fourth section directly addresses that collective accusation, instead of leaving it to rumor.";
+      document.getElementById("footer-source").innerText = "Second Vatican Council Declaration";
+    }, null, 4.66);
+
+    // Scene 3: Plate 3 & Excerpt Card (14.94s - 24.89s)
+    tl.to("#plate-2", { opacity: 0, duration: 0.8 }, 14.94);
+    tl.to("#plate-3", { opacity: 1, duration: 0.8 }, 14.94);
+    tl.fromTo("#plate-3 img", { scale: 1.0 }, { scale: 1.08, duration: 10.0, ease: "none" }, 14.94);
+    tl.to("#vote-card", { opacity: 0, duration: 0.4 }, 14.94);
+
+    tl.fromTo("#excerpt-card",
+      { opacity: 0, scale: 0.95 },
+      { opacity: 1, scale: 1, duration: 0.7, ease: "power2.out" },
+      15.4
+    );
+
+    // Subtitle 3 (14.94s - 24.54s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "It says Jesus’s suffering cannot be charged indiscriminately to all Jewish people alive then, or to Jewish people today. It also condemns antisemitism.";
+      document.getElementById("footer-source").innerText = "Nostra Aetate, n. 4";
+    }, null, 14.94);
+
+    // Scene 4: Plate 4 (24.89s - 36.2s)
+    tl.to("#plate-3", { opacity: 0, duration: 0.8 }, 24.89);
+    tl.to("#plate-4", { opacity: 1, duration: 0.8 }, 24.89);
+    tl.fromTo("#plate-4 img", { scale: 1.05 }, { scale: 1.14, duration: 11.3, ease: "none" }, 24.89);
+
+    // Subtitle 4 (24.89s - 34.32s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "That doesn’t erase the harm the accusation caused. And one declaration didn’t make prejudice disappear. But it matters when someone presents collective blame as Catholic teaching.";
+      document.getElementById("footer-source").innerText = "Historical Theology Documentation";
+    }, null, 24.89);
+
+    // Scene 5: Back to Plate 1 with theology debate vs group guilt (36.2s - 47.5s)
+    tl.to("#plate-4", { opacity: 0, duration: 0.8 }, 36.2);
+    tl.to("#plate-1", { opacity: 1, duration: 0.8 }, 36.2);
+    tl.to("#excerpt-card", { opacity: 0, duration: 0.4 }, 36.2);
+
+    // Subtitle 5 (36.2s - 45.70s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "You can discuss religious texts and disagree about theology. That is different from making people guilty because they belong to a community, especially generations later.";
+      document.getElementById("footer-source").innerText = "Interfaith Hermeneutics";
+    }, null, 36.2);
+
+    // Scene 6 & 7: Outro Finale (47.5s - 60.00s)
+    tl.fromTo("#outro-card",
+      { opacity: 0, y: 25 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+      47.5
+    );
+
+    // Subtitle 6 (47.5s - 52.30s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "So check what the document actually says, not a comment claiming to speak for an entire faith.";
+      document.getElementById("footer-source").innerText = "Vatican Archive Direct Record";
+    }, null, 47.5);
+
+    // Subtitle 7 (55.2s - 58.22s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "You don’t inherit guilt from a stranger’s history.";
+      document.getElementById("footer-source").innerText = "Beyond the Myth · Facts, not scapegoats";
+    }, null, 55.2);
+
+    // Fade to black
+    tl.to("#stage", { opacity: 0, duration: 0.7, ease: "power2.in" }, 59.3);
+
+    // Driver hook
+    window.__seekFrame = (seconds) => {
+      tl.seek(seconds);
+    };
+  </script>
+</body>
+</html>

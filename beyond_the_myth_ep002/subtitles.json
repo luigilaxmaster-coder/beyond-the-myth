@@ -1,0 +1,72 @@
+{
+  "episode_id": "ep002",
+  "episode_num": "02",
+  "title": "A Real Screenshot Can Still Mislead You",
+  "cover_text": "REAL IMAGE. MISSING CONTEXT.",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 3.71,
+      "text": "A screenshot can be real\u2014and still mislead you.",
+      "on_screen": "REAL SCREENSHOT \u2260 WHOLE STORY",
+      "source": "Digital Inquiry Group"
+    },
+    {
+      "id": 2,
+      "speaker": "Maya",
+      "start": 4.3,
+      "end": 10.8,
+      "text": "Try this made-up example. Crop a sentence after \u201cI agree,\u201d and hide the part that says \u201cwith neither claim.\u201d",
+      "on_screen": "DEMO: CROPPING CHANGES MEANING",
+      "source": "Lateral Reading Methods"
+    },
+    {
+      "id": 3,
+      "speaker": "Alex",
+      "start": 13.0,
+      "end": 21.98,
+      "text": "Same words. Different meaning. Now imagine a post accusing Jewish people of something, using one cropped quote as the whole argument.",
+      "on_screen": "ONE CROPPED QUOTE \u2260 PROOF",
+      "source": "Harvard Misinformation Review"
+    },
+    {
+      "id": 4,
+      "speaker": "Maya",
+      "start": 24.5,
+      "end": 33.86,
+      "text": "Before sharing it, open the original. Who said it? When? What came before and after? Are we seeing a quote, a translation, or somebody\u2019s caption?",
+      "on_screen": "CHECK: WHO \u00b7 WHEN \u00b7 CONTEXT",
+      "source": "Digital Media Literacy Standards"
+    },
+    {
+      "id": 5,
+      "speaker": "Alex",
+      "start": 36.2,
+      "end": 44.22,
+      "text": "Then check an independent source. And even if one person really said something awful, that does not make an entire community responsible.",
+      "on_screen": "INDIVIDUAL ACTIONS \u2260 COLLECTIVE GUILT",
+      "source": "Principles of Evidence & Accountability"
+    },
+    {
+      "id": 6,
+      "speaker": "Maya",
+      "start": 47.5,
+      "end": 53.02,
+      "text": "Context isn\u2019t an excuse. It\u2019s how you figure out what actually happened, and who actually did it.",
+      "on_screen": "CONTEXT REVEALS WHAT HAPPENED",
+      "source": "Digital Inquiry Group"
+    },
+    {
+      "id": 7,
+      "speaker": "Alex",
+      "start": 55.2,
+      "end": 57.79,
+      "text": "Zoom out before you call it proof.",
+      "on_screen": "ZOOM OUT BEFORE YOU CALL IT PROOF",
+      "source": "Beyond the Myth \u00b7 Facts, not scapegoats"
+    }
+  ]
+}

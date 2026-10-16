@@ -1,0 +1,75 @@
+{
+  "episode_id": "ep018",
+  "episode_num": "08",
+  "title": "The 'Stab in the Back' Myth: Blaming Defeat on Others",
+  "hero_object": "German General Staff Strategic Retreat Map (Western Front, Autumn 1918)",
+  "hook": "They lost the war. Then came a story blaming someone else.",
+  "punchline": "A scapegoat can explain away a failure. It can’t change the facts.",
+  "visual_paradigm": "WWI General Staff Cartography & Imperial Telegrams (Prussian Slate #1E293B, Field Olive #365314, Carmine Red #DC2626)",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Maya",
+      "start": 0.25,
+      "end": 4.2,
+      "text": "They lost the war. Then came a story blaming someone else.",
+      "on_screen": "MILITARY DEFEAT VS. CONSPIRACY MYTH",
+      "source": "USHMM Holocaust Encyclopedia"
+    },
+    {
+      "id": 2,
+      "speaker": "Alex",
+      "start": 4.5,
+      "end": 13.9,
+      "text": "In November nineteen-eighteen, Germany surrendered in World War One. Its armies were retreating, allies had collapsed, and frontlines were out of reserves.",
+      "on_screen": "NOVEMBER 1918: MILITARY EXHAUSTION",
+      "source": "German Military Archives (Bundesarchiv)"
+    },
+    {
+      "id": 3,
+      "speaker": "Maya",
+      "start": 14.2,
+      "end": 23.6,
+      "text": "General Ludendorff had told the Kaiser two months earlier that military victory was impossible. But after the armistice, he and other generals invented an excuse.",
+      "on_screen": "LUDENDORFF DEMANDED ARMISTICE IN SEPT 1918",
+      "source": "Imperial War Cabinet Transcripts"
+    },
+    {
+      "id": 4,
+      "speaker": "Alex",
+      "start": 23.9,
+      "end": 34.6,
+      "text": "The Dolchstoßlegende: the stab-in-the-back myth. They claimed the army was undefeated in the field and betrayed only by traitors, socialists, and Jewish citizens at home.",
+      "on_screen": "THE 'STAB-IN-THE-BACK' (DOLCHSTOSSLEGENDE)",
+      "source": "Weimar Parliamentary Inquiry (1920s)"
+    },
+    {
+      "id": 5,
+      "speaker": "Maya",
+      "start": 35.0,
+      "end": 44.8,
+      "text": "It was completely false. Nearly one hundred thousand Jewish Germans served bravely in the German army, and twelve thousand died for their country.",
+      "on_screen": "100,000 JEWISH SOLDIERS SERVED · 12,000 DIED",
+      "source": "German War Ministry Census (Judenzählung)"
+    },
+    {
+      "id": 6,
+      "speaker": "Alex",
+      "start": 45.2,
+      "end": 53.6,
+      "text": "The generals invented a myth to protect their military reputations, with catastrophic consequences for European history.",
+      "on_screen": "GENERALS INVENTED A MYTH TO PROTECT PRIDE",
+      "source": "USHMM Timeline of Events"
+    },
+    {
+      "id": 7,
+      "speaker": "Maya",
+      "start": 54.2,
+      "end": 59.0,
+      "text": "A scapegoat can explain away a failure. It can’t change the facts.",
+      "on_screen": "A SCAPEGOAT CANNOT CHANGE FACTS",
+      "source": "Beyond the Myth · Facts, not scapegoats"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "episode_id": "ep007",
+  "episode_num": "07",
+  "title": "Criticize the Policy. Don\u2019t Blame Your Classmate.",
+  "cover_text": "POLICY \u2260 COLLECTIVE GUILT",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Maya",
+      "start": 0.25,
+      "end": 3.39,
+      "text": "Your Jewish classmate is not a government press office.",
+      "on_screen": "A CLASSMATE IS NOT A GOVERNMENT",
+      "source": "Civic Dialogue Standards"
+    },
+    {
+      "id": 2,
+      "speaker": "Alex",
+      "start": 4.21,
+      "end": 15.65,
+      "text": "Criticizing the Israeli government is not automatically antisemitic. Policies can be investigated, challenged, and protested. That\u2019s not the same as blaming Jewish people collectively.",
+      "on_screen": "POLICY CRITICISM \u2260 COLLECTIVE BLAME",
+      "source": "IHRA & Jerusalem Declaration"
+    },
+    {
+      "id": 3,
+      "speaker": "Maya",
+      "start": 15.91,
+      "end": 25.8,
+      "text": "Here\u2019s the distinction: \u201cThis policy causes harm\u201d identifies something to examine. \u201cYou\u2019re Jewish, so you\u2019re responsible\u201d assigns guilt from identity. Those are different claims.",
+      "on_screen": "EXAMINE POLICIES \u00b7 REJECT IDENTITY GUILT",
+      "source": "Jerusalem Declaration on Antisemitism"
+    },
+    {
+      "id": 4,
+      "speaker": "Alex",
+      "start": 26.05,
+      "end": 37.02,
+      "text": "You can ask anyone about their views. But being Jewish doesn\u2019t automatically make someone answerable for another person\u2019s decisions. And Jewish people don\u2019t all share one political opinion.",
+      "on_screen": "DIVERSE VIEWS \u00b7 INDIVIDUAL OPINIONS",
+      "source": "Pew Research Center"
+    },
+    {
+      "id": 5,
+      "speaker": "Maya",
+      "start": 37.28,
+      "end": 45.7,
+      "text": "The same principle protects a Palestinian classmate from being blamed for an armed group. People are responsible for their own actions, not somebody else\u2019s label.",
+      "on_screen": "EQUAL PRINCIPLE: RESPONSIBLE FOR ACTIONS",
+      "source": "Universal Human Rights Principle"
+    },
+    {
+      "id": 6,
+      "speaker": "Alex",
+      "start": 47.03,
+      "end": 55.07,
+      "text": "Be specific. Name the policy, the decision-maker, and the evidence. Keep the criticism attached to what happened.",
+      "on_screen": "NAME POLICY \u00b7 DECISION-MAKER \u00b7 EVIDENCE",
+      "source": "Critical Thinking & Public Reasoning"
+    },
+    {
+      "id": 7,
+      "speaker": "Maya",
+      "start": 55.33,
+      "end": 59.0,
+      "text": "Strong criticism needs accuracy. Not collective blame.",
+      "on_screen": "STRONG CRITICISM NEEDS ACCURACY",
+      "source": "Beyond the Myth \u00b7 Facts, not scapegoats"
+    }
+  ]
+}

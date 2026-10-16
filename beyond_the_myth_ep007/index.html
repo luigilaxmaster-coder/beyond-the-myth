@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond The Myth - Ep 07: Policy Critique vs Classmate Scapegoating</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    :root {
+      --bg-dark: #070E1A;
+      --card-bg: rgba(15, 27, 48, 0.92);
+      --card-border: rgba(56, 189, 248, 0.28);
+      --accent-cyan: #38BDF8;
+      --accent-emerald: #34D399;
+      --accent-coral: #F87171;
+      --accent-amber: #FDE047;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --font-display: 'Outfit', sans-serif;
+      --font-sub: 'Space Grotesk', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-color: var(--bg-dark);
+      font-family: var(--font-display);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #stage {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    /* Photographic Plates Layer */
+    .plate-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      transform-origin: center center;
+    }
+
+    .plate-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.4) contrast(1.15) saturate(0.9);
+    }
+
+    /* Modern Blueprint Civic Vignette */
+    .civic-vignette {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(circle at 50% 35%, rgba(7, 14, 26, 0.25) 0%, rgba(7, 14, 26, 0.85) 75%, rgba(4, 8, 16, 0.98) 100%);
+      pointer-events: none;
+    }
+
+    /* Top Civic Header Bar */
+    .header-bar {
+      position: absolute;
+      top: 60px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 28px;
+      background: rgba(15, 27, 48, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 12px;
+      backdrop-filter: blur(16px);
+      z-index: 50;
+    }
+
+    .series-tag {
+      font-family: var(--font-sub);
+      font-size: 19px;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .series-tag::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: var(--accent-emerald);
+      border-radius: 50%;
+    }
+
+    .topic-badge {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--accent-amber);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Center Card Container */
+    .center-card-container {
+      position: absolute;
+      top: 220px;
+      left: 54px;
+      width: 972px;
+      z-index: 40;
+    }
+
+    .civic-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--accent-cyan);
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    .main-headline {
+      font-family: var(--font-display);
+      font-size: 56px;
+      line-height: 1.15;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      margin-bottom: 26px;
+    }
+
+    .main-headline span {
+      color: var(--accent-coral);
+    }
+
+    /* Scene 1: Initial Distinction Banner */
+    .distinction-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .distinction-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: rgba(248, 113, 113, 0.15);
+      border: 2px solid var(--accent-coral);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--accent-coral);
+      flex-shrink: 0;
+    }
+
+    .distinction-text {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--text-main);
+    }
+
+    /* Scene 2: Split Columns Policy vs Collective Blame */
+    .split-grid {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      opacity: 0;
+    }
+
+    .split-col {
+      background: rgba(12, 22, 40, 0.94);
+      border-radius: 14px;
+      padding: 26px;
+    }
+
+    .col-legit {
+      border: 1px solid rgba(52, 211, 153, 0.4);
+    }
+
+    .col-blame {
+      border: 1px solid rgba(248, 113, 113, 0.4);
+    }
+
+    .col-tag {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .tag-green {
+      background: rgba(52, 211, 153, 0.15);
+      color: var(--accent-emerald);
+      border: 1px solid var(--accent-emerald);
+    }
+
+    .tag-red {
+      background: rgba(248, 113, 113, 0.15);
+      color: var(--accent-coral);
+      border: 1px solid var(--accent-coral);
+    }
+
+    .col-title {
+      font-family: var(--font-sub);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #FFFFFF;
+    }
+
+    .col-desc {
+      font-size: 18px;
+      line-height: 1.45;
+      color: var(--text-muted);
+    }
+
+    /* Scene 3: Universal Principle Card */
+    .universal-card {
+      margin-top: 26px;
+      background: rgba(15, 27, 48, 0.95);
+      border: 2px solid var(--accent-cyan);
+      border-radius: 16px;
+      padding: 32px;
+      opacity: 0;
+    }
+
+    .universal-header {
+      font-family: var(--font-mono);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent-amber);
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .universal-title {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.3;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .universal-desc {
+      font-size: 20px;
+      line-height: 1.45;
+      color: var(--text-muted);
+    }
+
+    /* Scene 6: The 3-Point Checklist */
+    .checklist-container {
+      margin-top: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      opacity: 0;
+    }
+
+    .checklist-item {
+      background: rgba(12, 22, 40, 0.94);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .check-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.2);
+      border: 1px solid var(--accent-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      flex-shrink: 0;
+    }
+
+    .check-label {
+      font-size: 22px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .check-sub {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-left: auto;
+      font-family: var(--font-mono);
+    }
+
+    /* Scene 7: Outro Finale Card */
+    .outro-card {
+      margin-top: 26px;
+      background: linear-gradient(135deg, rgba(17, 30, 54, 0.98), rgba(9, 16, 30, 0.98));
+      border: 2px solid var(--accent-emerald);
+      border-radius: 18px;
+      padding: 38px;
+      opacity: 0;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .outro-title {
+      font-size: 38px;
+      line-height: 1.25;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+    }
+
+    .outro-title span {
+      color: var(--accent-emerald);
+    }
+
+    .outro-sub {
+      font-size: 22px;
+      color: var(--accent-cyan);
+      font-family: var(--font-sub);
+      font-weight: 600;
+    }
+
+    /* Subtitles (Bottom) */
+    .subtitles-container {
+      position: absolute;
+      bottom: 110px;
+      left: 54px;
+      width: 972px;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .speaker-pill {
+      display: inline-block;
+      padding: 6px 18px;
+      background: var(--accent-emerald);
+      color: #070E1A;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle-text {
+      font-size: 34px;
+      line-height: 1.35;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+      background: rgba(12, 22, 40, 0.88);
+      padding: 16px 28px;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent-emerald);
+      max-width: 940px;
+    }
+
+    /* Source Citation Line */
+    .source-citation-line {
+      position: absolute;
+      bottom: 40px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 14px;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="ep007-civic" data-width="1080" data-height="1920" data-duration="60">
+    <!-- Photographic Plates Layer -->
+    <div id="plate-1" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_1_campus_quad.jpg" class="plate-img" alt="University Campus Quad">
+    </div>
+    <div id="plate-2" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_2_diplomatic_podium.jpg" class="plate-img" alt="Diplomatic Policy Podium">
+    </div>
+    <div id="plate-3" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_3_diverse_students.jpg" class="plate-img" alt="Diverse University Students">
+    </div>
+    <div id="plate-4" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_4_human_rights.jpg" class="plate-img" alt="Universal Human Rights Standards">
+    </div>
+
+    <!-- Vignette -->
+    <div class="civic-vignette" data-layout-allow-overlap="true"></div>
+
+    <!-- Top Header -->
+    <div class="header-bar" data-layout-allow-overlap="true">
+      <div class="series-tag">CIVIC RIGOR & CRITICAL THINKING</div>
+      <div class="topic-badge">EP 07 // LOGIC BOUNDARY</div>
+    </div>
+
+    <!-- Center Card Container -->
+    <div class="center-card-container" data-layout-allow-overlap="true">
+      <div class="civic-tag">CIVIC DISCOURSE ETHICS</div>
+      <h1 class="main-headline">Criticize the Policy.<br><span>Don’t Blame Your Classmate.</span></h1>
+
+      <!-- Scene 1: Initial Distinction -->
+      <div id="distinction-card" class="distinction-box" data-layout-allow-overlap="true">
+        <div class="distinction-icon">&#9888;</div>
+        <div class="distinction-text">Your Jewish classmate is not a government press office.</div>
+      </div>
+
+      <!-- Scene 2: Split Columns -->
+      <div id="split-grid" class="split-grid" data-layout-allow-overlap="true">
+        <div class="split-col col-legit">
+          <span class="col-tag tag-green">PROTECTED SPEECH</span>
+          <div class="col-title">Critiquing Policies</div>
+          <div class="col-desc">Scrutinizing foreign actions, state decisions, and public laws is normal civic debate.</div>
+        </div>
+        <div class="split-col col-blame">
+          <span class="col-tag tag-red">DISCRIMINATION</span>
+          <div class="col-title">Collective Blame</div>
+          <div class="col-desc">Demanding local peers answer for foreign state decisions because of their ethnic identity.</div>
+        </div>
+      </div>
+
+      <!-- Scene 5: Universal Principle Card -->
+      <div id="universal-card" class="universal-card" data-layout-allow-overlap="true">
+        <div class="universal-header">UNIVERSAL RECIPROCAL PRINCIPLE</div>
+        <div class="universal-title">Accountability Follows Action, Never Identity</div>
+        <div class="universal-desc">The same standard protects Palestinian classmates from being blamed for armed groups. People answer for their own conduct, not somebody else’s label.</div>
+      </div>
+
+      <!-- Scene 6: 3-Point Checklist -->
+      <div id="checklist-box" class="checklist-container" data-layout-allow-overlap="true">
+        <div class="checklist-item">
+          <div class="check-number">1</div>
+          <div class="check-label">Name The Policy</div>
+          <div class="check-sub">Specific Legislation / Action</div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-number">2</div>
+          <div class="check-label">Name The Decision-Maker</div>
+          <div class="check-sub">Responsible State Agency</div>
+        </div>
+        <div class="checklist-item">
+          <div class="check-number">3</div>
+          <div class="check-label">Cite Documented Evidence</div>
+          <div class="check-sub">Verifiable Facts</div>
+        </div>
+      </div>
+
+      <!-- Scene 7: Outro Card -->
+      <div id="outro-card" class="outro-card" data-layout-allow-overlap="true">
+        <div class="outro-title">Strong criticism needs accuracy.<br><span>Not collective blame.</span></div>
+        <div class="outro-sub">KEEP THE CRITICISM ATTACHED TO WHAT HAPPENED</div>
+      </div>
+    </div>
+
+    <!-- Subtitles Overlay -->
+    <div class="subtitles-container" data-layout-allow-overlap="true">
+      <div id="speaker-badge" class="speaker-pill">MAYA</div>
+      <div id="sub-line" class="subtitle-text">Your Jewish classmate is not a government press office.</div>
+    </div>
+
+    <!-- Footer Source Citation -->
+    <div class="source-citation-line" data-layout-allow-overlap="true">
+      <span id="footer-source">Civic Dialogue Standards</span>
+      <span>EP 07 / 10 &middot; 60.00S MASTER</span>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["ep007-civic"] = tl;
+
+    // Scene 1: Plate 1 (0s - 4.21s)
+    tl.to("#plate-1", { opacity: 1, duration: 0.8, ease: "power2.out" }, 0);
+    tl.fromTo("#plate-1 img", { scale: 1.0 }, { scale: 1.08, duration: 4.2, ease: "none" }, 0);
+
+    // Subtitle 1 (0.25s - 3.39s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "Your Jewish classmate is not a government press office.";
+      document.getElementById("footer-source").innerText = "Civic Dialogue Standards";
+    }, null, 0.25);
+
+    // Scene 2: Plate 2 & Split Columns (4.21s - 15.91s)
+    tl.to("#plate-1", { opacity: 0, duration: 0.8 }, 4.21);
+    tl.to("#plate-2", { opacity: 1, duration: 0.8 }, 4.21);
+    tl.fromTo("#plate-2 img", { scale: 1.05 }, { scale: 1.14, duration: 11.7, ease: "none" }, 4.21);
+    tl.to("#distinction-card", { opacity: 0, y: -20, duration: 0.4 }, 4.21);
+
+    tl.fromTo("#split-grid", 
+      { opacity: 0, y: 30 }, 
+      { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }, 
+      4.8
+    );
+
+    // Subtitle 2 (4.21s - 15.65s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "Criticizing the Israeli government is not automatically antisemitic. Policies can be investigated, challenged, and protested. That’s not the same as blaming Jewish people collectively.";
+      document.getElementById("footer-source").innerText = "IHRA & Jerusalem Declaration";
+    }, null, 4.21);
+
+    // Scene 3: Plate 3 & Boundary Nuance (15.91s - 26.05s)
+    tl.to("#plate-2", { opacity: 0, duration: 0.8 }, 15.91);
+    tl.to("#plate-3", { opacity: 1, duration: 0.8 }, 15.91);
+    tl.fromTo("#plate-3 img", { scale: 1.0 }, { scale: 1.08, duration: 10.1, ease: "none" }, 15.91);
+
+    // Subtitle 3 (15.91s - 25.80s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "Here’s the distinction: “This policy causes harm” identifies something to examine. “You’re Jewish, so you’re responsible” assigns guilt from identity. Those are different claims.";
+      document.getElementById("footer-source").innerText = "Jerusalem Declaration on Antisemitism";
+    }, null, 15.91);
+
+    // Scene 4: Diverse Views (26.05s - 37.28s)
+    // Subtitle 4 (26.05s - 37.02s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "You can ask anyone about their views. But being Jewish doesn’t automatically make someone answerable for another person’s decisions. And Jewish people don’t all share one political opinion.";
+      document.getElementById("footer-source").innerText = "Pew Research Center";
+    }, null, 26.05);
+
+    // Scene 5: Plate 4 & Universal Card (37.28s - 47.03s)
+    tl.to("#plate-3", { opacity: 0, duration: 0.8 }, 37.28);
+    tl.to("#plate-4", { opacity: 1, duration: 0.8 }, 37.28);
+    tl.fromTo("#plate-4 img", { scale: 1.04 }, { scale: 1.12, duration: 9.8, ease: "none" }, 37.28);
+    tl.to("#split-grid", { opacity: 0, duration: 0.4 }, 37.28);
+
+    tl.fromTo("#universal-card",
+      { opacity: 0, scale: 0.95 },
+      { opacity: 1, scale: 1, duration: 0.7, ease: "power2.out" },
+      37.8
+    );
+
+    // Subtitle 5 (37.28s - 45.70s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "The same principle protects a Palestinian classmate from being blamed for an armed group. People are responsible for their own actions, not somebody else’s label.";
+      document.getElementById("footer-source").innerText = "Universal Human Rights Principle";
+    }, null, 37.28);
+
+    // Scene 6: Checklist (47.03s - 55.33s)
+    tl.to("#universal-card", { opacity: 0, duration: 0.4 }, 47.03);
+    tl.fromTo("#checklist-box",
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+      47.3
+    );
+
+    // Subtitle 6 (47.03s - 55.07s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "Be specific. Name the policy, the decision-maker, and the evidence. Keep the criticism attached to what happened.";
+      document.getElementById("footer-source").innerText = "Critical Thinking & Public Reasoning";
+    }, null, 47.03);
+
+    // Scene 7: Outro Finale (55.33s - 60.00s)
+    tl.to("#checklist-box", { opacity: 0, duration: 0.4 }, 55.33);
+    tl.fromTo("#outro-card",
+      { opacity: 0, y: 25 },
+      { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+      55.5
+    );
+
+    // Subtitle 7 (55.33s - 59.00s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "Strong criticism needs accuracy. Not collective blame.";
+      document.getElementById("footer-source").innerText = "Beyond the Myth · Facts, not scapegoats";
+    }, null, 55.33);
+
+    // Fade out
+    tl.to("#stage", { opacity: 0, duration: 0.7, ease: "power2.in" }, 59.3);
+
+    // Driver hook
+    window.__seekFrame = (seconds) => {
+      tl.seek(seconds);
+    };
+  </script>
+</body>
+</html>

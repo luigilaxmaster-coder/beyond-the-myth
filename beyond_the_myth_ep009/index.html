@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond The Myth - Ep 09: The Dreyfus Affair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    :root {
+      --bg-dark: #0A0E17;
+      --card-bg: rgba(18, 26, 42, 0.92);
+      --card-border: rgba(59, 130, 246, 0.3);
+      --accent-gold: #F59E0B;
+      --accent-red: #FFA4A4;
+      --accent-blue: #60A5FA;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-color: var(--bg-dark);
+      font-family: var(--font-body);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #stage {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    /* Photographic Plates Layer */
+    .plate-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      transform-origin: center center;
+    }
+
+    .plate-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.38) contrast(1.2) sepia(0.18);
+    }
+
+    /* Archival Newsprint Vignette */
+    .news-vignette {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(circle at 50% 36%, rgba(10, 14, 23, 0.2) 0%, rgba(10, 14, 23, 0.85) 75%, rgba(5, 7, 12, 0.98) 100%);
+      pointer-events: none;
+    }
+
+    /* Top Archival Header Bar */
+    .header-bar {
+      position: absolute;
+      top: 60px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 28px;
+      background: rgba(18, 26, 42, 0.88);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      border-radius: 12px;
+      backdrop-filter: blur(16px);
+      z-index: 50;
+    }
+
+    .series-tag {
+      font-family: var(--font-display);
+      font-size: 19px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .series-tag::before {
+      content: 'COUR DE CASSATION //';
+      color: var(--accent-blue);
+      font-family: var(--font-mono);
+      font-size: 15px;
+    }
+
+    .topic-badge {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--accent-gold);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Center Container */
+    .center-card-container {
+      position: absolute;
+      top: 220px;
+      left: 54px;
+      width: 972px;
+      z-index: 40;
+    }
+
+    .court-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid var(--accent-red);
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent-red);
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    .main-headline {
+      font-family: var(--font-display);
+      font-size: 56px;
+      line-height: 1.15;
+      font-weight: 900;
+      color: #FFFFFF;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      margin-bottom: 26px;
+    }
+
+    .main-headline span {
+      color: var(--accent-gold);
+    }
+
+    /* Scene 1: J'Accuse Broadside Stamp */
+    .jaccuse-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .jaccuse-masthead {
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 3px;
+      color: var(--accent-blue);
+      margin-bottom: 10px;
+    }
+
+    .jaccuse-text {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--text-main);
+      max-width: 650px;
+    }
+
+    .innocent-stamp {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      padding: 12px 24px;
+      background: rgba(220, 38, 38, 0.9);
+      border: 2px dashed #EF4444;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 2px;
+      transform: rotate(5deg) scale(0);
+      opacity: 0;
+    }
+
+    /* Scene 3: Forgery & Frame-Up Card */
+    .frameup-card {
+      margin-top: 26px;
+      background: rgba(16, 23, 38, 0.95);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 30px;
+      opacity: 0;
+    }
+
+    .frameup-header {
+      font-family: var(--font-mono);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent-red);
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .frameup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .frameup-col {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 18px;
+      border-radius: 10px;
+      border-left: 3px solid var(--accent-blue);
+    }
+
+    .col-label {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 6px;
+    }
+
+    .col-val {
+      font-size: 18px;
+      line-height: 1.4;
+      color: var(--text-main);
+    }
+
+    /* Scene 4: Exoneration Timeline */
+    .timeline-card {
+      margin-top: 26px;
+      background: rgba(16, 23, 38, 0.95);
+      border: 2px solid var(--accent-gold);
+      border-radius: 16px;
+      padding: 30px;
+      opacity: 0;
+    }
+
+    .timeline-step {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-year {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      width: 70px;
+      flex-shrink: 0;
+    }
+
+    .timeline-desc {
+      font-size: 20px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    /* Scene 7: Final Court Seal Outro */
+    .outro-card {
+      margin-top: 26px;
+      background: linear-gradient(135deg, rgba(24, 34, 56, 0.98), rgba(12, 17, 28, 0.98));
+      border: 2px solid var(--accent-gold);
+      border-radius: 18px;
+      padding: 40px;
+      opacity: 0;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .outro-title {
+      font-family: var(--font-display);
+      font-size: 42px;
+      line-height: 1.25;
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+    }
+
+    .outro-title span {
+      color: var(--accent-gold);
+    }
+
+    .outro-sub {
+      font-size: 22px;
+      color: var(--accent-blue);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    /* Subtitles (Bottom) */
+    .subtitles-container {
+      position: absolute;
+      bottom: 110px;
+      left: 54px;
+      width: 972px;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .speaker-pill {
+      display: inline-block;
+      padding: 6px 18px;
+      background: var(--accent-gold);
+      color: #0A0E17;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle-text {
+      font-size: 34px;
+      line-height: 1.35;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+      background: rgba(14, 20, 32, 0.88);
+      padding: 16px 28px;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent-gold);
+      max-width: 940px;
+    }
+
+    /* Source Citation Line */
+    .source-citation-line {
+      position: absolute;
+      bottom: 40px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 14px;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="ep009-dreyfus" data-width="1080" data-height="1920" data-duration="60">
+    <!-- Photographic Plates Layer -->
+    <div id="plate-1" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_1_jaccuse.jpg" class="plate-img" alt="L'Aurore J'Accuse Émile Zola Broadside">
+    </div>
+    <div id="plate-2" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_2_captain_dreyfus.jpg" class="plate-img" alt="Captain Alfred Dreyfus">
+    </div>
+    <div id="plate-3" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_3_military_degradation.jpg" class="plate-img" alt="Military Degradation Ceremony 1895">
+    </div>
+    <div id="plate-4" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_4_devils_island_hut.jpg" class="plate-img" alt="Devil's Island Penal Colony">
+    </div>
+
+    <!-- Vignette -->
+    <div class="news-vignette" data-layout-allow-overlap="true"></div>
+
+    <!-- Top Header -->
+    <div class="header-bar" data-layout-allow-overlap="true">
+      <div class="series-tag">HISTORICAL TRIAL REVIEW</div>
+      <div class="topic-badge">EP 09 // DUE PROCESS</div>
+    </div>
+
+    <!-- Center Container -->
+    <div class="center-card-container" data-layout-allow-overlap="true">
+      <div class="court-tag">COUR DE CASSATION EXONERATION</div>
+      <h1 class="main-headline">The Spy Case That<br><span>Convicted the Wrong Man</span></h1>
+
+      <!-- Scene 1: J'Accuse Stamp -->
+      <div id="jaccuse-box" class="jaccuse-box" data-layout-allow-overlap="true">
+        <div class="jaccuse-masthead">L’AURORE &middot; 13 JANVIER 1898</div>
+        <div class="jaccuse-text">Captain Alfred Dreyfus was convicted as a German spy. He was innocent. The case relied on forged files and anti-Jewish bias.</div>
+        <div id="innocent-stamp" class="innocent-stamp">PROVEN INNOCENT</div>
+      </div>
+
+      <!-- Scene 3: Frameup Grid -->
+      <div id="frameup-card" class="frameup-card" data-layout-allow-overlap="true">
+        <div class="frameup-header">ANATOMY OF A MILITARY FRAME-UP</div>
+        <div class="frameup-grid">
+          <div class="frameup-col">
+            <div class="col-label">THE REAL SPY</div>
+            <div class="col-val">Major Ferdinand Walsin Esterhazy. Protected by aristocratic rank.</div>
+          </div>
+          <div class="frameup-col">
+            <div class="col-label">THE TARGET</div>
+            <div class="col-val">Captain Alfred Dreyfus. Targeted because he was Jewish.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 4: Exoneration Timeline -->
+      <div id="timeline-card" class="timeline-card" data-layout-allow-overlap="true">
+        <div class="timeline-step">
+          <div class="timeline-year">1894</div>
+          <div class="timeline-desc">Wrongful treason conviction & exile</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-year">1898</div>
+          <div class="timeline-desc">Émile Zola publishes “J’Accuse...!”</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-year">1906</div>
+          <div class="timeline-desc" style="color: var(--accent-gold); font-weight:700;">Full legal exoneration by Supreme Court</div>
+        </div>
+      </div>
+
+      <!-- Scene 7: Outro Finale -->
+      <div id="outro-card" class="outro-card" data-layout-allow-overlap="true">
+        <div class="outro-title">A label is not evidence.<br><span>Ask what actually happened.</span></div>
+        <div class="outro-sub">COUR DE CASSATION &middot; FULL LEGAL EXONERATION (1906)</div>
+      </div>
+    </div>
+
+    <!-- Subtitles Overlay -->
+    <div class="subtitles-container" data-layout-allow-overlap="true">
+      <div id="speaker-badge" class="speaker-pill">MAYA</div>
+      <div id="sub-line" class="subtitle-text">He was convicted as a spy. He was innocent.</div>
+    </div>
+
+    <!-- Footer Source Citation -->
+    <div class="source-citation-line" data-layout-allow-overlap="true">
+      <span id="footer-source">USHMM Historical Archives</span>
+      <span>EP 09 / 10 &middot; 60.00S MASTER</span>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["ep009-dreyfus"] = tl;
+
+    // Scene 1: Plate 1 (0s - 4.30s)
+    tl.to("#plate-1", { opacity: 1, duration: 0.8, ease: "power2.out" }, 0);
+    tl.fromTo("#plate-1 img", { scale: 1.0 }, { scale: 1.08, duration: 4.3, ease: "none" }, 0);
+    tl.to("#innocent-stamp", { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.7)" }, 1.8);
+
+    // Subtitle 1 (0.25s - 3.39s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "He was convicted as a spy. He was innocent.";
+      document.getElementById("footer-source").innerText = "USHMM Historical Archives";
+    }, null, 0.25);
+
+    // Scene 2: Plate 2 (4.30s - 13.00s)
+    tl.to("#plate-1", { opacity: 0, duration: 0.8 }, 4.30);
+    tl.to("#plate-2", { opacity: 1, duration: 0.8 }, 4.30);
+    tl.fromTo("#plate-2 img", { scale: 1.04 }, { scale: 1.13, duration: 8.7, ease: "none" }, 4.30);
+    tl.to("#jaccuse-box", { opacity: 0, y: -20, duration: 0.4 }, 4.30);
+
+    // Subtitle 2 (4.30s - 12.65s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "Meet Alfred Dreyfus, a Jewish officer in the French army. In eighteen-ninety-four, he was wrongly convicted of treason and sent to prison.";
+      document.getElementById("footer-source").innerText = "Dreyfus Affair Records";
+    }, null, 4.30);
+
+    // Scene 3: Plate 3 & Frameup Grid (13.00s - 24.50s)
+    tl.to("#plate-2", { opacity: 0, duration: 0.8 }, 13.00);
+    tl.to("#plate-3", { opacity: 1, duration: 0.8 }, 13.00);
+    tl.fromTo("#plate-3 img", { scale: 1.0 }, { scale: 1.08, duration: 11.5, ease: "none" }, 13.00);
+
+    tl.fromTo("#frameup-card",
+      { opacity: 0, y: 25 },
+      { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
+      13.5
+    );
+
+    // Subtitle 3 (13.00s - 23.13s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "The case involved secret evidence, forged documents, and anti-Jewish prejudice. His family and supporters kept challenging it. Later evidence pointed to a different officer.";
+      document.getElementById("footer-source").innerText = "French Military Historical Review";
+    }, null, 13.00);
+
+    // Scene 4: Plate 4 & Timeline (24.50s - 36.20s)
+    tl.to("#plate-3", { opacity: 0, duration: 0.8 }, 24.50);
+    tl.to("#plate-4", { opacity: 1, duration: 0.8 }, 24.50);
+    tl.fromTo("#plate-4 img", { scale: 1.05 }, { scale: 1.14, duration: 11.7, ease: "none" }, 24.50);
+    tl.to("#frameup-card", { opacity: 0, duration: 0.4 }, 24.50);
+
+    tl.fromTo("#timeline-card",
+      { opacity: 0, scale: 0.95 },
+      { opacity: 1, scale: 1, duration: 0.7, ease: "power2.out" },
+      25.0
+    );
+
+    // Subtitle 4 (24.50s - 35.59s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "But correcting the case took years. Dreyfus was finally cleared in nineteen-oh-six. This wasn’t just an argument in a newspaper. A real person lost years of freedom.";
+      document.getElementById("footer-source").innerText = "French Cour de Cassation (1906)";
+    }, null, 24.50);
+
+    // Scene 5: Back to Plate 1 with legal standards (36.20s - 47.50s)
+    tl.to("#plate-4", { opacity: 0, duration: 0.8 }, 36.20);
+    tl.to("#plate-1", { opacity: 1, duration: 0.8 }, 36.20);
+    tl.to("#timeline-card", { opacity: 0, duration: 0.4 }, 36.20);
+
+    // Subtitle 5 (36.20s - 44.60s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "The lesson is not that every accusation is false. It’s that someone’s Jewish identity is not proof that they’re disloyal. You still need reliable evidence.";
+      document.getElementById("footer-source").innerText = "Legal Evidence Standards";
+    }, null, 36.20);
+
+    // Scene 6 & 7: Outro Finale (47.50s - 60.00s)
+    tl.fromTo("#outro-card",
+      { opacity: 0, y: 25 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+      47.50
+    );
+
+    // Subtitle 6 (47.50s - 54.17s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "If a case depends on prejudice instead of facts, looking confident doesn’t fix it. Neither does a crowd.";
+      document.getElementById("footer-source").innerText = "Principles of Due Process";
+    }, null, 47.50);
+
+    // Subtitle 7 (55.20s - 58.97s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "A label is not evidence. Ask what actually happened.";
+      document.getElementById("footer-source").innerText = "Beyond the Myth · Facts, not scapegoats";
+    }, null, 55.20);
+
+    // Fade out
+    tl.to("#stage", { opacity: 0, duration: 0.7, ease: "power2.in" }, 59.3);
+
+    // Driver hook
+    window.__seekFrame = (seconds) => {
+      tl.seek(seconds);
+    };
+  </script>
+</body>
+</html>

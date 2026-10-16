@@ -1,0 +1,72 @@
+{
+  "episode_id": "ep010",
+  "episode_num": "10",
+  "title": "Before You Share That Claim, Ask These 3 Questions",
+  "cover_text": "3 QUESTIONS BEFORE SHARE",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 3.71,
+      "text": "Before you send that post, give it three questions.",
+      "on_screen": "3 QUESTIONS BEFORE YOU SHARE",
+      "source": "Digital Inquiry Group"
+    },
+    {
+      "id": 2,
+      "speaker": "Maya",
+      "start": 3.94,
+      "end": 11.48,
+      "text": "One: where did the claim start? Not who reposted it. Find the original document, interview, or report\u2014and check the date.",
+      "on_screen": "1. WHERE DID IT START? FIND ORIGINAL",
+      "source": "Teaching Lateral Reading"
+    },
+    {
+      "id": 3,
+      "speaker": "Alex",
+      "start": 12.28,
+      "end": 23.71,
+      "text": "Two: what does the evidence actually prove? A logo can show certification. A company filing can show ownership. Neither gives you permission to invent extra claims.",
+      "on_screen": "2. WHAT DOES THE EVIDENCE PROVE?",
+      "source": "OU Kosher & SEC EDGAR"
+    },
+    {
+      "id": 4,
+      "speaker": "Maya",
+      "start": 23.7,
+      "end": 30.92,
+      "text": "Three: did the post jump from one person\u2019s actions to blaming Jewish people as a group? That jump needs challenging, not another share.",
+      "on_screen": "3. DID IT JUMP TO GROUP BLAME?",
+      "source": "Public Reasoning Standards"
+    },
+    {
+      "id": 5,
+      "speaker": "Alex",
+      "start": 34.77,
+      "end": 43.84,
+      "text": "Then check a reliable independent source. And if the answer is still unclear, saying \u201cI don\u2019t know yet\u201d is better than confidently spreading something false.",
+      "on_screen": "CHECK INDEPENDENT SOURCE \u00b7 IT'S OK TO SAY 'NOT SURE'",
+      "source": "Media Literacy Framework"
+    },
+    {
+      "id": 6,
+      "speaker": "Maya",
+      "start": 45.71,
+      "end": 50.6,
+      "text": "You don\u2019t have to win every comment section. You can be the person who brings the actual source.",
+      "on_screen": "BE THE PERSON WHO BRINGS THE SOURCE",
+      "source": "Constructive Discourse"
+    },
+    {
+      "id": 7,
+      "speaker": "Alex",
+      "start": 53.05,
+      "end": 59.0,
+      "text": "Which claim should we check next? Specific claims. Real evidence.",
+      "on_screen": "SPECIFIC CLAIMS \u00b7 REAL EVIDENCE",
+      "source": "Beyond the Myth \u00b7 Facts, not scapegoats"
+    }
+  ]
+}

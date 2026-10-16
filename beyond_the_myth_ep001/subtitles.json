@@ -1,0 +1,72 @@
+{
+  "episode_id": "ep001",
+  "episode_num": "01",
+  "title": "What That Kosher Symbol Actually Means",
+  "cover_text": "WHAT DOES THIS MEAN?",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Maya",
+      "start": 0.25,
+      "end": 3.71,
+      "text": "Wait. Your cereal box is not an ownership chart.",
+      "on_screen": "CERTIFICATION \u2260 OWNERSHIP",
+      "source": "OU Kosher (oukosher.org)"
+    },
+    {
+      "id": 2,
+      "speaker": "Alex",
+      "start": 4.3,
+      "end": 12.22,
+      "text": "That little O-U symbol? It means the product meets the Orthodox Union\u2019s kosher standards. That\u2019s the actual claim.",
+      "on_screen": "OU \u00b7 KOSHER CERTIFICATION",
+      "source": "OU Kosher Symbols Explained"
+    },
+    {
+      "id": 3,
+      "speaker": "Maya",
+      "start": 13.0,
+      "end": 23.46,
+      "text": "Okay, but what gets checked? Ingredients, equipment, and production. Kosher follows Jewish dietary law. Companies apply for certification, and yes, they pay fees.",
+      "on_screen": "INGREDIENTS \u2192 EQUIPMENT \u2192 PROCESS",
+      "source": "What Is Kosher Certification?"
+    },
+    {
+      "id": 4,
+      "speaker": "Alex",
+      "start": 24.5,
+      "end": 33.45,
+      "text": "You can question the service or its price. But a paid certification does not prove that Jewish people secretly control a company, or an entire industry.",
+      "on_screen": "CERTIFICATION \u2260 COLLECTIVE CONTROL",
+      "source": "Evidence-Based Public Reasoning"
+    },
+    {
+      "id": 5,
+      "speaker": "Maya",
+      "start": 36.2,
+      "end": 43.28,
+      "text": "Want to know who owns the business? Look at company records. Want to know what the certification covers? Check the certifier\u2019s rules.",
+      "on_screen": "OWNERSHIP? \u2192 COMPANY RECORDS",
+      "source": "Corporate Filings & Public Disclosures"
+    },
+    {
+      "id": 6,
+      "speaker": "Alex",
+      "start": 47.5,
+      "end": 54.53,
+      "text": "Different questions. Different evidence. A tiny symbol isn\u2019t doing all the jobs the internet gives it.",
+      "on_screen": "DIFFERENT QUESTIONS \u00b7 DIFFERENT EVIDENCE",
+      "source": "Evidence-Based Public Reasoning"
+    },
+    {
+      "id": 7,
+      "speaker": "Maya",
+      "start": 55.2,
+      "end": 58.37,
+      "text": "The label belongs on the box. Not on people.",
+      "on_screen": "THE LABEL BELONGS ON THE BOX",
+      "source": "Beyond the Myth \u00b7 Facts, not scapegoats"
+    }
+  ]
+}

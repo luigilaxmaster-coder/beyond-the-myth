@@ -1,0 +1,72 @@
+{
+  "episode_id": "ep005",
+  "episode_num": "05",
+  "title": "Can You Be Jewish Without Being Religious?",
+  "cover_text": "IDENTITY ISN\u2019T A CHECKBOX",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Maya",
+      "start": 0.25,
+      "end": 3.25,
+      "text": "Can you be Jewish without being religious? Yes.",
+      "on_screen": "IDENTITY IS NOT A SINGLE CHECKBOX",
+      "source": "Pew Research Center (2020 Survey)"
+    },
+    {
+      "id": 2,
+      "speaker": "Alex",
+      "start": 4.18,
+      "end": 13.21,
+      "text": "Here\u2019s where the one-box explanation breaks down. Jewish identity can involve religion, family, culture, history, or several of those together.",
+      "on_screen": "RELIGION \u00b7 FAMILY \u00b7 CULTURE \u00b7 HISTORY",
+      "source": "Sociological Diversity Studies"
+    },
+    {
+      "id": 3,
+      "speaker": "Maya",
+      "start": 13.44,
+      "end": 23.44,
+      "text": "Pew\u2019s twenty-twenty survey of Jewish Americans documented that variety. Some people described their Jewish identity through religion. Others connected through ancestry or culture.",
+      "on_screen": "DIVERSITY: FAITH, ANCESTRY & CULTURE",
+      "source": "Pew: Jewish Americans in 2020"
+    },
+    {
+      "id": 4,
+      "speaker": "Alex",
+      "start": 24.14,
+      "end": 34.73,
+      "text": "That doesn\u2019t mean everybody agrees about identity. It means one label does not tell you a person\u2019s beliefs, daily routines, or opinions. You still have to ask.",
+      "on_screen": "ONE LABEL DOES NOT DEFINE A PERSON",
+      "source": "Pew Research Findings"
+    },
+    {
+      "id": 5,
+      "speaker": "Maya",
+      "start": 35.73,
+      "end": 43.36,
+      "text": "So a Jewish person you see online is not automatically speaking for every Jewish person. And they don\u2019t have to pass your stereotype checklist.",
+      "on_screen": "NO ONE PERSON SPEAKS FOR EVERYONE",
+      "source": "Demographic Nuance in Research"
+    },
+    {
+      "id": 6,
+      "speaker": "Alex",
+      "start": 46.91,
+      "end": 53.51,
+      "text": "Curious about someone? Try \u201cWhat does that mean to you?\u201d Then actually listen to the answer.",
+      "on_screen": "ASK: WHAT DOES THAT MEAN TO YOU?",
+      "source": "Dialogic Verification Principle"
+    },
+    {
+      "id": 7,
+      "speaker": "Maya",
+      "start": 54.49,
+      "end": 59.0,
+      "text": "More conversation. Fewer assumptions. People aren\u2019t dropdown menus.",
+      "on_screen": "MORE CONVERSATION \u00b7 FEWER ASSUMPTIONS",
+      "source": "Beyond the Myth \u00b7 Facts, not scapegoats"
+    }
+  ]
+}

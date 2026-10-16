@@ -1,0 +1,75 @@
+{
+  "episode_id": "ep017",
+  "episode_num": "07",
+  "title": "Henry Ford: When a Business Icon Spread Conspiracies",
+  "hero_object": "1920 Original Copy of The Dearborn Independent & 1927 Public Retraction Letter",
+  "hook": "Henry Ford didn’t just build cars. His newspaper spread antisemitic conspiracy theories.",
+  "punchline": "Being good at business doesn’t make every claim you publish true.",
+  "visual_paradigm": "1920s Industrial Press & Ford Motor Assembly (Industrial Charcoal #18181B, Model-T Black #09090B, Printing Brass #CA8A04)",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 4.6,
+      "text": "Henry Ford didn’t just build cars. His newspaper spread antisemitic conspiracy theories.",
+      "on_screen": "HENRY FORD & THE DEARBORN INDEPENDENT",
+      "source": "USHMM (encyclopedia.ushmm.org)"
+    },
+    {
+      "id": 2,
+      "speaker": "Maya",
+      "start": 4.9,
+      "end": 14.2,
+      "text": "Starting in nineteen-twenty, Henry Ford used his wealth to buy a weekly newspaper: The Dearborn Independent. Over ninety-one issues, it published attacks based on the forged Protocols.",
+      "on_screen": "1920-1927: 91 ISSUES PROMOTING FORGERIES",
+      "source": "Dearborn Independent Historical Archive"
+    },
+    {
+      "id": 3,
+      "speaker": "Alex",
+      "start": 14.5,
+      "end": 23.8,
+      "text": "Ford required every Ford car dealership to distribute copies to car buyers. Wealth and fame gave an exposed lie a massive corporate distribution channel.",
+      "on_screen": "MANDATORY DEALERSHIP DISTRIBUTION",
+      "source": "Ford Motor Company Historical Archives"
+    },
+    {
+      "id": 4,
+      "speaker": "Maya",
+      "start": 24.1,
+      "end": 34.5,
+      "text": "Here’s what happened next. Sued for defamation by Aaron Sapiro in nineteen-twenty-seven, Ford settled, closed the paper, and issued a formal public apology acknowledging the claims were completely untrue.",
+      "on_screen": "1927 DEFAMATION LAWSUIT & FORMAL RETRACTION",
+      "source": "Sapiro v. Ford (1927) & Public Retraction"
+    },
+    {
+      "id": 5,
+      "speaker": "Alex",
+      "start": 34.9,
+      "end": 44.8,
+      "text": "Yet even today, people quote Ford’s articles without mentioning his own sworn retraction. Success in automotive manufacturing didn’t make him an expert in history.",
+      "on_screen": "QUOTE FORD'S CLAIMS? QUOTE HIS APOLOGY TOO.",
+      "source": "Historical Record of 1927 Settlement"
+    },
+    {
+      "id": 6,
+      "speaker": "Maya",
+      "start": 45.2,
+      "end": 53.6,
+      "text": "Authority in one field doesn’t transfer to another. When a billionaire makes a massive historical claim, ask for evidence, not their net worth.",
+      "on_screen": "WEALTH & FAME DO NOT VALIDATE CLAIMS",
+      "source": "Critical Thinking & Epistemic Humility"
+    },
+    {
+      "id": 7,
+      "speaker": "Alex",
+      "start": 54.2,
+      "end": 59.0,
+      "text": "Being good at business doesn’t make every claim you publish true.",
+      "on_screen": "BUSINESS SKILL DOES NOT MAKE CLAIMS TRUE",
+      "source": "Beyond the Myth · Facts, not scapegoats"
+    }
+  ]
+}

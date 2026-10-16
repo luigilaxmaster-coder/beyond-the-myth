@@ -1,0 +1,75 @@
+{
+  "episode_id": "ep015",
+  "episode_num": "05",
+  "title": "The Black Death (1348) and the Poisoned Well Myth",
+  "hero_object": "Papal Bull of Clement VI (Avignon, 1348) Sicut Judaeis",
+  "hook": "The accusation spread. That didn’t make it evidence.",
+  "punchline": "A thousand people repeating it is still not a source.",
+  "visual_paradigm": "Medieval Illuminated Manuscript & Papal Decree (Vellum Sepia #FEF3C7, Crimson Wax #991B1B, Iron Gall Ink #1F2937)",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 3.9,
+      "text": "The accusation spread. That didn’t make it evidence.",
+      "on_screen": "RUMOR SPREAD ≠ HISTORICAL EVIDENCE",
+      "source": "USHMM Historical Timeline"
+    },
+    {
+      "id": 2,
+      "speaker": "Maya",
+      "start": 4.2,
+      "end": 13.8,
+      "text": "In thirteen-forty-eight, the Black Death swept across Europe. Terrified communities, lacking germ theory, looked for someone to blame.",
+      "on_screen": "1348 BLACK DEATH: CRISIS WITHOUT GERM THEORY",
+      "source": "Cambridge Medieval History"
+    },
+    {
+      "id": 3,
+      "speaker": "Alex",
+      "start": 14.1,
+      "end": 23.5,
+      "text": "The rumor spread that local Jewish families were poisoning village wells. Mobs attacked communities, extracting false confessions through torture.",
+      "on_screen": "WELL-POISONING RUMORS & FORCED CONFESSIONS",
+      "source": "Historical Source Criticism"
+    },
+    {
+      "id": 4,
+      "speaker": "Maya",
+      "start": 23.8,
+      "end": 34.2,
+      "text": "Even at the time, perceptive leaders saw through it. Pope Clement the Sixth issued two papal bulls in thirteen-forty-eight condemning the accusation as a lie.",
+      "on_screen": "POPE CLEMENT VI: CONDEMNED ACCUSATION IN 1348",
+      "source": "Papal Bull 'Quamvis Perfidiam' (1348)"
+    },
+    {
+      "id": 5,
+      "speaker": "Alex",
+      "start": 34.6,
+      "end": 44.8,
+      "text": "He pointed out the obvious logic: Jewish people were dying of the plague at the exact same rates, and in places where no Jewish communities existed, the plague raged just as hard.",
+      "on_screen": "IDENTICAL PLAGUE RATES REVEALED THE LIE",
+      "source": "Medieval Epidemiological Records"
+    },
+    {
+      "id": 6,
+      "speaker": "Maya",
+      "start": 45.2,
+      "end": 53.6,
+      "text": "When fear replaces investigation, scapegoats replace science. Repetition by a frightened crowd never turns a myth into fact.",
+      "on_screen": "FEAR REPLACES SCIENCE · MOB RUMORS ≠ FACTS",
+      "source": "USHMM Holocaust Encyclopedia"
+    },
+    {
+      "id": 7,
+      "speaker": "Alex",
+      "start": 54.2,
+      "end": 59.0,
+      "text": "A thousand people repeating it is still not a source.",
+      "on_screen": "A THOUSAND PEOPLE REPEATING IT IS NOT A SOURCE",
+      "source": "Beyond the Myth · Facts, not scapegoats"
+    }
+  ]
+}

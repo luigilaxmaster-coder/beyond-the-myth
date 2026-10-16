@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond The Myth - Ep 05: Can You Be Jewish Without Being Religious?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    :root {
+      --bg-dark: #120F0D;
+      --card-bg: rgba(28, 23, 20, 0.88);
+      --card-border: rgba(224, 109, 83, 0.28);
+      --accent-terracotta: #FF8A65;
+      --accent-gold: #E5A93C;
+      --accent-sage: #6E9C7B;
+      --text-main: #F7F2EB;
+      --text-muted: #BFAFA2;
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-color: var(--bg-dark);
+      font-family: var(--font-body);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #stage {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    /* Background photographic plates layer */
+    .plate-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      transform-origin: center center;
+    }
+
+    .plate-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.42) contrast(1.12) saturate(0.92);
+    }
+
+    /* Cinematic warm vignette and duotone overlay */
+    .vignette-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(circle at 50% 45%, rgba(18, 15, 13, 0.3) 0%, rgba(18, 15, 13, 0.82) 75%, rgba(10, 8, 7, 0.96) 100%);
+      pointer-events: none;
+    }
+
+    /* Header Bar */
+    .header-bar {
+      position: absolute;
+      top: 60px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 28px;
+      background: rgba(22, 18, 15, 0.82);
+      border: 1px solid rgba(229, 169, 60, 0.3);
+      border-radius: 14px;
+      backdrop-filter: blur(16px);
+      z-index: 50;
+    }
+
+    .series-tag {
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .series-tag::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+    }
+
+    .topic-badge {
+      font-family: var(--font-mono);
+      font-size: 17px;
+      letter-spacing: 1.5px;
+      color: var(--accent-terracotta);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* Main Editorial Topic Card */
+    .center-card-container {
+      position: absolute;
+      top: 220px;
+      left: 54px;
+      width: 972px;
+      z-index: 40;
+    }
+
+    .editorial-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      background: rgba(224, 109, 83, 0.2);
+      border: 1px solid var(--accent-terracotta);
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--accent-terracotta);
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .main-question {
+      font-family: var(--font-display);
+      font-size: 58px;
+      line-height: 1.15;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+      margin-bottom: 24px;
+    }
+
+    .main-question span {
+      color: var(--accent-gold);
+    }
+
+    /* Scene 1: The Broken Checkbox Graphic */
+    .checkbox-breakdown {
+      margin-top: 28px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .checkbox-box {
+      width: 38px;
+      height: 38px;
+      border: 2px solid var(--accent-gold);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: var(--accent-gold);
+    }
+
+    .red-rejection-stamp {
+      position: absolute;
+      top: 14px;
+      right: 28px;
+      padding: 10px 22px;
+      background: rgba(185, 28, 28, 0.88);
+      border: 2px solid #EF4444;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 1.5px;
+      transform: rotate(4deg) scale(0);
+      opacity: 0;
+    }
+
+    /* Scene 2: 4 Pillars Cultural Mosaic */
+    .mosaic-container {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .mosaic-card {
+      background: rgba(32, 26, 22, 0.92);
+      border: 1px solid rgba(229, 169, 60, 0.25);
+      border-radius: 14px;
+      padding: 24px;
+      opacity: 0;
+    }
+
+    .mosaic-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .mosaic-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 8px;
+    }
+
+    .mosaic-desc {
+      font-size: 19px;
+      line-height: 1.35;
+      color: var(--text-muted);
+    }
+
+    /* Scene 3: Pew Research Chart */
+    .pew-chart-card {
+      margin-top: 32px;
+      background: var(--card-bg);
+      border: 1px solid rgba(110, 156, 123, 0.4);
+      border-radius: 16px;
+      padding: 34px;
+      opacity: 0;
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .chart-title {
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent-sage);
+      letter-spacing: 1px;
+    }
+
+    .source-tag {
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+
+    .stat-row {
+      margin-bottom: 22px;
+    }
+
+    .stat-label-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .stat-bar-track {
+      width: 100%;
+      height: 22px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 11px;
+      overflow: hidden;
+      padding: 2px;
+    }
+
+    .stat-bar-fill {
+      height: 100%;
+      border-radius: 9px;
+      width: 0%;
+    }
+
+    .fill-gold {
+      background: linear-gradient(90deg, #D97706, #F59E0B);
+    }
+
+    .fill-sage {
+      background: linear-gradient(90deg, #059669, #10B981);
+    }
+
+    /* Scene 4 & 5: Empathetic Quote & Dialogue Rule */
+    .quote-card {
+      margin-top: 32px;
+      background: linear-gradient(135deg, rgba(38, 30, 25, 0.95), rgba(24, 19, 16, 0.95));
+      border: 2px solid var(--accent-gold);
+      border-radius: 18px;
+      padding: 40px;
+      position: relative;
+      opacity: 0;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .quote-mark {
+      font-family: var(--font-display);
+      font-size: 70px;
+      line-height: 1;
+      color: var(--accent-gold);
+      opacity: 0.5;
+    }
+
+    .quote-text {
+      font-family: var(--font-display);
+      font-size: 38px;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin: 10px 0 20px 0;
+    }
+
+    .quote-subtext {
+      font-size: 22px;
+      line-height: 1.45;
+      color: var(--accent-terracotta);
+      font-weight: 500;
+    }
+
+    /* Subtitles Container (Bottom) */
+    .subtitles-container {
+      position: absolute;
+      bottom: 110px;
+      left: 54px;
+      width: 972px;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .speaker-pill {
+      display: inline-block;
+      padding: 6px 18px;
+      background: var(--accent-gold);
+      color: #120F0D;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle-text {
+      font-size: 34px;
+      line-height: 1.35;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+      background: rgba(18, 15, 13, 0.78);
+      padding: 16px 28px;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent-terracotta);
+      max-width: 940px;
+    }
+
+    /* Source Citation Line */
+    .source-citation-line {
+      position: absolute;
+      bottom: 40px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 14px;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="ep005-diversity" data-width="1080" data-height="1920" data-duration="60">
+    <!-- Background Plates with Ken Burns -->
+    <div id="plate-1" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_1_gathering.jpg" class="plate-img" alt="Community Gathering">
+    </div>
+    <div id="plate-2" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_2_heritage.jpg" class="plate-img" alt="Cultural Heritage">
+    </div>
+    <div id="plate-3" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_3_pew.jpg" class="plate-img" alt="Pew Research Data">
+    </div>
+    <div id="plate-4" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overflow="true">
+      <img src="assets/images/scene_4_cultural_center.jpg" class="plate-img" alt="Cultural Center Diversity">
+    </div>
+
+    <!-- Vignette / Contrast Grading -->
+    <div class="vignette-overlay" data-layout-allow-overlap="true"></div>
+
+    <!-- Header -->
+    <div class="header-bar" data-layout-allow-overlap="true">
+      <div class="series-tag">BEYOND THE MYTH</div>
+      <div class="topic-badge">EPISODE 05 \ DEMOGRAPHIC FACT</div>
+    </div>
+
+    <!-- Center Card Container -->
+    <div class="center-card-container" data-layout-allow-overlap="true">
+      <div class="editorial-badge">ANTHROPOLOGICAL & DEMOGRAPHIC REALITY</div>
+      <h1 class="main-question">Can You Be Jewish<br><span>Without Being Religious?</span></h1>
+
+      <!-- Scene 1: Checkbox breakdown -->
+      <div id="checkbox-card" class="checkbox-breakdown" data-layout-allow-overlap="true">
+        <div class="checkbox-row">
+          <div class="checkbox-box">&#10003;</div>
+          <div>Strict Religious Theological Observance</div>
+        </div>
+        <div id="stamp-rejected" class="red-rejection-stamp">INCOMPLETE DEFINITION</div>
+      </div>
+
+      <!-- Scene 2: 4 Pillars of Diversity -->
+      <div id="mosaic-grid" class="mosaic-container" data-layout-allow-overlap="true">
+        <div class="mosaic-card">
+          <div class="mosaic-icon">&#x1F54E;</div>
+          <div class="mosaic-title">FAITH & RITUAL</div>
+          <div class="mosaic-desc">Traditions, holidays, and moral philosophical teachings.</div>
+        </div>
+        <div class="mosaic-card">
+          <div class="mosaic-icon">&#x1F30D;</div>
+          <div class="mosaic-title">ANCESTRY & ETHNOS</div>
+          <div class="mosaic-desc">Family heritage, lineage, and global diaspora memory.</div>
+        </div>
+        <div class="mosaic-card">
+          <div class="mosaic-icon">&#x1F4DA;</div>
+          <div class="mosaic-title">CULTURE & ARTS</div>
+          <div class="mosaic-desc">Literature, humor, Yiddish/Ladino, food, and music.</div>
+        </div>
+        <div class="mosaic-card">
+          <div class="mosaic-icon">&#x1F91D;</div>
+          <div class="mosaic-title">COMMUNITY</div>
+          <div class="mosaic-desc">Shared commitment to human rights and mutual support.</div>
+        </div>
+      </div>
+
+      <!-- Scene 3: Pew Research Chart -->
+      <div id="pew-chart" class="pew-chart-card" data-layout-allow-overlap="true">
+        <div class="chart-header">
+          <div class="chart-title">PEW RESEARCH: JEWISH AMERICANS IN 2020</div>
+          <div class="source-tag">National Landmark Survey</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label-row">
+            <span>Connect Through Culture & Ancestry</span>
+            <span style="color: var(--accent-gold); font-weight:700;">73%</span>
+          </div>
+          <div class="stat-bar-track">
+            <div id="bar-culture" class="stat-bar-fill fill-gold"></div>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label-row">
+            <span>Define Identity Solely Through Synagogue Dogma</span>
+            <span style="color: var(--accent-sage); font-weight:700;">27%</span>
+          </div>
+          <div class="stat-bar-track">
+            <div id="bar-religion" class="stat-bar-fill fill-sage"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 4 & 5: Empathetic Quote -->
+      <div id="quote-card" class="quote-card" data-layout-allow-overlap="true">
+        <div class="quote-mark">&ldquo;</div>
+        <div class="quote-text">What does that mean to you?</div>
+        <div class="quote-subtext">More conversation. Fewer assumptions.<br>People are not dropdown menus.</div>
+      </div>
+    </div>
+
+    <!-- Subtitles Overlay -->
+    <div class="subtitles-container" data-layout-allow-overlap="true">
+      <div id="speaker-badge" class="speaker-pill">MAYA</div>
+      <div id="sub-line" class="subtitle-text">Can you be Jewish without being religious? Yes.</div>
+    </div>
+
+    <!-- Footer Source Citation -->
+    <div class="source-citation-line" data-layout-allow-overlap="true">
+      <span id="footer-source">Pew Research Center (2020 Survey)</span>
+      <span>EP 05 / 10 &middot; 60.00S MASTER</span>
+    </div>
+  </div>
+
+  <script>
+    // Pure GSAP Timeline synchronized to 60.00s audio master
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["ep005-diversity"] = tl;
+
+    // Scene 1: Plate 1 (0s - 4.18s)
+    tl.to("#plate-1", { opacity: 1, duration: 0.8, ease: "power2.out" }, 0);
+    tl.fromTo("#plate-1 img", { scale: 1.0 }, { scale: 1.08, duration: 4.2, ease: "none" }, 0);
+    tl.to("#stamp-rejected", { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.7)" }, 2.0);
+
+    // Subtitle 1 (0.25s - 3.25s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "Can you be Jewish without being religious? Yes.";
+      document.getElementById("footer-source").innerText = "Pew Research Center (2020 Survey)";
+    }, null, 0.25);
+
+    // Scene 2: Plate 2 (4.18s - 13.44s)
+    tl.to("#plate-1", { opacity: 0, duration: 0.8 }, 4.18);
+    tl.to("#plate-2", { opacity: 1, duration: 0.8 }, 4.18);
+    tl.fromTo("#plate-2 img", { scale: 1.05 }, { scale: 1.14, duration: 9.3, ease: "none" }, 4.18);
+    tl.to("#checkbox-card", { opacity: 0, y: -20, duration: 0.4 }, 4.18);
+
+    // Stagger in 4 pillars mosaic with fromTo
+    tl.fromTo("#mosaic-grid .mosaic-card", 
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.6, stagger: 0.2, ease: "power2.out" }, 
+      4.8
+    );
+
+    // Subtitle 2 (4.18s - 13.21s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "Here’s where the one-box explanation breaks down. Jewish identity can involve religion, family, culture, history, or several of those together.";
+      document.getElementById("footer-source").innerText = "Sociological Diversity Studies";
+    }, null, 4.18);
+
+    // Scene 3: Plate 3 (13.44s - 24.14s)
+    tl.to("#plate-2", { opacity: 0, duration: 0.8 }, 13.44);
+    tl.to("#plate-3", { opacity: 1, duration: 0.8 }, 13.44);
+    tl.fromTo("#plate-3 img", { scale: 1.0 }, { scale: 1.08, duration: 10.7, ease: "none" }, 13.44);
+    tl.to("#mosaic-grid", { opacity: 0, duration: 0.4 }, 13.44);
+
+    // Reveal Pew Chart and animate percentage bars
+    tl.to("#pew-chart", { opacity: 1, duration: 0.5 }, 14.0);
+    tl.fromTo("#bar-culture", { width: "0%" }, { width: "73%", duration: 1.4, ease: "power2.out" }, 14.8);
+    tl.fromTo("#bar-religion", { width: "0%" }, { width: "27%", duration: 1.4, ease: "power2.out" }, 15.5);
+
+    // Subtitle 3 (13.44s - 23.44s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "Pew’s twenty-twenty survey of Jewish Americans documented that variety. Some people described their Jewish identity through religion. Others connected through ancestry or culture.";
+      document.getElementById("footer-source").innerText = "Pew: Jewish Americans in 2020";
+    }, null, 13.44);
+
+    // Scene 4: Plate 4 (24.14s - 35.73s)
+    tl.to("#plate-3", { opacity: 0, duration: 0.8 }, 24.14);
+    tl.to("#plate-4", { opacity: 1, duration: 0.8 }, 24.14);
+    tl.fromTo("#plate-4 img", { scale: 1.06 }, { scale: 1.15, duration: 11.6, ease: "none" }, 24.14);
+
+    // Subtitle 4 (24.14s - 34.73s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "That doesn’t mean everybody agrees about identity. It means one label does not tell you a person’s beliefs, daily routines, or opinions. You still have to ask.";
+      document.getElementById("footer-source").innerText = "Pew Research Findings";
+    }, null, 24.14);
+
+    // Scene 5: Back to Plate 1 with warmth (35.73s - 46.91s)
+    tl.to("#plate-4", { opacity: 0, duration: 0.8 }, 35.73);
+    tl.to("#plate-1", { opacity: 1, duration: 0.8 }, 35.73);
+    tl.to("#pew-chart", { opacity: 0, duration: 0.4 }, 35.73);
+
+    // Subtitle 5 (35.73s - 43.36s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "So a Jewish person you see online is not automatically speaking for every Jewish person. And they don’t have to pass your stereotype checklist.";
+      document.getElementById("footer-source").innerText = "Demographic Nuance in Research";
+    }, null, 35.73);
+
+    // Scene 6 & 7: Quote Card & Finale (46.91s - 60.00s)
+    tl.to("#quote-card", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, 46.91);
+
+    // Subtitle 6 (46.91s - 53.51s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "Curious about someone? Try “What does that mean to you?” Then actually listen to the answer.";
+      document.getElementById("footer-source").innerText = "Dialogic Verification Principle";
+    }, null, 46.91);
+
+    // Subtitle 7 (54.49s - 60.00s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "More conversation. Fewer assumptions. People aren’t dropdown menus.";
+      document.getElementById("footer-source").innerText = "Beyond the Myth · Facts, not scapegoats";
+    }, null, 54.49);
+
+    // Fade to black at 59.3s
+    tl.to("#stage", { opacity: 0, duration: 0.7, ease: "power2.in" }, 59.3);
+
+    // HyperFrames driver hook
+    window.__seekFrame = (seconds) => {
+      tl.seek(seconds);
+    };
+  </script>
+</body>
+</html>

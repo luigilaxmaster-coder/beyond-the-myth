@@ -1,0 +1,72 @@
+{
+  "episode_id": "ep008",
+  "episode_num": "08",
+  "title": "The Catholic Document That Rejects Collective Blame",
+  "cover_text": "READ THE ACTUAL DOCUMENT",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 4.31,
+      "text": "The Catholic Church rejects blaming all Jews for Jesus\u2019s death.",
+      "on_screen": "OFFICIAL TEACHING: COLLECTIVE BLAME REJECTED",
+      "source": "Vatican II (vatican.va)"
+    },
+    {
+      "id": 2,
+      "speaker": "Maya",
+      "start": 4.66,
+      "end": 14.59,
+      "text": "There\u2019s an official document: Nostra aetate, issued in nineteen-sixty-five. Its fourth section directly addresses that collective accusation, instead of leaving it to rumor.",
+      "on_screen": "NOSTRA AETATE \u00b7 SECTION 4 (1965)",
+      "source": "Second Vatican Council Declaration"
+    },
+    {
+      "id": 3,
+      "speaker": "Alex",
+      "start": 14.94,
+      "end": 24.54,
+      "text": "It says Jesus\u2019s suffering cannot be charged indiscriminately to all Jewish people alive then, or to Jewish people today. It also condemns antisemitism.",
+      "on_screen": "CANNOT BE CHARGED TO ALL JEWISH PEOPLE",
+      "source": "Nostra Aetate, n. 4"
+    },
+    {
+      "id": 4,
+      "speaker": "Maya",
+      "start": 24.89,
+      "end": 34.32,
+      "text": "That doesn\u2019t erase the harm the accusation caused. And one declaration didn\u2019t make prejudice disappear. But it matters when someone presents collective blame as Catholic teaching.",
+      "on_screen": "COLLECTIVE BLAME IS NOT CATHOLIC DOCTRINE",
+      "source": "Historical Theology Documentation"
+    },
+    {
+      "id": 5,
+      "speaker": "Alex",
+      "start": 36.2,
+      "end": 45.7,
+      "text": "You can discuss religious texts and disagree about theology. That is different from making people guilty because they belong to a community, especially generations later.",
+      "on_screen": "THEOLOGICAL DEBATE \u2260 GROUP GUILT",
+      "source": "Interfaith Hermeneutics"
+    },
+    {
+      "id": 6,
+      "speaker": "Maya",
+      "start": 47.5,
+      "end": 52.3,
+      "text": "So check what the document actually says, not a comment claiming to speak for an entire faith.",
+      "on_screen": "CHECK THE ORIGINAL DOCUMENT",
+      "source": "Vatican Archive Direct Record"
+    },
+    {
+      "id": 7,
+      "speaker": "Alex",
+      "start": 55.2,
+      "end": 58.22,
+      "text": "You don\u2019t inherit guilt from a stranger\u2019s history.",
+      "on_screen": "NO INHERITED GUILT FROM HISTORY",
+      "source": "Beyond the Myth \u00b7 Facts, not scapegoats"
+    }
+  ]
+}

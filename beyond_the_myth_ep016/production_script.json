@@ -1,0 +1,75 @@
+{
+  "episode_id": "ep016",
+  "episode_num": "06",
+  "title": "Blamed for Capitalism... and for Communism?",
+  "hero_object": "Contradictory Historical Propaganda Dossiers (Wall Street Ledger vs. Soviet Red Star)",
+  "hook": "Wait. The same community gets blamed for capitalism—and communism?",
+  "punchline": "If every outcome confirms your theory, what could ever prove it wrong?",
+  "visual_paradigm": "Propaganda Contradiction Matrix & Archival Deconstruction (Split Navy/Crimson #0F172A / #991B1B, Gold #FDE047)",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Maya",
+      "start": 0.25,
+      "end": 4.5,
+      "text": "Wait. The same community gets blamed for capitalism—and communism?",
+      "on_screen": "THE IMPOSSIBLE CONTRADICTION",
+      "source": "USHMM Holocaust Encyclopedia"
+    },
+    {
+      "id": 2,
+      "speaker": "Alex",
+      "start": 4.8,
+      "end": 14.1,
+      "text": "Open the history of political propaganda. In one pamphlet, Jewish people are depicted as greedy Wall Street bankers dominating global finance.",
+      "on_screen": "ACCUSATION A: RUTHLESS WALL STREET CAPITALISTS",
+      "source": "Historical Anti-Capitalist Propaganda"
+    },
+    {
+      "id": 3,
+      "speaker": "Maya",
+      "start": 14.4,
+      "end": 23.8,
+      "text": "Open another pamphlet from the exact same era. Now they’re accused of leading the Bolshevik revolution to overthrow private property.",
+      "on_screen": "ACCUSATION B: BOLSHEVIK COMMUNIST AGITATORS",
+      "source": "Historical Anti-Bolshevik Propaganda"
+    },
+    {
+      "id": 4,
+      "speaker": "Alex",
+      "start": 24.1,
+      "end": 34.6,
+      "text": "Stop and look at the contradiction. You cannot simultaneously run international private banking and be dedicated to abolishing private banking.",
+      "on_screen": "MUTUALLY EXCLUSIVE ECONOMIC SYSTEMS",
+      "source": "Economic History & Logic Analysis"
+    },
+    {
+      "id": 5,
+      "speaker": "Maya",
+      "start": 35.0,
+      "end": 44.8,
+      "text": "The reality? Jewish people, like any human population, span every political ideology: business owners, union organizers, conservatives, and socialists.",
+      "on_screen": "HUMAN PLURALISM: EVERY POLITICAL VIEWPOINT",
+      "source": "Sociological Pluralism Studies"
+    },
+    {
+      "id": 6,
+      "speaker": "Alex",
+      "start": 45.2,
+      "end": 53.8,
+      "text": "Conspiracy logic doesn’t care about consistency. It just changes the villain costume to match whatever you already fear.",
+      "on_screen": "THE CONSPIRACY SHIFTS TO MATCH ANY FEAR",
+      "source": "Cognitive Bias & Scapegoating Research"
+    },
+    {
+      "id": 7,
+      "speaker": "Maya",
+      "start": 54.3,
+      "end": 59.0,
+      "text": "If every outcome confirms your theory, what could ever prove it wrong?",
+      "on_screen": "WHAT COULD EVER PROVE IT WRONG?",
+      "source": "Beyond the Myth · Facts, not scapegoats"
+    }
+  ]
+}

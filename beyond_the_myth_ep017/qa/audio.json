@@ -1,0 +1,77 @@
+{
+  "sample_rate": 44100,
+  "channels": 2,
+  "samples": 2646000,
+  "duration": 60.0,
+  "duck_db": -12,
+  "release_ms": 150,
+  "voice_map": {
+    "Maya": "en-US-AvaNeural",
+    "Alex": "en-US-ChristopherNeural"
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 4.6,
+      "actual_end": 4.506598639455782,
+      "tempo": 1.4726005937113331,
+      "word_count": 12
+    },
+    {
+      "scene": 2,
+      "speaker": "Maya",
+      "start": 4.9,
+      "end": 14.2,
+      "actual_end": 14.100589569160999,
+      "tempo": 1.1531473037515803,
+      "word_count": 27
+    },
+    {
+      "scene": 3,
+      "speaker": "Alex",
+      "start": 14.5,
+      "end": 23.8,
+      "actual_end": 23.500793650793653,
+      "tempo": 1.0,
+      "word_count": 24
+    },
+    {
+      "scene": 4,
+      "speaker": "Maya",
+      "start": 24.1,
+      "end": 34.5,
+      "actual_end": 34.40138321995465,
+      "tempo": 1.137210181230115,
+      "word_count": 29
+    },
+    {
+      "scene": 5,
+      "speaker": "Alex",
+      "start": 34.9,
+      "end": 44.8,
+      "actual_end": 44.21278911564626,
+      "tempo": 1.0,
+      "word_count": 24
+    },
+    {
+      "scene": 6,
+      "speaker": "Maya",
+      "start": 45.2,
+      "end": 53.6,
+      "actual_end": 53.49743764172336,
+      "tempo": 1.021154936333508,
+      "word_count": 23
+    },
+    {
+      "scene": 7,
+      "speaker": "Alex",
+      "start": 54.2,
+      "end": 59.0,
+      "actual_end": 57.70478458049887,
+      "tempo": 1.0,
+      "word_count": 11
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "episode_id": "ep006",
+  "episode_num": "06",
+  "title": "The Antisemitic Forgery That Copied Another Book",
+  "cover_text": "THE \u201cPROOF\u201d WAS COPIED",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 4.86,
+      "text": "The supposed secret document was fake. And partly copied.",
+      "on_screen": "FABRICATED DOCUMENT \u00b7 PLAGIARIZED TEXT",
+      "source": "USHMM (ushmm.org)"
+    },
+    {
+      "id": 2,
+      "speaker": "Maya",
+      "start": 5.21,
+      "end": 12.48,
+      "text": "It\u2019s called The Protocols of the Elders of Zion. First published in nineteen-oh-three, it pretended to reveal secret Jewish plans.",
+      "on_screen": "PROTOCOLS \u00b7 FIRST PUBLISHED 1903",
+      "source": "Holocaust Encyclopedia"
+    },
+    {
+      "id": 3,
+      "speaker": "Alex",
+      "start": 13.0,
+      "end": 21.93,
+      "text": "But those meeting records were invented. And here\u2019s the giveaway: large sections came from an earlier French political satire that wasn\u2019t even about Jewish people.",
+      "on_screen": "COPIED FROM 1864 FRENCH SATIRE",
+      "source": "Maurice Joly Textual Comparison"
+    },
+    {
+      "id": 4,
+      "speaker": "Maya",
+      "start": 24.5,
+      "end": 34.08,
+      "text": "In nineteen-twenty-one, The Times of London exposed the copying. The United States Holocaust Memorial Museum documents the forgery and how it kept spreading afterward.",
+      "on_screen": "EXPOSED 1921 \u00b7 THE TIMES OF LONDON",
+      "source": "The Times (1921) & USHMM Archive"
+    },
+    {
+      "id": 5,
+      "speaker": "Alex",
+      "start": 36.2,
+      "end": 46.02,
+      "text": "So this wasn\u2019t a hidden truth finally uncovered. It was a fabricated accusation dressed up as an insider document. A dramatic cover didn\u2019t make it evidence.",
+      "on_screen": "FABRICATION DRESSED AS EVIDENCE",
+      "source": "Historical Source Criticism"
+    },
+    {
+      "id": 6,
+      "speaker": "Maya",
+      "start": 47.5,
+      "end": 53.98,
+      "text": "That matters when a post recycles the same story with new graphics. New packaging doesn\u2019t repair false evidence.",
+      "on_screen": "NEW PACKAGING \u2260 NEW EVIDENCE",
+      "source": "Media History & Misinformation"
+    },
+    {
+      "id": 7,
+      "speaker": "Alex",
+      "start": 55.2,
+      "end": 58.44,
+      "text": "An old lie doesn\u2019t become true in high definition.",
+      "on_screen": "AN OLD LIE ISN'T TRUE IN HIGH DEFINITION",
+      "source": "Beyond the Myth \u00b7 Facts, not scapegoats"
+    }
+  ]
+}

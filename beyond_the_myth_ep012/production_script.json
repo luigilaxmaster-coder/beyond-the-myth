@@ -1,0 +1,75 @@
+{
+  "episode_id": "ep012",
+  "episode_num": "02",
+  "title": "The Brooklyn Synagogue Tunnel: Facts vs. Inventions",
+  "hero_object": "Official NYC Department of Buildings (DOB) Architectural Inspection Blueprint",
+  "hook": "The tunnel was real. That doesn’t make every story about it true.",
+  "punchline": "Investigate what happened. Don’t add what you can’t prove.",
+  "visual_paradigm": "Forensic Structural Blueprint & Urban Mapping (Architectural Navy #0B132B, Laser Cyan #00F0FF, Warning Coral #FF5757)",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Maya",
+      "start": 0.25,
+      "end": 4.2,
+      "text": "The tunnel was real. That doesn’t make every story about it true.",
+      "on_screen": "THE TUNNEL WAS REAL. THE RUMORS WEREN'T.",
+      "source": "FactCheck.org & NYC DOB"
+    },
+    {
+      "id": 2,
+      "speaker": "Alex",
+      "start": 4.5,
+      "end": 13.9,
+      "text": "In January twenty-twenty-four, an unauthorized underground passageway was uncovered beside a historic Brooklyn synagogue at seven-seventy Eastern Parkway.",
+      "on_screen": "JANUARY 2024: UNAUTHORIZED EXCAVATION",
+      "source": "NYC Department of Buildings Official Report"
+    },
+    {
+      "id": 3,
+      "speaker": "Maya",
+      "start": 14.2,
+      "end": 23.5,
+      "text": "Within hours, social media added wild claims: stories claiming it led to a children’s museum, or connected to global criminal networks.",
+      "on_screen": "UNVERIFIED CLAIMS ADDED TO REAL EVENT",
+      "source": "Social Media Rumor Tracking"
+    },
+    {
+      "id": 4,
+      "speaker": "Alex",
+      "start": 23.8,
+      "end": 34.1,
+      "text": "Here is what the city inspection actually found. The structural engineering report documented a sixty-foot rudimentary trench dug between two adjacent synagogue basements by unauthorized students trying to expand prayer space.",
+      "on_screen": "60-FOOT BASEMENT TRENCH · ZERO CONNECTIONS BEYOND",
+      "source": "NYC DOB Engineering Structural Order"
+    },
+    {
+      "id": 5,
+      "speaker": "Maya",
+      "start": 34.5,
+      "end": 44.8,
+      "text": "It did not cross the street. It did not touch any museum. Synagogue leadership condemned the excavation and called building inspectors immediately.",
+      "on_screen": "LEADERSHIP CONDEMNED & REPORTED HAZARD",
+      "source": "Chabad-Lubavitch World HQ Statement"
+    },
+    {
+      "id": 6,
+      "speaker": "Alex",
+      "start": 45.2,
+      "end": 53.8,
+      "text": "A real municipal safety violation was weaponized into ancient folklore. Look at the verified blueprints, not the runaway rumors.",
+      "on_screen": "STICK TO VERIFIED BLUEPRINTS",
+      "source": "FactCheck.org Case Review"
+    },
+    {
+      "id": 7,
+      "speaker": "Maya",
+      "start": 54.4,
+      "end": 59.0,
+      "text": "Investigate what happened. Don’t add what you can’t prove.",
+      "on_screen": "DON'T ADD WHAT YOU CAN'T PROVE",
+      "source": "Beyond the Myth · Facts, not scapegoats"
+    }
+  ]
+}

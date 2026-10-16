@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "duration": 5.16,
+    "wav_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_1.wav",
+    "mp3_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_1.mp3",
+    "vtt_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_1.vtt",
+    "text": "That tiny symbol on your food? It's a certification, not an ownership code.",
+    "on_screen": "CERTIFICATION \u2260 OWNERSHIP",
+    "source": "OU Kosher Certification (oukosher.org)",
+    "words": []
+  },
+  {
+    "id": 2,
+    "duration": 5.712018,
+    "wav_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_2.wav",
+    "mp3_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_2.mp3",
+    "vtt_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_2.vtt",
+    "text": "This is the O-U mark. It means the product meets the Orthodox Union's kosher standards.",
+    "on_screen": "OU \u00b7 KOSHER CERTIFICATION",
+    "source": "OU Kosher Symbols Explained [S1]",
+    "words": []
+  },
+  {
+    "id": 3,
+    "duration": 6.6,
+    "wav_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_3.wav",
+    "mp3_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_3.mp3",
+    "vtt_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_3.vtt",
+    "text": "Kosher follows Jewish dietary law. Inspectors check ingredients, equipment, and how food is made.",
+    "on_screen": "INGREDIENTS \u2192 EQUIPMENT \u2192 PROCESS",
+    "source": "What Is Kosher Certification? [S2]",
+    "words": []
+  },
+  {
+    "id": 4,
+    "duration": 8.616009,
+    "wav_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_4.wav",
+    "mp3_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_4.mp3",
+    "vtt_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_4.vtt",
+    "text": "Companies apply for certification. Yes, they pay fees. The process includes a plant visit, an assessment, and a contract.",
+    "on_screen": "APPLICATION \u2192 REVIEW \u2192 CONTRACT",
+    "source": "Steps for Kosher Certification [S3]",
+    "words": []
+  },
+  {
+    "id": 5,
+    "duration": 4.896009,
+    "wav_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_5.wav",
+    "mp3_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_5.mp3",
+    "vtt_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_5.vtt",
+    "text": "But paying for a certification service doesn't prove that Jewish people control the food industry.",
+    "on_screen": "CERTIFICATION \u2260 COLLECTIVE CONTROL",
+    "source": "Evidence-Based Public Reasoning [S3]",
+    "words": []
+  },
+  {
+    "id": 6,
+    "duration": 6.888005,
+    "wav_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_6.wav",
+    "mp3_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_6.mp3",
+    "vtt_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_6.vtt",
+    "text": "Want to know who owns a company? Check its corporate records. A dietary label answers a different question.",
+    "on_screen": "OWNERSHIP? \u2192 COMPANY RECORDS",
+    "source": "Corporate Filings & Public Disclosures",
+    "words": []
+  },
+  {
+    "id": 7,
+    "duration": 8.544014,
+    "wav_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_7.wav",
+    "mp3_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_7.mp3",
+    "vtt_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_7.vtt",
+    "text": "Ask hard questions. Follow the evidence. But hold people responsible for their actions\u2014not an entire community for its identity.",
+    "on_screen": "EVIDENCE. NOT COLLECTIVE BLAME.",
+    "source": "Ethical Public Accountability",
+    "words": []
+  },
+  {
+    "id": 8,
+    "duration": 8.232018,
+    "wav_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_8.wav",
+    "mp3_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_8.mp3",
+    "vtt_path": "C:\\Users\\PD2\\Desktop\\cad\\video\\beyond_the_myth_ep002\\assets\\audio\\raw\\scene_8.vtt",
+    "text": "The label belongs on the box. Not on an entire community. Beyond the Myth. Facts, not scapegoats.",
+    "on_screen": "BEYOND THE MYTH \u00b7 FACTS, NOT SCAPEGOATS",
+    "source": "Beyond the Myth \u00b7 Facts, not scapegoats",
+    "words": []
+  }
+]

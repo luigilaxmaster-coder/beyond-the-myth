@@ -1,0 +1,75 @@
+{
+  "episode_id": "ep019",
+  "episode_num": "09",
+  "title": "The Fake Surname Lists: How Memes Invent Genealogies",
+  "hero_object": "1808 Napoleonic Surname Registry & Linguistic Etymology Lexicon",
+  "hook": "A meme gave you a list of surnames. Historical genealogy gives you something else.",
+  "punchline": "A viral graphic is not a family tree.",
+  "visual_paradigm": "Genealogical Archives & Civil Ledger Registry (Warm Parchment #FFFBEB, Sepia Ink #451A03, Archival Cyan #0284C7)",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 4.4,
+      "text": "A meme gave you a list of surnames. Historical genealogy gives you something else.",
+      "on_screen": "VIRAL SURNAME LISTS VS. REAL GENEALOGY",
+      "source": "National Institute for Genealogical Studies"
+    },
+    {
+      "id": 2,
+      "speaker": "Maya",
+      "start": 4.7,
+      "end": 14.1,
+      "text": "You’ve seen posts circulating lists claiming that any name ending in '-man', '-stein', or geographic names like 'Frank' proves someone is secretly Jewish.",
+      "on_screen": "THE CLAIM: SPECIFIC SUFFIXES = SECRET IDENTITY",
+      "source": "Onomastics & Linguistics Research"
+    },
+    {
+      "id": 3,
+      "speaker": "Alex",
+      "start": 14.4,
+      "end": 23.7,
+      "text": "Here is the linguistic reality. Names like 'Hoffman', 'Schneider', or 'Berg' are standard German occupational and geographic words shared by millions of Christians and Jews alike.",
+      "on_screen": "COMMON GERMANIC OCCUPATIONAL & TOPONYMIC WORDS",
+      "source": "Dictionary of German Surnames"
+    },
+    {
+      "id": 4,
+      "speaker": "Maya",
+      "start": 24.0,
+      "end": 34.6,
+      "text": "Before the nineteenth century, most European Jews did not use fixed hereditary surnames at all. They were mandated by secular laws like Napoleon’s decree of eighteen-oh-eight.",
+      "on_screen": "1808 NAPOLEONIC DECREE MANDATED SURNAMES",
+      "source": "French Civil Registry Records (1808)"
+    },
+    {
+      "id": 5,
+      "speaker": "Alex",
+      "start": 35.0,
+      "end": 44.8,
+      "text": "Families adopted whatever common regional names were assigned by local civil clerks. A name tells you about regional language, not religious affiliation.",
+      "on_screen": "CIVIL REGISTRY ASSIGNMENT ≠ IDENTITY CODE",
+      "source": "European Historical Demography Studies"
+    },
+    {
+      "id": 6,
+      "speaker": "Maya",
+      "start": 45.2,
+      "end": 53.6,
+      "text": "Classifying strangers by surname patterns is bad linguistics and lazy profiling. Real ancestry requires authentic archives, not a cropped graphic.",
+      "on_screen": "LAZY PROFILING VS. DOCUMENTED ARCHIVES",
+      "source": "Genealogical Method & Provenance"
+    },
+    {
+      "id": 7,
+      "speaker": "Alex",
+      "start": 54.2,
+      "end": 59.0,
+      "text": "A viral graphic is not a family tree.",
+      "on_screen": "A VIRAL GRAPHIC IS NOT A FAMILY TREE",
+      "source": "Beyond the Myth · Facts, not scapegoats"
+    }
+  ]
+}

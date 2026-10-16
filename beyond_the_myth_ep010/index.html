@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond The Myth - Ep 10: The 3-Question Fact-Check Protocol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    :root {
+      --bg-dark: #040812;
+      --card-bg: rgba(13, 22, 38, 0.94);
+      --card-border: rgba(0, 240, 255, 0.3);
+      --accent-cyan: #56D5FF;
+      --accent-amber: #FDE047;
+      --accent-emerald: #34D399;
+      --accent-coral: #FFA4A4;
+      --text-main: #FFFFFF;
+      --text-muted: #94A3B8;
+      --font-display: 'Outfit', sans-serif;
+      --font-sub: 'Space Grotesk', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-color: var(--bg-dark);
+      font-family: var(--font-display);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #stage {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+    }
+
+    /* Photographic Plates Layer */
+    .plate-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      transform-origin: center center;
+    }
+
+    .plate-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.38) contrast(1.22) saturate(1.1);
+    }
+
+    /* Cyber HUD Vignette */
+    .hud-vignette {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(circle at 50% 35%, rgba(4, 8, 18, 0.2) 0%, rgba(4, 8, 18, 0.85) 75%, rgba(2, 4, 10, 0.98) 100%);
+      pointer-events: none;
+    }
+
+    /* Top HUD Header */
+    .header-bar {
+      position: absolute;
+      top: 60px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 28px;
+      background: rgba(13, 22, 38, 0.88);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      backdrop-filter: blur(16px);
+      z-index: 50;
+    }
+
+    .series-tag {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .series-tag::before {
+      content: 'DIGITAL PROTOCOL //';
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .topic-badge {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--accent-amber);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Center Container */
+    .center-card-container {
+      position: absolute;
+      top: 220px;
+      left: 54px;
+      width: 972px;
+      z-index: 40;
+    }
+
+    .hud-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      background: rgba(0, 240, 255, 0.15);
+      border: 1px solid var(--accent-cyan);
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    .main-headline {
+      font-family: var(--font-display);
+      font-size: 56px;
+      line-height: 1.15;
+      font-weight: 900;
+      color: #FFFFFF;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      margin-bottom: 26px;
+    }
+
+    .main-headline span {
+      color: var(--accent-cyan);
+    }
+
+    /* Question Cards Stack */
+    .q-card-container {
+      margin-top: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .q-step-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 22px 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      opacity: 0;
+    }
+
+    .q-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(0, 240, 255, 0.15);
+      border: 2px solid var(--accent-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      flex-shrink: 0;
+    }
+
+    .q-body {
+      flex: 1;
+    }
+
+    .q-title {
+      font-family: var(--font-sub);
+      font-size: 24px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .q-desc {
+      font-size: 18px;
+      line-height: 1.4;
+      color: var(--text-muted);
+    }
+
+    /* Scene 5: Source Verification Badge */
+    .honesty-card {
+      margin-top: 26px;
+      background: rgba(10, 18, 32, 0.96);
+      border: 2px solid var(--accent-emerald);
+      border-radius: 16px;
+      padding: 30px;
+      opacity: 0;
+    }
+
+    .honesty-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent-emerald);
+      margin-bottom: 10px;
+    }
+
+    .honesty-desc {
+      font-size: 20px;
+      line-height: 1.45;
+      color: var(--text-main);
+    }
+
+    /* Scene 7: Season Finale Card */
+    .finale-card {
+      margin-top: 26px;
+      background: linear-gradient(135deg, rgba(16, 28, 52, 0.98), rgba(8, 14, 26, 0.98));
+      border: 2px solid var(--accent-cyan);
+      border-radius: 18px;
+      padding: 38px;
+      opacity: 0;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .finale-title {
+      font-size: 40px;
+      line-height: 1.25;
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+    }
+
+    .finale-title span {
+      color: var(--accent-cyan);
+    }
+
+    .finale-sub {
+      font-size: 22px;
+      color: var(--accent-amber);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    /* Subtitles (Bottom) */
+    .subtitles-container {
+      position: absolute;
+      bottom: 110px;
+      left: 54px;
+      width: 972px;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .speaker-pill {
+      display: inline-block;
+      padding: 6px 18px;
+      background: var(--accent-cyan);
+      color: #040812;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle-text {
+      font-size: 34px;
+      line-height: 1.35;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+      background: rgba(10, 18, 32, 0.88);
+      padding: 16px 28px;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent-cyan);
+      max-width: 940px;
+    }
+
+    /* Source Citation Line */
+    .source-citation-line {
+      position: absolute;
+      bottom: 40px;
+      left: 54px;
+      width: 972px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 14px;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body>
+  <div id="stage" data-composition-id="ep010-factcheck" data-width="1080" data-height="1920" data-duration="60">
+    <!-- Photographic Plates Layer -->
+    <div id="plate-1" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_1_mobile_feed.jpg" class="plate-img" alt="Viral Social Feed on Smartphone">
+    </div>
+    <div id="plate-2" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_2_newsroom_station.jpg" class="plate-img" alt="Digital Newsroom Workstation">
+    </div>
+    <div id="plate-3" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_3_lateral_diagram.jpg" class="plate-img" alt="Stanford Lateral Reading Multi-Tab">
+    </div>
+    <div id="plate-4" class="plate-layer" data-layout-allow-overflow="true" data-layout-allow-overlap="true">
+      <img src="assets/images/scene_4_evidence_magnifier.jpg" class="plate-img" alt="Forensic Metadata Inspector">
+    </div>
+
+    <!-- HUD Vignette -->
+    <div class="hud-vignette" data-layout-allow-overlap="true"></div>
+
+    <!-- Top Header -->
+    <div class="header-bar" data-layout-allow-overlap="true">
+      <div class="series-tag">MEDIA LITERACY PROTOCOL</div>
+      <div class="topic-badge">EP 10 // VERIFICATION</div>
+    </div>
+
+    <!-- Center Container -->
+    <div class="center-card-container" data-layout-allow-overlap="true">
+      <div class="hud-tag">STANFORD INQUIRY FRAMEWORK</div>
+      <h1 class="main-headline">Before You Share That Claim,<br><span>Ask These 3 Questions</span></h1>
+
+      <!-- 3 Questions Stack -->
+      <div class="q-card-container" data-layout-allow-overlap="true">
+        <div id="q-card-1" class="q-step-card">
+          <div class="q-num">1</div>
+          <div class="q-body">
+            <div class="q-title">Where did the claim start?</div>
+            <div class="q-desc">Don’t trust a repost. Find the original document, filing, or transcript &mdash; and check the actual date.</div>
+          </div>
+        </div>
+
+        <div id="q-card-2" class="q-step-card">
+          <div class="q-num">2</div>
+          <div class="q-body">
+            <div class="q-title">What does the evidence actually prove?</div>
+            <div class="q-desc">A food logo proves dietary rules. An SEC filing proves shares. Neither proves a secret plot.</div>
+          </div>
+        </div>
+
+        <div id="q-card-3" class="q-step-card">
+          <div class="q-num">3</div>
+          <div class="q-body">
+            <div class="q-title">Did it jump to collective blame?</div>
+            <div class="q-desc">Moving from one individual’s actions to blaming Jewish people as a group is scapegoating, not analysis.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 5: Intellectual Honesty Card -->
+      <div id="honesty-box" class="honesty-card" data-layout-allow-overlap="true">
+        <div class="honesty-title">Check Independent Sources</div>
+        <div class="honesty-desc">If the facts remain unclear, saying &ldquo;I don’t know yet&rdquo; is far better than confidently spreading misinformation.</div>
+      </div>
+
+      <!-- Scene 7: Season Finale Card -->
+      <div id="finale-box" class="finale-card" data-layout-allow-overlap="true">
+        <div class="finale-title">Be the person who brings<br><span>the actual source.</span></div>
+        <div class="finale-sub">SPECIFIC CLAIMS &middot; REAL EVIDENCE &middot; FACTS OVER MYTHS</div>
+      </div>
+    </div>
+
+    <!-- Subtitles Overlay -->
+    <div class="subtitles-container" data-layout-allow-overlap="true">
+      <div id="speaker-badge" class="speaker-pill">ALEX</div>
+      <div id="sub-line" class="subtitle-text">Before you send that post, give it three questions.</div>
+    </div>
+
+    <!-- Footer Source Citation -->
+    <div class="source-citation-line" data-layout-allow-overlap="true">
+      <span id="footer-source">Digital Inquiry Group</span>
+      <span>EP 10 / 10 &middot; 60.00S MASTER</span>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["ep010-factcheck"] = tl;
+
+    // Scene 1: Plate 1 (0s - 3.94s)
+    tl.to("#plate-1", { opacity: 1, duration: 0.8, ease: "power2.out" }, 0);
+    tl.fromTo("#plate-1 img", { scale: 1.0 }, { scale: 1.08, duration: 3.94, ease: "none" }, 0);
+
+    // Subtitle 1 (0.25s - 3.71s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "Before you send that post, give it three questions.";
+      document.getElementById("footer-source").innerText = "Digital Inquiry Group";
+    }, null, 0.25);
+
+    // Scene 2: Plate 2 & Question 1 (3.94s - 12.28s)
+    tl.to("#plate-1", { opacity: 0, duration: 0.8 }, 3.94);
+    tl.to("#plate-2", { opacity: 1, duration: 0.8 }, 3.94);
+    tl.fromTo("#plate-2 img", { scale: 1.04 }, { scale: 1.13, duration: 8.3, ease: "none" }, 3.94);
+
+    tl.fromTo("#q-card-1",
+      { opacity: 0, x: -30 },
+      { opacity: 1, x: 0, duration: 0.6, ease: "power2.out" },
+      4.3
+    );
+
+    // Subtitle 2 (3.94s - 11.48s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "One: where did the claim start? Not who reposted it. Find the original document, interview, or report—and check the date.";
+      document.getElementById("footer-source").innerText = "Teaching Lateral Reading";
+    }, null, 3.94);
+
+    // Scene 3: Plate 3 & Question 2 (12.28s - 23.70s)
+    tl.to("#plate-2", { opacity: 0, duration: 0.8 }, 12.28);
+    tl.to("#plate-3", { opacity: 1, duration: 0.8 }, 12.28);
+    tl.fromTo("#plate-3 img", { scale: 1.0 }, { scale: 1.08, duration: 11.4, ease: "none" }, 12.28);
+
+    tl.fromTo("#q-card-2",
+      { opacity: 0, x: -30 },
+      { opacity: 1, x: 0, duration: 0.6, ease: "power2.out" },
+      12.6
+    );
+
+    // Subtitle 3 (12.28s - 23.71s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "Two: what does the evidence actually prove? A logo can show certification. A company filing can show ownership. Neither gives you permission to invent extra claims.";
+      document.getElementById("footer-source").innerText = "OU Kosher & SEC EDGAR";
+    }, null, 12.28);
+
+    // Scene 4: Plate 4 & Question 3 (23.70s - 34.77s)
+    tl.to("#plate-3", { opacity: 0, duration: 0.8 }, 23.70);
+    tl.to("#plate-4", { opacity: 1, duration: 0.8 }, 23.70);
+    tl.fromTo("#plate-4 img", { scale: 1.05 }, { scale: 1.14, duration: 11.0, ease: "none" }, 23.70);
+
+    tl.fromTo("#q-card-3",
+      { opacity: 0, x: -30 },
+      { opacity: 1, x: 0, duration: 0.6, ease: "power2.out" },
+      24.0
+    );
+
+    // Subtitle 4 (23.70s - 30.92s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "Three: did the post jump from one person’s actions to blaming Jewish people as a group? That jump needs challenging, not another share.";
+      document.getElementById("footer-source").innerText = "Public Reasoning Standards";
+    }, null, 23.70);
+
+    // Scene 5: Back to Plate 1 with Honesty Card (34.77s - 45.71s)
+    tl.to("#plate-4", { opacity: 0, duration: 0.8 }, 34.77);
+    tl.to("#plate-1", { opacity: 1, duration: 0.8 }, 34.77);
+    tl.to(".q-card-container", { opacity: 0, duration: 0.4 }, 34.77);
+
+    tl.fromTo("#honesty-box",
+      { opacity: 0, scale: 0.95 },
+      { opacity: 1, scale: 1, duration: 0.7, ease: "power2.out" },
+      35.2
+    );
+
+    // Subtitle 5 (34.77s - 43.84s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "Then check a reliable independent source. And if the answer is still unclear, saying “I don’t know yet” is better than confidently spreading something false.";
+      document.getElementById("footer-source").innerText = "Media Literacy Framework";
+    }, null, 34.77);
+
+    // Scene 6 & 7: Season Finale (45.71s - 60.00s)
+    tl.to("#honesty-box", { opacity: 0, duration: 0.4 }, 45.71);
+    tl.fromTo("#finale-box",
+      { opacity: 0, y: 25 },
+      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+      46.0
+    );
+
+    // Subtitle 6 (45.71s - 50.60s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "MAYA";
+      document.getElementById("sub-line").innerText = "You don’t have to win every comment section. You can be the person who brings the actual source.";
+      document.getElementById("footer-source").innerText = "Constructive Discourse";
+    }, null, 45.71);
+
+    // Subtitle 7 (53.05s - 59.00s)
+    tl.call(() => {
+      document.getElementById("speaker-badge").innerText = "ALEX";
+      document.getElementById("sub-line").innerText = "Which claim should we check next? Specific claims. Real evidence.";
+      document.getElementById("footer-source").innerText = "Beyond the Myth · Facts, not scapegoats";
+    }, null, 53.05);
+
+    // Fade to black
+    tl.to("#stage", { opacity: 0, duration: 0.7, ease: "power2.in" }, 59.3);
+
+    // Driver hook
+    window.__seekFrame = (seconds) => {
+      tl.seek(seconds);
+    };
+  </script>
+</body>
+</html>

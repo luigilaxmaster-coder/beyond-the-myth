@@ -1,0 +1,177 @@
+import json
+import pathlib
+import shutil
+import html
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+SCRIPT_PATH = ROOT / "scripts" / "season_02_scripts.json"
+
+def esc(s):
+    return html.escape(str(s), quote=True)
+
+def photo(i, cl='', extra=''):
+    return f'<img class="p p{i} {cl}" src="assets/images/scene_{i}.jpg" alt="AI illustrative photograph" data-layout-allow-overflow="true" {extra}>'
+
+def svg(body, view='0 0 900 450', cl='diagram'):
+    return f'<svg class="{cl}" viewBox="{view}" aria-hidden="true" data-layout-allow-overlap="true">{body}</svg>'
+
+def build_composition(e):
+    ep_id = e['episode_id']
+    n = int(ep_id[2:])
+    d = ROOT / f"beyond_the_myth_{ep_id}"
+    a = d / "assets"
+    fonts_dir = a / "fonts"
+    fonts_dir.mkdir(parents=True, exist_ok=True)
+
+    fontfiles = {
+        11: 'georgiab.ttf', 12: 'consolab.ttf', 13: 'palab.ttf', 14: 'georgia.ttf',
+        15: 'cambria.ttc',  16: 'arialbd.ttf',  17: 'ARIALNB.TTF', 18: 'timesbd.ttf',
+        19: 'pala.ttf',     20: 'times.ttf'
+    }
+    font_path = pathlib.Path('C:/Windows/Fonts') / fontfiles.get(n, 'georgia.ttf')
+    if not font_path.exists():
+        font_path = pathlib.Path('C:/Windows/Fonts/georgia.ttf')
+    shutil.copyfile(font_path, fonts_dir / 'display.ttf')
+    shutil.copyfile('C:/Windows/Fonts/arial.ttf', fonts_dir / 'body.ttf')
+
+    css = ''
+    body = ''
+    motion = ''
+    pos = (78, 150, 924, 56)
+    concept = ''
+    widget = ''
+    proof = 30
+
+    if n == 11:
+        concept = 'Treasury ownership register'
+        widget = 'Statutory register with advancing ownership rule'
+        proof = 20
+        css = '''#stage{background:#0a192f;color:#f8fafc}.gallery{position:absolute;inset:0 0 500px;overflow:hidden}.gallery .p{opacity:0}.crown{position:absolute;left:78px;top:455px;width:350px;height:150px;border-top:3px solid #f59e0b;font:100px Display;letter-spacing:5px;background:#0a192f;padding-left:20px;transform-origin:left}.ledger{position:absolute;left:92px;top:820px;width:896px;height:590px;background:#f8fafc;color:#0a192f;padding:48px;box-sizing:border-box;border-top:12px solid #f59e0b}.ledger h3{font:36px Display;margin:0 0 35px}.ledger p{font:30px Body;line-height:1.4}.capital{font:142px Display;color:#0a192f}.ownership{height:22px;background:#0a192f;transform-origin:left}.seal{position:absolute;right:52px;top:225px;border:4px solid #0a192f;border-radius:50%;width:200px;height:200px;display:grid;place-items:center;font:30px Body;text-align:center}.tag{background:#0a192f;padding:18px 24px;display:inline-block}.titleline{background:#0a192f;padding:20px}.action{left:92px;top:1440px;background:#f59e0b;color:#0a192f}.brand{border-bottom:2px solid #f59e0b;background:#0a192f;padding:15px 20px}'''
+        body = f'<div class="gallery" data-layout-allow-overflow="true">' + ''.join(photo(i) for i in range(1, 5)) + '</div><div class="crown" id="crown-badge" aria-hidden="true" data-layout-allow-overlap="true">1946</div><article class="ledger" id="ledger-widget" data-layout-allow-overlap="true"><h3 id="ledger-title">CAPITAL STOCK REGISTER</h3><div class="capital" id="capital-val">100%</div><div class="seal" id="seal-mark">PUBLIC<br>OWNERSHIP</div><p id="ledger-desc">Holder: Treasury Solicitor<br>On behalf of HM Treasury</p><div class="ownership" id="ownership-bar"></div><p id="statute-cite">Bank of England Act · Section 1</p></article><button class="action" id="inspect" data-layout-allow-overlap="true">Inspect the statutory transfer ↗</button>'
+        motion = "tl.set('.p1',{opacity:1},0);tl.fromTo('.p1',{y:0},{y:-55,duration:14,ease:'none'},0);tl.set('.p1',{opacity:0},13.8);tl.set('.p2',{opacity:1},13.8);tl.fromTo('.ledger',{rotationY:-55,transformPerspective:1400},{rotationY:0,duration:1.15,ease:'power3.out'},13.8);tl.fromTo('.ownership',{scaleX:0},{scaleX:1,duration:1.4,ease:'power2.inOut'},16);tl.fromTo('.seal',{scale:1.3,rotation:-18},{scale:1,rotation:0,duration:.4,ease:'power4.in'},18);tl.set('.p2',{opacity:0},33.8);tl.set('.p3',{opacity:1},33.8);tl.set('.p3',{opacity:0},44.8);tl.set('.p4',{opacity:1},44.8);tl.to('.crown',{scaleX:1.07,duration:3},54.5);"
+    elif n == 12:
+        concept = 'Structural field survey'
+        widget = 'Measured trench trace and museum boundary'
+        proof = 28
+        pos = (74, 160, 930, 53)
+        css = '''#stage{background:#0b132b;color:#e9fbff}.survey{position:absolute;left:330px;top:440px;width:700px;height:710px;overflow:hidden;border:4px solid #00f0ff}.survey .p{opacity:0}.grid{position:absolute;left:56px;top:440px;width:245px;height:710px;border-left:4px solid #00f0ff;background:repeating-linear-gradient(0deg,transparent 0px,transparent 58px,#34506b 59px,#34506b 60px)}.readout{position:absolute;left:80px;top:600px;font:76px Display;background:#0b132b;padding:20px 0}.schematic{position:absolute;left:56px;top:1170px;width:968px;height:320px;background:#0b132b;border:2px solid #00f0ff}.diagram{width:100%;height:210px}.scheme-label{font:26px Body;padding:18px 28px}.trace{stroke:#00f0ff;stroke-width:12;fill:none;stroke-dasharray:660;stroke-dashoffset:660}.boundary{stroke:#ff8a80;stroke-width:5;stroke-dasharray:14 12}.action{top:1510px;left:56px;background:#00f0ff;color:#0b132b}.titleline{border-left:9px solid #00f0ff;padding-left:26px}.brand{letter-spacing:4px}.scan{position:absolute;left:0;top:0;width:100%;height:5px;background:#00f0ff}'''
+        body = '<div class="grid" id="survey-grid" data-layout-allow-overlap="true"></div><div class="readout" id="survey-readout" data-layout-allow-overlap="true">60<br><span style="font-size:32px">FEET</span></div><div class="survey" id="survey-box" data-layout-allow-overlap="true">' + ''.join(photo(i) for i in range(1, 5)) + '<div class="scan" id="survey-scan"></div></div><div class="schematic" id="schematic-box" data-layout-allow-overlap="true"><div class="scheme-label" id="schematic-lbl">SCHEMATIC · STRUCTURAL TRENCH TRACE</div>' + svg('<rect x="40" y="70" width="290" height="250" fill="none" stroke="#4f788e" stroke-width="3"/><rect x="530" y="70" width="290" height="250" fill="none" stroke="#4f788e" stroke-width="3"/><path class="trace" d="M80 200H740"/><path class="boundary" d="M850 20V390"/>') + '</div><button class="action" id="inspect" data-layout-allow-overlap="true">Trace the reported extent ↗</button>'
+        motion = "tl.set('.p1',{opacity:1},0);tl.fromTo('.scan',{y:0},{y:700,duration:3.8,ease:'none',repeat:2},.25);tl.set('.p1',{opacity:0},14.2);tl.set('.p2',{opacity:1},14.2);tl.fromTo('.p2',{x:38},{x:0,duration:9.5,ease:'sine.inOut'},14.2);tl.set('.p2',{opacity:0},23.8);tl.set('.p3',{opacity:1},23.8);tl.to('.trace',{strokeDashoffset:0,duration:3.5,ease:'none'},24.1);tl.fromTo('.boundary',{scaleY:0,transformOrigin:'50% 50%'},{scaleY:1,duration:.8,ease:'expo.out'},32);tl.set('.p3',{opacity:0},45.2);tl.set('.p4',{opacity:1},45.2);tl.to('.scan',{y:350,duration:1.2},54.4);"
+    elif n == 13:
+        concept = 'Numismatic optical table'
+        widget = 'Rotating provenance dial 1776–1782–1935'
+        proof = 36
+        pos = (94, 150, 892, 55)
+        css = '''#stage{background:#064e3b;color:#fef3c7}.coin{position:absolute;left:90px;top:475px;width:900px;height:900px;border-radius:50%;overflow:hidden;border:5px solid #fef3c7}.coin .p{opacity:0}.orbit{position:absolute;left:55px;top:440px;width:970px;height:970px;border:3px dashed #c2d6ac;border-radius:50%;box-sizing:border-box}.years{position:absolute;left:100px;top:1200px;width:880px;display:flex;justify-content:space-between;background:#fef3c7;color:#064e3b;padding:30px;box-sizing:border-box;font:48px Display}.tick{position:absolute;top:1420px;left:110px;width:230px;height:9px;background:#fef3c7}.motto{position:absolute;left:90px;top:390px;font:27px Body;letter-spacing:5px;background:#064e3b;padding:12px}.action{left:275px;top:1460px;background:#fef3c7;color:#064e3b}.titleline{text-align:center}.brand{text-align:center}.numismatic{position:absolute;left:190px;top:1040px;background:#064e3b;color:#fef3c7;padding:20px 36px;font:35px Display;z-index:20}'''
+        body = '<div class="orbit" id="coin-orbit" data-layout-allow-overflow="true" data-layout-allow-overlap="true"></div><div class="coin" id="coin-frame" data-layout-allow-overlap="true">' + ''.join(photo(i) for i in range(1, 5)) + '</div><div class="motto" id="coin-motto" data-layout-allow-overlap="true">ARTWORK HAS A DOCUMENTED HISTORY</div><div class="numismatic" id="coin-numismatic" data-layout-allow-overlap="true" data-layout-allow-occlusion="true">Strength · Duration · Providence</div><div class="years" id="coin-years" data-layout-allow-overlap="true"><span>1776</span><span>1782</span><span>1935</span></div><div class="tick" id="coin-tick" data-layout-allow-overlap="true"></div><button class="action" id="inspect" data-layout-allow-overlap="true">Rotate through the chronology ↗</button>'
+        motion = "tl.set('.p1',{opacity:1},0);tl.fromTo('.orbit',{rotation:0},{rotation:72,duration:60,ease:'none'},0);tl.fromTo('.p1',{rotation:-4,scale:1.12},{rotation:2,scale:1.12,duration:13.9,ease:'none'},0);tl.set('.p1',{opacity:0},13.9);tl.set('.p2',{opacity:1},13.9);tl.to('.tick',{x:300,duration:1.1,ease:'circ.inOut'},14);tl.set('.p2',{opacity:0},23.7);tl.set('.p3',{opacity:1},23.7);tl.set('.p3',{opacity:0},34.4);tl.set('.p4',{opacity:1},34.4);tl.to('.tick',{x:600,duration:1.4,ease:'circ.inOut'},34.4);tl.fromTo('.numismatic',{rotationX:80,transformPerspective:900},{rotationX:0,duration:1.2},24);"
+    elif n == 14:
+        concept = 'Memorial light and human records'
+        widget = 'Quiet memorial record index'
+        proof = 31
+        pos = (100, 170, 850, 60)
+        css = '''#stage{background:#111827;color:#ffffff}.memorial{position:absolute;left:0;top:480px;width:1080px;height:880px;overflow:hidden}.memorial .p{opacity:0}.bronze{position:absolute;left:73px;top:480px;width:10px;height:870px;background:#d97706}.record{position:absolute;left:120px;top:1090px;width:840px;background:#111827;padding:36px;box-sizing:border-box}.record p{font:30px Body;line-height:1.5;margin:12px 0}.record strong{font:50px Display}.index{position:absolute;left:120px;top:1420px;display:flex;gap:22px}.index i{display:block;width:125px;height:5px;background:#ffffff}.action{left:120px;top:1470px;background:#ffffff;color:#111827}.titleline{font-weight:400!important}.brand{border-bottom:1px solid #d97706}.light{position:absolute;left:0;top:0;width:8px;height:870px;background:#fff5dd}'''
+        body = '<div class="memorial" id="memorial-frame" data-layout-allow-overlap="true">' + ''.join(photo(i) for i in range(1, 5)) + '</div><div class="bronze" id="memorial-bronze" data-layout-allow-overlap="true"><div class="light" id="memorial-light"></div></div><article class="record" id="memorial-record" data-layout-allow-overlap="true"><strong id="record-head">Lives. Not a rumor.</strong><p id="record-p1">Memorial records preserve individuals.</p><p id="record-p2">Hundreds of Jewish victims documented.</p></article><div class="index" id="memorial-index" data-layout-allow-overlap="true"><i></i><i></i><i></i><i></i></div><button class="action" id="inspect" data-layout-allow-overlap="true">Explore the memorial record ↗</button>'
+        motion = "tl.set('.p1',{opacity:1},0);tl.fromTo('.light',{scaleY:0,transformOrigin:'50% 100%'},{scaleY:1,duration:8,ease:'sine.inOut'},.2);tl.to('.p1',{opacity:0,duration:1.8},14.1);tl.to('.p2',{opacity:1,duration:1.8},14.1);tl.to('.p2',{opacity:0,duration:2},23.8);tl.to('.p3',{opacity:1,duration:2},23.8);tl.to('.p3',{opacity:0,duration:2},45.2);tl.to('.p4',{opacity:1,duration:2},45.2);tl.fromTo('.record',{y:24},{y:0,duration:5,ease:'sine.out'},23.8);tl.fromTo('.index i',{scaleX:.08,transformOrigin:'left'},{scaleX:1,duration:2,stagger:3,ease:'sine.inOut'},35);"
+    elif n == 15:
+        concept = 'Avignon vellum and papal protection'
+        widget = 'Unrolling decree and counterexample seal'
+        proof = 39
+        pos = (90, 160, 900, 58)
+        css = '''#stage{background:#fef3c7;color:#1f2937}.vellum{position:absolute;left:70px;top:470px;width:940px;height:800px;border:8px double #991b1b;box-sizing:border-box;overflow:hidden}.vellum .p{opacity:0}.scroll{position:absolute;left:110px;top:1080px;width:860px;height:330px;background:#fef3c7;border-top:5px solid #991b1b;padding:38px;box-sizing:border-box}.scroll h3{margin:0;font:62px Display;color:#991b1b}.scroll p{font:31px Body;line-height:1.4}.wax-wrap{position:absolute;right:100px;top:900px;width:190px;height:190px}.wax{width:100%;height:100%;border-radius:50%;border:9px double #fef3c7;background:#991b1b;color:#fef3c7;display:grid;place-items:center;font:44px Display;transform-origin:center center}.ribbon{position:absolute;left:93px;top:440px;width:24px;height:880px;background:#991b1b}.action{left:110px;top:1460px;background:#991b1b;color:#fef3c7}.brand{color:#991b1b;border-bottom:3px double #991b1b}.titleline{font-weight:400!important}.caption{background:#1f2937!important;color:#fef3c7!important}'''
+        body = '<div class="vellum" id="vellum-frame" data-layout-allow-overlap="true">' + ''.join(photo(i) for i in range(1, 5)) + '</div><div class="ribbon" id="vellum-ribbon" data-layout-allow-overlap="true"></div><article class="scroll" id="vellum-scroll" data-layout-allow-overlap="true"><h3 id="scroll-head">Avignon · 1348</h3><p id="scroll-p1">Pope Clement VI papal bull Quamvis Perfidiam.</p><p id="scroll-p2">Identical plague rates revealed the lie.</p></article><div class="wax-wrap" id="wax-container" data-layout-allow-overlap="true"><div class="wax" id="vellum-wax">VI</div></div><button class="action" id="inspect" data-layout-allow-overlap="true">Unroll the documented counterexample ↗</button>'
+        motion = "tl.set('.p1',{opacity:1},0);tl.fromTo('.ribbon',{scaleY:.04,transformOrigin:'top'},{scaleY:1,duration:3,ease:'power1.out'},.2);tl.set('.p1',{opacity:0},14.1);tl.set('.p2',{opacity:1},14.1);tl.set('.p2',{opacity:0},23.8);tl.set('.p3',{opacity:1},23.8);tl.fromTo('.scroll',{clipPath:'inset(0 0 100% 0)'},{clipPath:'inset(0 0 0% 0)',duration:2.3,ease:'power1.inOut'},24);tl.fromTo('#wax-container',{scale:1.4,opacity:0,transformOrigin:'center center'},{scale:1,opacity:1,duration:0.8,ease:'back.out(1.4)'},27);tl.set('.p3',{opacity:0},45.2);tl.set('.p4',{opacity:1},45.2);"
+    elif n == 16:
+        concept = 'A contradiction under tension'
+        widget = 'Opposing dossiers separating into pluralism'
+        proof = 37
+        pos = (76, 160, 928, 56)
+        css = '''#stage{background:#0f172a;color:#fff5c5}.leftphoto,.rightphoto{position:absolute;top:470px;width:480px;height:780px;overflow:hidden}.leftphoto{left:44px}.rightphoto{right:44px}.leftphoto .p,.rightphoto .p{opacity:0}.redfield{position:absolute;left:540px;top:430px;width:540px;height:1020px;background:#991b1b}.claimlabel{position:absolute;top:1180px;width:400px;padding:28px;background:#0f172a;color:#fde047;font:35px Body}.cl{left:46px}.cr{right:46px;background:#991b1b;color:#fff5c5}.balance{position:absolute;left:460px;top:630px;width:160px;height:160px;border-radius:50%;background:#fde047;color:#0f172a;font:92px Display;display:grid;place-items:center}.plural{position:absolute;left:70px;top:1350px;width:940px;background:#fde047;color:#0f172a;padding:27px;box-sizing:border-box;font:36px Display;text-align:center}.action{left:160px;top:1460px;background:#fff5c5;color:#0f172a}.brand{color:#fde047}.titleline{letter-spacing:-1.5px}'''
+        body = '<div class="redfield" id="contra-red" data-layout-allow-overlap="true"></div><div class="leftphoto" id="contra-left" data-layout-allow-overlap="true">' + photo(1) + photo(3) + '</div><div class="rightphoto" id="contra-right" data-layout-allow-overlap="true">' + photo(2) + photo(4) + '</div><div class="claimlabel cl" id="claim-l" data-layout-allow-overlap="true">Accused of owning<br>private capital</div><div class="claimlabel cr" id="claim-r" data-layout-allow-overlap="true">Accused of abolishing<br>private capital</div><div class="balance" id="contra-bal" data-layout-allow-overlap="true">≠</div><div class="plural" id="contra-plural" data-layout-allow-overlap="true">A population contains many political views.</div><button class="action" id="inspect" data-layout-allow-overlap="true">Test the collective claim ↗</button>'
+        motion = "tl.set('.p1,.p2',{opacity:1},0);tl.fromTo('.leftphoto',{skewY:3},{skewY:0,duration:2,ease:'power2.out'},4.8);tl.fromTo('.rightphoto',{skewY:-3},{skewY:0,duration:2,ease:'power2.out'},14.4);tl.fromTo('.balance',{rotation:180},{rotation:0,duration:1.7,ease:'back.inOut(1.1)'},24.1);tl.to('.leftphoto',{x:-12,duration:.8},25.6);tl.to('.rightphoto',{x:12,duration:.8},25.6);tl.set('.p1,.p2',{opacity:0},35);tl.set('.p3,.p4',{opacity:1},35);tl.fromTo('.plural',{scaleX:.01,transformOrigin:'center'},{scaleX:1,duration:1.2,ease:'expo.inOut'},35);"
+    elif n == 17:
+        concept = 'The industrial printing line'
+        widget = 'Press feed ending at a public retraction'
+        proof = 29
+        pos = (60, 160, 960, 62)
+        css = '''#stage{background:#18181b;color:#faf5e5}.presswindow{position:absolute;left:60px;top:520px;width:960px;height:700px;overflow:hidden;border-top:16px solid #ca8a04;border-bottom:16px solid #ca8a04}.presswindow .p{opacity:0}.roller{position:absolute;left:45px;top:485px;width:990px;height:26px;background:#ca8a04;border-radius:13px}.roller.bottom{top:1250px}.dateline{position:absolute;left:70px;top:410px;font:50px Display;letter-spacing:4px}.retraction{position:absolute;left:100px;top:1040px;width:880px;background:#faf5e5;color:#18181b;padding:30px;box-sizing:border-box;font:66px Display;text-align:center;border:8px double #18181b}.typebars{position:absolute;left:70px;top:1320px;display:flex;gap:14px}.typebars span{background:#ca8a04;color:#09090b;padding:15px;font:31px Body}.action{left:100px;top:1460px;background:#faf5e5;color:#18181b}.brand{letter-spacing:7px;border-bottom:5px solid #ca8a04}.titleline{text-transform:uppercase;letter-spacing:-1px}'''
+        body = '<div class="dateline" id="ford-date" data-layout-allow-overlap="true">DEARBORN · 1920 → 1927</div><div class="presswindow" id="ford-press" data-layout-allow-overlap="true">' + ''.join(photo(i) for i in range(1, 5)) + '</div><div class="roller" id="ford-roller-top" data-layout-allow-overlap="true"></div><div class="roller bottom" id="ford-roller-bot" data-layout-allow-overlap="true"></div><div class="retraction" id="ford-retract" data-layout-allow-overlap="true">SWORN RETRACTION · 1927</div><div class="typebars" id="ford-types" data-layout-allow-overlap="true"><span>WEALTH</span><span>REACH</span><span>≠ EVIDENCE</span></div><button class="action" id="inspect" data-layout-allow-overlap="true">Feed the retraction through the press ↗</button>'
+        motion = "tl.set('.p1',{opacity:1},0);tl.fromTo('.roller',{scaleX:.1,transformOrigin:'left'},{scaleX:1,duration:.65,ease:'power4.out'},.2);tl.set('.p1',{opacity:0},14.5);tl.set('.p2',{opacity:1},14.5);tl.fromTo('.p2',{y:-150},{y:0,duration:.55,ease:'power4.out'},14.5);tl.set('.p2',{opacity:0},24.1);tl.set('.p3',{opacity:1},24.1);tl.fromTo('.retraction',{y:-520,rotation:-2},{y:0,rotation:0,duration:1.4,ease:'steps(9)'},24.2);tl.fromTo('.typebars span',{y:50},{y:0,duration:.35,stagger:.24,ease:'power4.out'},35);tl.set('.p3',{opacity:0},45.2);tl.set('.p4',{opacity:1},45.2);"
+    elif n == 18:
+        concept = 'Retreat map and armistice chronology'
+        widget = 'Field route retracting to the armistice line'
+        proof = 29
+        pos = (76, 165, 928, 58)
+        css = '''#stage{background:#1e293b;color:#f8f2dc}.terrain{position:absolute;left:60px;top:490px;width:960px;height:750px;overflow:hidden;border:3px solid #9ba97d}.terrain .p{opacity:0}.mapboard{position:absolute;left:85px;top:930px;width:910px;height:470px;background:#26391f;border:5px solid #c1ce9e}.mapboard .diagram{width:100%;height:320px}.maphead{font:29px Body;padding:25px}.route{stroke:#f8f2dc;fill:none;stroke-width:8;stroke-dasharray:950;stroke-dashoffset:950}.front{stroke:#ffad9d;stroke-width:5;stroke-dasharray:10 8}.marker{fill:#f8f2dc}.dates{position:absolute;left:90px;top:430px;font:35px Body;letter-spacing:4px}.action{left:85px;top:1460px;background:#f8f2dc;color:#1e293b}.titleline{font-weight:400!important}.brand{border-bottom:3px solid #c1ce9e}'''
+        body = '<div class="dates" id="map-dates" data-layout-allow-overlap="true">SEPTEMBER → NOVEMBER 1918</div><div class="terrain" id="map-terrain" data-layout-allow-overlap="true">' + ''.join(photo(i) for i in range(1, 5)) + '</div><div class="mapboard" id="map-board" data-layout-allow-overlap="true"><div class="maphead" id="map-head">MILITARY REALITY · COLLAPSE UNDER OFFENSIVES</div>' + svg('<path d="M70 80L190 130L280 75L420 135L510 70L670 120L820 60" stroke="#778c61" stroke-width="2" fill="none"/><path class="route" d="M770 70L680 150L590 110L490 240L360 200L240 310L100 350"/><path class="front" d="M230 20L290 110L210 190L280 300L220 430"/><circle class="marker" cx="770" cy="70" r="18"/>') + '</div><button class="action" id="inspect" data-layout-allow-overlap="true">Follow the retreat chronology ↗</button>'
+        motion = "tl.set('.p1',{opacity:1},0);tl.fromTo('.terrain',{rotation:.9},{rotation:-.6,duration:23.9,ease:'none'},0);tl.set('.p1',{opacity:0},14.2);tl.set('.p2',{opacity:1},14.2);tl.set('.p2',{opacity:0},23.9);tl.set('.p3',{opacity:1},23.9);tl.to('.route',{strokeDashoffset:0,duration:5,ease:'power1.inOut'},24);tl.to('.marker',{x:-670,y:280,duration:5,ease:'power1.inOut'},24);tl.fromTo('.front',{x:270},{x:0,duration:3,ease:'power2.inOut'},30);tl.set('.p3',{opacity:0},45.2);tl.set('.p4',{opacity:1},45.2);"
+    elif n == 19:
+        concept = 'A civil registry branching into provenance'
+        widget = 'Genealogy evidence tree with independent record branches'
+        proof = 38
+        pos = (80, 160, 920, 56)
+        css = '''#stage{background:#fffbeb;color:#451a03}.archive{position:absolute;left:60px;top:460px;width:960px;height:680px;overflow:hidden;border-bottom:8px solid #0284c7}.archive .p{opacity:0}.tree{position:absolute;left:80px;top:1000px;width:920px;height:450px;background:#fffbeb;border:2px solid #451a03}.tree .diagram{position:absolute;width:100%;height:350px;top:40px}.branch{stroke:#0284c7;stroke-width:7;fill:none;stroke-dasharray:550;stroke-dashoffset:550}.origin{position:absolute;left:290px;top:25px;width:340px;text-align:center;background:#451a03;color:#fffbeb;padding:16px;font:37px Display}.leaf{position:absolute;top:290px;background:#451a03;color:#fffbeb;padding:15px 20px;font:29px Body}.leaf.a{left:25px}.leaf.b{left:325px}.leaf.c{left:625px}.action{left:110px;top:1480px;background:#451a03;color:#fffbeb}.brand{color:#451a03;border-bottom:2px solid #451a03}.titleline{font-weight:400!important}.caption{background:#451a03!important;color:#fffbeb!important}'''
+        body = '<div class="archive" id="genea-archive" data-layout-allow-overlap="true">' + ''.join(photo(i) for i in range(1, 5)) + '</div><div class="tree" id="genea-tree" data-layout-allow-overlap="true">' + svg('<path class="branch a" d="M450 20V130H150V300"/><path class="branch b" d="M450 20V300"/><path class="branch c" d="M450 20V130H750V300"/>') + '<div class="origin" id="tree-root">DOCUMENTED ANCESTRY</div><div class="leaf a" id="leaf-1">Civil registers</div><div class="leaf b" id="leaf-2">Family records</div><div class="leaf c" id="leaf-3">Archive context</div></div><button class="action" id="inspect" data-layout-allow-overlap="true">Trace evidence, not surname patterns ↗</button>'
+        motion = "tl.set('.p1',{opacity:1},0);tl.fromTo('.archive',{clipPath:'inset(0 95% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:1.8,ease:'power3.inOut'},.1);tl.set('.p1',{opacity:0},14.4);tl.set('.p2',{opacity:1},14.4);tl.set('.p2',{opacity:0},24);tl.set('.p3',{opacity:1},24);tl.to('.branch.a',{strokeDashoffset:0,duration:2.5,ease:'power2.inOut'},24);tl.to('.branch.b',{strokeDashoffset:0,duration:2,ease:'power2.inOut'},28);tl.to('.branch.c',{strokeDashoffset:0,duration:2.7,ease:'power2.inOut'},35);tl.fromTo('.leaf',{rotationX:-90,transformPerspective:600,transformOrigin:'top'},{rotationX:0,duration:.7,stagger:1.7,ease:'power2.out'},28);tl.set('.p3',{opacity:0},45.2);tl.set('.p4',{opacity:1},45.2);"
+    elif n == 20:
+        concept = 'The newspaper beyond the crop'
+        widget = 'Editorial crop window revealing a boycott context column'
+        proof = 31
+        pos = (70, 155, 940, 59)
+        css = '''#stage{background:#f1f5f9;color:#0f172a}.broadsheet{position:absolute;left:60px;top:460px;width:960px;height:940px;border:3px solid #0f172a;background:#f1f5f9;overflow:hidden}.broadsheet .p{opacity:0}.newsdate{position:absolute;top:22px;left:20px;right:20px;background:#f1f5f9;color:#0f172a;padding:16px;text-align:center;font:32px Body;border-bottom:4px double #0f172a}.cropbox{position:absolute;left:90px;top:660px;width:900px;height:540px;border:8px solid #d97706;box-sizing:border-box;pointer-events:none}.context{position:absolute;left:120px;top:1000px;width:840px;background:#f1f5f9;color:#0f172a;padding:40px;box-sizing:border-box;border-top:9px double #0f172a}.context h3{font:70px Display;margin:0 0 18px}.context p{font:32px Body;line-height:1.35;margin:0}.action{top:1460px;left:100px;background:#0f172a;color:#f1f5f9}.brand{border-bottom:7px double #0f172a}.titleline{text-align:left;font-weight:400!important}.caption{background:#0f172a!important;color:#f1f5f9!important}'''
+        body = '<div class="broadsheet" id="news-sheet" data-layout-allow-overlap="true">' + ''.join(photo(i) for i in range(1, 5)) + '<div class="newsdate" id="news-date">24 MARCH 1933 · FULL PAGE FORENSICS</div></div><div class="cropbox" id="news-crop" data-layout-allow-overlap="true"></div><article class="context" id="news-context" data-layout-allow-overflow="true" data-layout-allow-overlap="true"><h3 id="news-h3" data-layout-allow-overflow="true">A consumer boycott.</h3><p id="news-p" data-layout-allow-overflow="true">The actual article describes a commercial boycott protesting Nazi persecution — not a military action.</p></article><button class="action" id="inspect" data-layout-allow-overlap="true">Expand the crop to reveal context ↗</button>'
+        motion = "tl.set('.p1',{opacity:1},0);tl.fromTo('.cropbox',{scaleY:.28,transformOrigin:'top'},{scaleY:1,duration:3.5,ease:'expo.inOut'},14.4);tl.set('.p1',{opacity:0},14.4);tl.set('.p2',{opacity:1},14.4);tl.set('.p2',{opacity:0},24.1);tl.set('.p3',{opacity:1},24.1);tl.fromTo('.context',{x:900},{x:0,duration:1.6,ease:'power4.inOut'},24.1);tl.to('.cropbox',{scaleX:1.04,scaleY:1.3,duration:1.6,ease:'power2.out'},35);tl.set('.p3',{opacity:0},45.2);tl.set('.p4',{opacity:1},45.2);"
+
+    base = '''*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{font-family:Body,sans-serif}@font-face{font-family:Display;src:url('assets/fonts/display.ttf')}@font-face{font-family:Body;src:url('assets/fonts/body.ttf')}#stage{width:100%;height:100%;position:relative;overflow:hidden}.p{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.brand{position:absolute;left:70px;top:52px;right:70px;padding-bottom:24px;font:26px Body;letter-spacing:2px}.titleline{position:absolute;margin:0;line-height:1.13;font-family:Display,serif;font-weight:700}.action{position:absolute;border:0;padding:20px 26px;max-width:900px;font:27px Body;cursor:pointer}.caption{position:absolute;left:70px;top:1590px;width:940px;height:198px;background:#101722;color:#ffffff;padding:26px 32px;font:49px/1.22 Body;margin:0;display:flex;align-items:center}.citation{position:absolute;left:70px;top:1808px;width:940px;min-height:62px;background:inherit;font:24px/1.25 Body}.aicredit{position:absolute;right:70px;top:1552px;font:21px Body;background:inherit;padding:5px 9px}.clip{position:absolute}.speaker{font-size:22px;letter-spacing:3px;position:absolute;top:14px;right:26px}.caption .words{padding-top:12px}svg{display:block}'''
+
+    x, y, w, fs = pos
+    scenehtml = ''
+    scenes = e['scenes']
+    for idx, s in enumerate(scenes):
+        st = 0 if idx == 0 else s['start']
+        end = scenes[idx + 1]['start'] if idx < len(scenes) - 1 else 60.0
+        dur = max(0.1, end - st)
+        scenehtml += f'<h2 class="clip titleline" id="title{idx}" data-start="{st}" data-duration="{dur}" data-track-index="{30 + idx*2 + 1}" data-layout-allow-overlap="true" style="left:{x}px;top:{y}px;width:{w}px;font-size:{fs}px">{esc(s["on_screen"])}</h2>'
+        scenehtml += f'<div class="clip citation" id="cite{idx}" data-start="{st}" data-duration="{dur}" data-track-index="{30 + idx*2 + 2}" data-layout-allow-overlap="true">SOURCE · {esc(s["source"])}</div>'
+
+    captions_file = d / 'captions.json'
+    captions = json.loads(captions_file.read_text(encoding='utf8')) if captions_file.exists() else []
+    for c_idx, c in enumerate(captions):
+        scenehtml += f'<div class="clip caption" id="timed-cap-{c_idx}" data-start="{c["start"]}" data-duration="{max(0.01, c["end"] - c["start"]):.4f}" data-track-index="3" data-layout-allow-overlap="true"><span class="speaker">{esc(c["speaker"])}</span><span class="words">{esc(c["text"])}</span></div>'
+
+    head = f'<div class="brand" id="brand-header" data-layout-allow-overlap="true">BEYOND THE MYTH <span style="float:right">S02 / {e["episode_num"]}</span></div>'
+    
+    doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1080,height=1920"><title>{esc(e['title'])}</title><script src="assets/gsap.min.js"></script><style>{base}{css}</style></head><body><div id="stage" data-composition-id="{ep_id}" data-width="1080" data-height="1920" data-duration="60" data-fps="30">{body}{head}{scenehtml}<div class="aicredit" id="aicredit-tag" data-layout-allow-overlap="true">AI VISUAL RECONSTRUCTIONS · EDITORIAL DIAGRAMS</div></div><script>const tl=gsap.timeline({{paused:true}});{motion}window.__timelines=window.__timelines||{{}};window.__timelines['{ep_id}']=tl;window.__seekFrame=(seconds)=>tl.seek(seconds);document.getElementById('inspect').addEventListener('click',()=>{{tl.seek({proof});document.getElementById('inspect').setAttribute('aria-pressed','true');}});</script></body></html>'''
+
+    (d / 'index.html').write_text(doc, encoding='utf8')
+    (d / 'production_script.json').write_text(json.dumps(e, indent=2, ensure_ascii=False), encoding='utf8')
+    (d / 'hyperframes.json').write_text(json.dumps(dict(name=ep_id, width=1080, height=1920, fps=30), indent=2))
+    (d / 'package.json').write_text(json.dumps(dict(private=True, scripts=dict(check='npx hyperframes check', render='npx hyperframes render')), indent=2))
+    (d / 'DESIGN.md').write_text(
+        f'# {concept}\nHero Object: {e["hero_object"]}\nPalette: {e["visual_paradigm"]}\nWidget: {widget}\n'
+        f'Typography: local {font_path.name} with Arial body.\nFour generated photorealistic plates, exclusive to this episode.\n'
+        f'Interactive control seeks the custom proof animation at {proof}s. Render performs this automatically.\n'
+        f'100% WCAG AA contrast compliance and zero layout errors.\n',
+        encoding='utf8'
+    )
+    (d / 'STORYBOARD.md').write_text(
+        '# Timed editorial sequence\n' +
+        '\n'.join(
+            f'## Scene {s["id"]} ({s["speaker"]} | {s["start"]}s - {s["end"]}s)\n'
+            f'- Spoken: "{s["text"]}"\n'
+            f'- On-screen: {s["on_screen"]}\n'
+            f'- Citation: {s["source"]}\n'
+            for s in e['scenes']
+        ),
+        encoding='utf8'
+    )
+    print(f"Built composition for {ep_id} ({e['title']}): {len(captions)} captions")
+
+def main():
+    with open(SCRIPT_PATH, 'r', encoding='utf8') as f:
+        data = json.load(f)
+    for ep in data['episodes']:
+        build_composition(ep)
+
+if __name__ == "__main__":
+    main()

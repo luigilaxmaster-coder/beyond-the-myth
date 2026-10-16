@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond The Myth · Episode 001: Who Actually Makes Fed Decisions?</title>
+  <!-- GSAP CDN for HyperFrames deterministic animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- Google Fonts: Outfit & Space Grotesk for mid-century editorial flair -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* 1950s/60s UPA & Editorial Jazz Cartoon Palette */
+      --paper-bg: #F5EFE0;
+      --paper-cream: #FAF6EB;
+      --paper-dark: #EDE3CE;
+      --ink-black: #1C1C1E;
+      --ink-charcoal: #2E2E32;
+      --retro-ochre: #E5A836;
+      --retro-mustard: #F0B849;
+      --retro-terracotta: #C74B34;
+      --retro-brick: #D4553B;
+      --retro-teal: #2B6D7A;
+      --retro-cyan: #3D8B99;
+      --retro-periwinkle: #54638A;
+      --retro-olive: #7D8E54;
+      --spotlight-yellow: rgba(254, 240, 138, 0.42);
+      --font-display: 'Outfit', sans-serif;
+      --font-text: 'Space Grotesk', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: #121214;
+      color: var(--ink-black);
+      font-family: var(--font-text);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* 9:16 Vertical Video Canvas (1080 x 1920) */
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      background-color: var(--paper-bg);
+      overflow: hidden;
+      box-shadow: 0 35px 120px rgba(0, 0, 0, 0.85);
+    }
+
+    /* Organic Newsprint / Screenprint Paper Grain Texture */
+    .paper-texture {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(#C8BFA8 0.75px, transparent 0.75px),
+        radial-gradient(#D6CDB8 0.75px, var(--paper-bg) 0.75px);
+      background-size: 16px 16px;
+      background-position: 0 0, 8px 8px;
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Screenprint Edge Deckle & Vignette */
+    .paper-vignette {
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 120px rgba(70, 55, 30, 0.18), inset 0 0 40px rgba(30, 20, 10, 0.12);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Theatrical Diagonal Spotlight Beam (Jazz Target Aesthetic) */
+    .theatrical-spotlight {
+      position: absolute;
+      top: -80px;
+      left: 140px;
+      width: 800px;
+      height: 1950px;
+      background: linear-gradient(172deg, rgba(254, 240, 138, 0.55) 0%, rgba(253, 224, 71, 0.32) 50%, rgba(250, 204, 21, 0.08) 90%, transparent 100%);
+      clip-path: polygon(240px 0, 560px 0, 800px 1950px, 0 1950px);
+      pointer-events: none;
+      z-index: 4;
+      mix-blend-mode: multiply;
+      transform-origin: top center;
+    }
+
+    /* Persistent Show Brand Header (Mid-Century Editorial Badge) */
+    .show-header {
+      position: absolute;
+      top: 175px;
+      left: 90px;
+      width: 900px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 30;
+      border-bottom: 3px solid var(--ink-black);
+      padding-bottom: 16px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-emblem {
+      width: 44px;
+      height: 44px;
+      background: var(--retro-terracotta);
+      border: 3px solid var(--ink-black);
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 24px;
+      color: #FFFFFF;
+      transform: rotate(-3deg);
+      box-shadow: 3px 3px 0 var(--ink-black);
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink-black);
+    }
+
+    .episode-tag {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-black);
+      background: var(--retro-mustard);
+      border: 3px solid var(--ink-black);
+      padding: 6px 18px;
+      border-radius: 6px;
+      transform: rotate(2deg);
+      box-shadow: 3px 3px 0 var(--ink-black);
+    }
+
+    /* Persistent Source Pill (Screenprinted Rubber Stamp Aesthetic) */
+    .source-container {
+      position: absolute;
+      bottom: 215px;
+      left: 90px;
+      width: 900px;
+      display: flex;
+      align-items: center;
+      z-index: 30;
+    }
+
+    .source-stamp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--paper-cream);
+      border: 3px solid var(--ink-black);
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-family: var(--font-text);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--ink-black);
+      box-shadow: 4px 4px 0 var(--ink-black);
+      transform: rotate(-1deg);
+    }
+
+    .source-star {
+      color: #A8321D;
+      font-size: 18px;
+    }
+
+    /* Dynamic Subtitles Banner (Mid-Century Movie / Editorial Caption) */
+    .subtitle-wrapper {
+      position: absolute;
+      left: 90px;
+      bottom: 290px;
+      width: 900px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 40;
+    }
+
+    .subtitle-card {
+      background: var(--ink-black);
+      border: 3px solid var(--ink-black);
+      border-radius: 14px;
+      padding: 18px 34px;
+      text-align: center;
+      box-shadow: 6px 6px 0 var(--retro-ochre);
+      max-width: 890px;
+    }
+
+    .subtitle-text {
+      font-family: var(--font-display);
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.35;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+    }
+
+    .subtitle-text .hl-yellow {
+      color: var(--retro-mustard);
+    }
+
+    .subtitle-text .hl-red {
+      color: #F87171;
+    }
+
+    .subtitle-text .hl-teal {
+      color: #38BDF8;
+    }
+
+    /* Scene / Clip Containers */
+    .scene {
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .scene-content {
+      position: absolute;
+      left: 90px;
+      top: 255px;
+      width: 900px;
+      height: 1000px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Editorial Section Eyebrow with Off-Register Patch */
+    .retro-eyebrow {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-black);
+      background: var(--retro-mustard);
+      border: 2px solid var(--ink-black);
+      padding: 4px 16px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      box-shadow: 3px 3px 0 var(--ink-black);
+      transform: rotate(-1.5deg);
+    }
+
+    /* Main Big Editorial Headline */
+    .retro-headline {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.12;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: var(--ink-black);
+      margin-bottom: 28px;
+    }
+
+    /* =========================================================================
+       SCENE 1: FOLLOW THE INSTITUTIONS (0.0s - 10.0s)
+       ========================================================================= */
+    .s1-illustration {
+      width: 760px;
+      height: 580px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Floating off-register backdrop patch */
+    .s1-backdrop-patch {
+      position: absolute;
+      width: 520px;
+      height: 380px;
+      background: var(--retro-mustard);
+      opacity: 0.75;
+      transform: rotate(3deg) translate(15px, 10px);
+      border-radius: 12px;
+      z-index: 1;
+    }
+
+    .s1-svg {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(4px 4px 0 rgba(28, 28, 30, 0.15));
+    }
+
+    /* =========================================================================
+       SCENE 2: OCT 7, 2026 · MINUTES RELEASED (10.0s - 15.0s)
+       ========================================================================= */
+    .s2-dossier {
+      width: 800px;
+      background: var(--paper-cream);
+      border: 4px solid var(--ink-black);
+      border-radius: 16px;
+      padding: 40px 46px;
+      box-shadow: 8px 8px 0 var(--ink-black);
+      position: relative;
+    }
+
+    .s2-stamp-seal {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      border: 3px dashed var(--retro-terracotta);
+      color: var(--retro-terracotta);
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      transform: rotate(12deg);
+      border-radius: 4px;
+    }
+
+    .s2-typewriter-header h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .s2-typewriter-header p {
+      font-size: 19px;
+      color: #555;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    .s2-calendar-duo {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .s2-cal-card {
+      flex: 1;
+      background: var(--paper-bg);
+      border: 3px solid var(--ink-black);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 4px 4px 0 var(--ink-black);
+    }
+
+    .s2-cal-card.released {
+      background: #FEF3C7;
+      border-color: var(--ink-black);
+    }
+
+    .s2-cal-tag {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .s2-cal-date {
+      font-family: var(--font-display);
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--ink-black);
+    }
+
+    /* =========================================================================
+       SCENE 3: PUBLIC + PRIVATE FEATURES (15.0s - 22.4s)
+       ========================================================================= */
+    .s3-split-container {
+      width: 820px;
+      display: flex;
+      gap: 28px;
+      margin-top: 10px;
+    }
+
+    .s3-card {
+      flex: 1;
+      background: var(--paper-cream);
+      border: 4px solid var(--ink-black);
+      border-radius: 16px;
+      padding: 34px 28px;
+      box-shadow: 6px 6px 0 var(--ink-black);
+      position: relative;
+    }
+
+    .s3-patch {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 14px;
+      border: 2px solid var(--ink-black);
+      border-radius: 4px;
+      box-shadow: 2px 2px 0 var(--ink-black);
+    }
+
+    .s3-title {
+      font-family: var(--font-display);
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-top: 12px;
+      margin-bottom: 20px;
+    }
+
+    .s3-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .s3-list li {
+      font-size: 19px;
+      line-height: 1.35;
+      font-weight: 600;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .s3-bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid var(--ink-black);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    /* =========================================================================
+       SCENE 4: NOMINATION → CONFIRMATION (22.4s - 27.2s)
+       ========================================================================= */
+    .s4-cartoon-flow {
+      width: 820px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .s4-nodes-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .s4-actor-box {
+      flex: 1;
+      background: var(--paper-cream);
+      border: 4px solid var(--ink-black);
+      border-radius: 16px;
+      padding: 26px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 5px 5px 0 var(--ink-black);
+    }
+
+    .s4-actor-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      border: 3px solid var(--ink-black);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      font-size: 28px;
+      box-shadow: 3px 3px 0 var(--ink-black);
+    }
+
+    .s4-actor-info h4 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .s4-actor-info p {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--retro-terracotta);
+      margin-top: 2px;
+    }
+
+    .s4-arrow-badge {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 900;
+      background: var(--retro-mustard);
+      border: 3px solid var(--ink-black);
+      padding: 8px 24px;
+      border-radius: 8px;
+      box-shadow: 4px 4px 0 var(--ink-black);
+      transform: rotate(-1deg);
+    }
+
+    .s4-board-seat-result {
+      width: 780px;
+      background: var(--retro-teal);
+      border: 4px solid var(--ink-black);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 6px 6px 0 var(--ink-black);
+    }
+
+    .s4-board-seat-result h4 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 900;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .s4-board-seat-result p {
+      font-size: 19px;
+      font-weight: 700;
+      color: #E2E8F0;
+      margin-top: 6px;
+    }
+
+    /* =========================================================================
+       SCENE 5: 7 BOARD SEATS + 5 BANK PRESIDENTS (27.2s - 34.8s)
+       ========================================================================= */
+    .s5-boardroom-card {
+      width: 820px;
+      background: var(--paper-cream);
+      border: 4px solid var(--ink-black);
+      border-radius: 20px;
+      padding: 34px 38px;
+      box-shadow: 8px 8px 0 var(--ink-black);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .s5-count-title {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      text-align: center;
+    }
+
+    .s5-mandate-banner {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--retro-mustard);
+      border: 3px solid var(--ink-black);
+      padding: 6px 20px;
+      border-radius: 6px;
+      box-shadow: 3px 3px 0 var(--ink-black);
+      margin-top: 10px;
+      margin-bottom: 24px;
+      transform: rotate(-1deg);
+    }
+
+    .s5-seats-row-group {
+      width: 100%;
+      background: var(--paper-bg);
+      border: 3px solid var(--ink-black);
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-bottom: 18px;
+      box-shadow: 4px 4px 0 var(--ink-black);
+    }
+
+    .s5-group-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .s5-tokens-rack {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+    }
+
+    .s5-token {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 3px solid var(--ink-black);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 22px;
+      color: #FFFFFF;
+      box-shadow: 3px 3px 0 var(--ink-black);
+    }
+
+    .token-gov {
+      background: var(--retro-teal);
+    }
+
+    .token-pres {
+      background: var(--retro-terracotta);
+    }
+
+    /* =========================================================================
+       SCENE 6: CHECK VOTES · READ RECORDS · QUESTION POLICY (34.8s - 47.7s)
+       ========================================================================= */
+    .s6-stack {
+      width: 820px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .s6-action-panel {
+      background: var(--paper-cream);
+      border: 4px solid var(--ink-black);
+      border-radius: 16px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      box-shadow: 5px 5px 0 var(--ink-black);
+    }
+
+    .s6-action-panel.active {
+      background: #FEF3C7;
+      border-color: var(--ink-black);
+      transform: scale(1.02);
+    }
+
+    .s6-num-badge {
+      width: 54px;
+      height: 54px;
+      border: 3px solid var(--ink-black);
+      border-radius: 12px;
+      background: var(--retro-terracotta);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 900;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 3px 3px 0 var(--ink-black);
+      flex-shrink: 0;
+    }
+
+    .s6-details h4 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .s6-details p {
+      font-size: 18px;
+      font-weight: 600;
+      color: #444;
+      margin-top: 4px;
+    }
+
+    .s6-tag {
+      margin-left: auto;
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 6px 14px;
+      border: 2px solid var(--ink-black);
+      border-radius: 6px;
+      background: #264A1C;
+      color: #FFFFFF;
+      box-shadow: 2px 2px 0 var(--ink-black);
+      flex-shrink: 0;
+    }
+
+    /* =========================================================================
+       SCENE 7: IDENTITY IS NOT EVIDENCE (47.7s - 53.2s)
+       ========================================================================= */
+    .s7-vs-container {
+      width: 820px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .s7-card {
+      border: 4px solid var(--ink-black);
+      border-radius: 18px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      box-shadow: 6px 6px 0 var(--ink-black);
+    }
+
+    .s7-card-rejected {
+      background: #FEE2E2;
+    }
+
+    .s7-card-approved {
+      background: #ECFDF5;
+    }
+
+    .s7-mark-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 3px solid var(--ink-black);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 900;
+      color: #FFFFFF;
+      box-shadow: 3px 3px 0 var(--ink-black);
+      flex-shrink: 0;
+    }
+
+    .s7-info h4 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .s7-info p {
+      font-size: 18px;
+      font-weight: 600;
+      color: #444;
+      margin-top: 4px;
+    }
+
+    .s7-verdict {
+      margin-left: auto;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border: 3px solid var(--ink-black);
+      border-radius: 6px;
+      box-shadow: 3px 3px 0 var(--ink-black);
+      flex-shrink: 0;
+    }
+
+    /* =========================================================================
+       SCENE 8: ACCOUNTABILITY, NOT COLLECTIVE BLAME (53.2s - 60.0s)
+       ========================================================================= */
+    .s8-box {
+      width: 820px;
+      background: var(--paper-cream);
+      border: 5px solid var(--ink-black);
+      border-radius: 24px;
+      padding: 44px 48px;
+      text-align: center;
+      box-shadow: 10px 10px 0 var(--ink-black);
+    }
+
+    .s8-quote {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 1.25;
+      text-transform: uppercase;
+      color: var(--ink-black);
+    }
+
+    .s8-rule {
+      width: 140px;
+      height: 6px;
+      background: var(--retro-terracotta);
+      border: 2px solid var(--ink-black);
+      margin: 24px auto;
+      border-radius: 3px;
+    }
+
+    .s8-cta {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--retro-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .s8-outro-brand {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .s8-wordmark {
+      font-family: var(--font-display);
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-black);
+    }
+
+    .s8-tagline {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--retro-terracotta);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="main" data-width="1080" data-height="1920">
+    <!-- Screenprint Paper Grain Texture -->
+    <div class="paper-texture"></div>
+    <div class="paper-vignette"></div>
+
+    <!-- Theatrical Spotlight Beam (Diagonal cone as seen in Jazz Trio and Guitarist) -->
+    <div class="theatrical-spotlight" id="spotlightBeam"></div>
+
+    <!-- Persistent Mid-Century Show Header -->
+    <div class="show-header">
+      <div class="brand-group">
+        <div class="brand-emblem">B</div>
+        <div class="brand-title">Beyond The Myth</div>
+      </div>
+      <div class="episode-tag">Ep. 001</div>
+    </div>
+
+    <!-- Persistent Source Stamp -->
+    <div class="source-container">
+      <div class="source-stamp" id="sourceStamp">
+        <span class="source-star">★</span>
+        <span id="sourceText">Board of Governors FAQ · federalreserve.gov</span>
+      </div>
+    </div>
+
+    <!-- Dynamic Subtitles Card -->
+    <div class="subtitle-wrapper">
+      <div class="subtitle-card" id="subtitleCard">
+        <div class="subtitle-text" id="subtitleText">
+          No religious community <span class="hl-yellow">owns the Federal Reserve</span>.
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         SCENE 1: FOLLOW THE INSTITUTIONS (0.0s - 10.0s)
+         ===================================================================== -->
+    <div class="scene" id="scene1">
+      <div class="scene-content">
+        <div class="retro-eyebrow">Institutional Reality</div>
+        <h1 class="retro-headline">Follow The<br><span style="color:var(--retro-terracotta)">Institutions</span></h1>
+
+        <div class="s1-illustration" id="s1Illustration">
+          <!-- Off-register patch -->
+          <div class="s1-backdrop-patch"></div>
+
+          <!-- Mid-Century Eccles Building Vector Art with Pigeons -->
+          <svg class="s1-svg" viewBox="0 0 700 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pediment / Quirky Triangular Roof -->
+            <polygon points="350,30 50,150 650,150" fill="#FAF6EB" stroke="#1C1C1E" stroke-width="7" stroke-linejoin="round"/>
+            <polygon points="350,55 100,140 600,140" fill="#E5A836" stroke="#1C1C1E" stroke-width="4"/>
+            <!-- Eagle Medallion Crest -->
+            <circle cx="350" cy="100" r="32" fill="#C74B34" stroke="#1C1C1E" stroke-width="5"/>
+            <path d="M336 96 L350 82 L364 96 L358 112 L342 112 Z" fill="#FAF6EB" stroke="#1C1C1E" stroke-width="3"/>
+            <circle cx="350" cy="94" r="3" fill="#1C1C1E"/>
+            <!-- Architrave Banner -->
+            <rect x="40" y="150" width="620" height="36" rx="4" fill="#2B6D7A" stroke="#1C1C1E" stroke-width="6"/>
+            <text x="350" y="175" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="19" font-weight="900" letter-spacing="4" fill="#FFFFFF">FEDERAL RESERVE SYSTEM</text>
+            <!-- 6 Angular Mid-Century Columns with Off-Register Fills -->
+            <g id="s1Columns">
+              <rect x="75" y="186" width="50" height="210" rx="4" fill="#FAF6EB" stroke="#1C1C1E" stroke-width="6"/>
+              <rect x="175" y="186" width="50" height="210" rx="4" fill="#FAF6EB" stroke="#1C1C1E" stroke-width="6"/>
+              <rect x="275" y="186" width="50" height="210" rx="4" fill="#FAF6EB" stroke="#1C1C1E" stroke-width="6"/>
+              <rect x="375" y="186" width="50" height="210" rx="4" fill="#FAF6EB" stroke="#1C1C1E" stroke-width="6"/>
+              <rect x="475" y="186" width="50" height="210" rx="4" fill="#FAF6EB" stroke="#1C1C1E" stroke-width="6"/>
+              <rect x="575" y="186" width="50" height="210" rx="4" fill="#FAF6EB" stroke="#1C1C1E" stroke-width="6"/>
+            </g>
+            <!-- Steps / Base Plinth -->
+            <rect x="30" y="396" width="640" height="30" rx="4" fill="#EDE3CE" stroke="#1C1C1E" stroke-width="6"/>
+            <rect x="10" y="426" width="680" height="34" rx="4" fill="#FAF6EB" stroke="#1C1C1E" stroke-width="6"/>
+
+            <!-- Homage to Ref 1: Mid-Century Stylized Pigeons on Steps! -->
+            <g id="s1Pigeon1" transform="translate(100, 398) scale(0.75)">
+              <ellipse cx="25" cy="18" rx="18" ry="12" fill="#54638A" stroke="#1C1C1E" stroke-width="3"/>
+              <circle cx="12" cy="10" r="8" fill="#54638A" stroke="#1C1C1E" stroke-width="3"/>
+              <circle cx="10" cy="8" r="2" fill="#FFFFFF"/>
+              <polygon points="5,10 0,13 6,14" fill="#E5A836" stroke="#1C1C1E" stroke-width="2"/>
+              <line x1="20" y1="28" x2="18" y2="38" stroke="#1C1C1E" stroke-width="3"/>
+              <line x1="28" y1="28" x2="28" y2="38" stroke="#1C1C1E" stroke-width="3"/>
+            </g>
+            <g id="s1Pigeon2" transform="translate(560, 412) scale(0.65) scale(-1, 1)">
+              <ellipse cx="25" cy="18" rx="18" ry="12" fill="#7D8E54" stroke="#1C1C1E" stroke-width="3"/>
+              <circle cx="12" cy="10" r="8" fill="#7D8E54" stroke="#1C1C1E" stroke-width="3"/>
+              <circle cx="10" cy="8" r="2" fill="#FFFFFF"/>
+              <polygon points="5,10 0,13 6,14" fill="#C74B34" stroke="#1C1C1E" stroke-width="2"/>
+              <line x1="20" y1="28" x2="18" y2="38" stroke="#1C1C1E" stroke-width="3"/>
+              <line x1="28" y1="28" x2="28" y2="38" stroke="#1C1C1E" stroke-width="3"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         SCENE 2: OCT 7, 2026 · MINUTES RELEASED (10.0s - 15.0s)
+         ===================================================================== -->
+    <div class="scene" id="scene2">
+      <div class="scene-content">
+        <div class="retro-eyebrow">Public Record</div>
+        <h2 class="retro-headline">Meeting Records<br><span style="color:var(--retro-teal)">Are Public</span></h2>
+
+        <div class="s2-dossier" id="s2Dossier">
+          <div class="s2-stamp-seal">Official Record</div>
+          <div class="s2-typewriter-header">
+            <h3>Federal Open Market Committee</h3>
+            <p>Minutes of the Policy Action Meeting</p>
+          </div>
+
+          <div class="s2-calendar-duo">
+            <div class="s2-cal-card" id="s2MeetingCard">
+              <div class="s2-cal-tag" style="color:var(--retro-terracotta)">Meeting Date</div>
+              <div class="s2-cal-date">SEPT 15–16</div>
+              <p style="font-size:16px;color:#555;margin-top:6px;font-weight:600">Policy deliberations & votes</p>
+            </div>
+
+            <div class="s2-cal-card released" id="s2ReleaseCard">
+              <div class="s2-cal-tag" style="color:var(--retro-teal)">Public Release</div>
+              <div class="s2-cal-date">OCT 7, 2026</div>
+              <p style="font-size:16px;color:#555;margin-top:6px;font-weight:600">Full transcript published</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         SCENE 3: PUBLIC + PRIVATE FEATURES (15.0s - 22.4s)
+         ===================================================================== -->
+    <div class="scene" id="scene3">
+      <div class="scene-content">
+        <div class="retro-eyebrow">Dual Institutional Structure</div>
+        <h2 class="retro-headline">Public Agency<br><span style="color:var(--retro-terracotta)">+ Regional Banks</span></h2>
+
+        <div class="s3-split-container">
+          <!-- Left: Board of Governors -->
+          <div class="s3-card" id="s3CardPublic">
+            <div class="s3-patch" style="background:var(--retro-mustard)">Federal Agency</div>
+            <h3 class="s3-title" style="color:var(--retro-teal)">Board of<br>Governors</h3>
+            <ul class="s3-list">
+              <li><span class="s3-bullet" style="background:var(--retro-teal)"></span>100% Federal Government agency in Washington, D.C.</li>
+              <li><span class="s3-bullet" style="background:var(--retro-teal)"></span>Appointed by U.S. President, confirmed by Senate</li>
+              <li><span class="s3-bullet" style="background:var(--retro-teal)"></span>Accountable directly to U.S. Congress</li>
+            </ul>
+          </div>
+
+          <!-- Right: Regional Reserve Banks -->
+          <div class="s3-card" id="s3CardPrivate">
+            <div class="s3-patch" style="background:var(--retro-terracotta);color:#FFFFFF">Regional Entities</div>
+            <h3 class="s3-title" style="color:var(--retro-terracotta)">12 Regional<br>Reserve Banks</h3>
+            <ul class="s3-list">
+              <li><span class="s3-bullet" style="background:var(--retro-terracotta)"></span>Operational branches (NY, Chicago, SF, etc.)</li>
+              <li><span class="s3-bullet" style="background:var(--retro-terracotta)"></span>Supervised directly by Board of Governors</li>
+              <li><span class="s3-bullet" style="background:var(--retro-terracotta)"></span>Stock carries ZERO public policy control</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         SCENE 4: NOMINATION → CONFIRMATION (22.4s - 27.2s)
+         ===================================================================== -->
+    <div class="scene" id="scene4">
+      <div class="scene-content">
+        <div class="retro-eyebrow">Constitutional Law</div>
+        <h2 class="retro-headline">Nomination<br><span style="color:var(--retro-terracotta)">→ Confirmation</span></h2>
+
+        <div class="s4-cartoon-flow">
+          <div class="s4-nodes-row">
+            <!-- President Node -->
+            <div class="s4-actor-box" id="s4BoxPres">
+              <div class="s4-actor-icon" style="background:var(--retro-mustard)">🏛️</div>
+              <div class="s4-actor-info">
+                <h4>President</h4>
+                <p>Nominates Members</p>
+              </div>
+            </div>
+
+            <!-- Senate Node -->
+            <div class="s4-actor-box" id="s4BoxSen">
+              <div class="s4-actor-icon" style="background:var(--retro-terracotta);color:#FFFFFF">⚖️</div>
+              <div class="s4-actor-info">
+                <h4>U.S. Senate</h4>
+                <p>Confirms by Vote</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="s4-arrow-badge" id="s4ArrowBadge">Executive Appointment ➔ Roll Call Vote</div>
+
+          <!-- Board of Governors Seat -->
+          <div class="s4-board-seat-result" id="s4BoardResult">
+            <h4>Board of Governors</h4>
+            <p>14-Year Statutory Terms to Protect Public Integrity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         SCENE 5: 7 BOARD SEATS + 5 BANK PRESIDENTS (27.2s - 34.8s)
+         ===================================================================== -->
+    <div class="scene" id="scene5">
+      <div class="scene-content">
+        <div class="retro-eyebrow">FOMC Voting Council</div>
+        <h2 class="retro-headline">12 Key Votes<br><span style="color:var(--retro-teal)">Set Interest Rates</span></h2>
+
+        <div class="s5-boardroom-card" id="s5Boardroom">
+          <div class="s5-count-title">7 + 5 = 12 Voting Seats</div>
+          <div class="s5-mandate-banner">Sets Key Interest-Rate Target</div>
+
+          <!-- 7 Board Governors -->
+          <div class="s5-seats-row-group">
+            <div class="s5-group-header">
+              <span style="color:var(--retro-teal)">7 Board of Governors Seats</span>
+              <span style="color:#666">Federal Agency Appointees</span>
+            </div>
+            <div class="s5-tokens-rack" id="s5TokensGov">
+              <div class="s5-token token-gov">1</div>
+              <div class="s5-token token-gov">2</div>
+              <div class="s5-token token-gov">3</div>
+              <div class="s5-token token-gov">4</div>
+              <div class="s5-token token-gov">5</div>
+              <div class="s5-token token-gov">6</div>
+              <div class="s5-token token-gov">7</div>
+            </div>
+          </div>
+
+          <!-- 5 Regional Bank Presidents -->
+          <div class="s5-seats-row-group">
+            <div class="s5-group-header">
+              <span style="color:var(--retro-terracotta)">5 Regional Bank Presidents</span>
+              <span style="color:#666">NY Fed + 4 Rotating</span>
+            </div>
+            <div class="s5-tokens-rack" id="s5TokensPres">
+              <div class="s5-token token-pres">8</div>
+              <div class="s5-token token-pres">9</div>
+              <div class="s5-token token-pres">10</div>
+              <div class="s5-token token-pres">11</div>
+              <div class="s5-token token-pres">12</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         SCENE 6: CHECK VOTES · READ RECORDS · QUESTION POLICY (34.8s - 47.7s)
+         ===================================================================== -->
+    <div class="scene" id="scene6">
+      <div class="scene-content">
+        <div class="retro-eyebrow">Real Accountability</div>
+        <h2 class="retro-headline">Where To Look<br><span style="color:var(--retro-terracotta)">For Evidence</span></h2>
+
+        <div class="s6-stack">
+          <!-- Action 1: Check Votes -->
+          <div class="s6-action-panel" id="s6Panel1">
+            <div class="s6-num-badge">1</div>
+            <div class="s6-details">
+              <h4>Check The Votes</h4>
+              <p>Examine individual roll-call votes and recorded dissents.</p>
+            </div>
+            <div class="s6-tag">Official Tally</div>
+          </div>
+
+          <!-- Action 2: Read Records -->
+          <div class="s6-action-panel" id="s6Panel2">
+            <div class="s6-num-badge" style="background:var(--retro-teal)">2</div>
+            <div class="s6-details">
+              <h4>Read The Records</h4>
+              <p>Verbatim transcripts, Beige Books, and economic models.</p>
+            </div>
+            <div class="s6-tag" style="background:var(--retro-teal)">Audited Data</div>
+          </div>
+
+          <!-- Action 3: Challenge Policy -->
+          <div class="s6-action-panel" id="s6Panel3">
+            <div class="s6-num-badge" style="background:var(--retro-mustard);color:var(--ink-black)">3</div>
+            <div class="s6-details">
+              <h4>Challenge The Policy</h4>
+              <p>Debate interest rates, inflation targets, and congressional testimony.</p>
+            </div>
+            <div class="s6-tag" style="background:var(--retro-mustard);color:var(--ink-black)">Legitimate Debate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         SCENE 7: IDENTITY IS NOT EVIDENCE (47.7s - 53.2s)
+         ===================================================================== -->
+    <div class="scene" id="scene7">
+      <div class="scene-content">
+        <div class="retro-eyebrow">Core Evidentiary Principle</div>
+        <h2 class="retro-headline">Identity Is<br><span style="color:var(--retro-terracotta)">Not Evidence</span></h2>
+
+        <div class="s7-vs-container">
+          <!-- Rejected Scapegoat Tag -->
+          <div class="s7-card s7-card-rejected" id="s7CardRejected">
+            <div class="s7-mark-icon" style="background:var(--retro-terracotta)">✕</div>
+            <div class="s7-info">
+              <h4 style="color:var(--retro-terracotta)">Blaming A Group By Ancestry</h4>
+              <p>Collective religious accusations, conspiracy myths, scapegoating.</p>
+            </div>
+            <div class="s7-verdict" style="background:var(--retro-terracotta);color:#FFFFFF">Zero Evidence</div>
+          </div>
+
+          <!-- Approved Documentary Policy Record -->
+          <div class="s7-card s7-card-approved" id="s7CardApproved">
+            <div class="s7-mark-icon" style="background:var(--retro-olive)">✓</div>
+            <div class="s7-info">
+              <h4 style="color:var(--retro-olive)">Documentary Policy Record</h4>
+              <p>Statutory authority, roll-call voting, verified economic outcomes.</p>
+            </div>
+            <div class="s7-verdict" style="background:var(--retro-olive);color:#FFFFFF">Real Evidence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+         SCENE 8: ACCOUNTABILITY, NOT COLLECTIVE BLAME (53.2s - 60.0s)
+         ===================================================================== -->
+    <div class="scene" id="scene8">
+      <div class="scene-content">
+        <div class="retro-eyebrow">Conclusion</div>
+
+        <div class="s8-box" id="s8Box">
+          <div class="s8-quote">
+            Hold Decision-Makers Accountable<br>
+            <span style="color:var(--retro-terracotta)">For What They Do</span>
+          </div>
+          <div class="s8-rule"></div>
+          <div class="s8-cta">
+            Not Millions Of People For Who They Are.
+          </div>
+        </div>
+
+        <div class="s8-outro-brand" id="s8OutroBrand">
+          <div class="brand-emblem" style="width:56px;height:56px;font-size:30px;">B</div>
+          <div class="s8-wordmark">Beyond The Myth</div>
+          <div class="s8-tagline">Facts, not scapegoats.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // =========================================================================
+    // HYPERFRAMES COMPOSITION TIMELINE REGISTRATION
+    // =========================================================================
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    window.__timelines["main"] = tl;
+
+    const easePop = "back.out(2)";
+    const easeSmooth = "power2.out";
+
+    // Synchronized subtitle cue points matching voiceover speech
+    const subtitles = [
+      { t: 0.0,  text: "No religious community <span class='hl-yellow'>owns the Federal Reserve</span>.", src: "Board of Governors FAQ · federalreserve.gov" },
+      { t: 4.8,  text: "To understand its decisions, <span class='hl-teal'>follow the institutions</span>—not ancestry.", src: "Board of Governors FAQ · federalreserve.gov" },
+      { t: 10.0, text: "On October seventh, the Fed published <span class='hl-teal'>minutes from its September meeting</span>.", src: "FOMC Minutes (Sept 15–16, 2026 / Rel. Oct 7, 2026)" },
+      { t: 15.0, text: "The system combines <span class='hl-yellow'>public and private features</span>.", src: "Federal Reserve Act § 10 / 12 U.S.C. § 241" },
+      { t: 18.5, text: "Its Board of Governors <span class='hl-teal'>is a federal agency</span>.", src: "Federal Reserve Act § 10 / 12 U.S.C. § 241" },
+      { t: 22.4, text: "The president nominates its members, and <span class='hl-yellow'>the Senate confirms them</span>.", src: "U.S. Constitution Art. II & 12 U.S.C. § 241" },
+      { t: 27.2, text: "A committee sets the key interest-rate target:", src: "Federal Reserve Act § 12A / 12 U.S.C. § 263" },
+      { t: 30.8, text: "<span class='hl-teal'>Seven Board seats</span> and <span class='hl-red'>five regional Reserve Bank presidents</span>.", src: "12 U.S.C. § 263 (FOMC Voting Seats)" },
+      { t: 34.8, text: "That structure does not make <span class='hl-yellow'>every decision right</span>.", src: "FOMC Records & Public Policy Records" },
+      { t: 38.6, text: "It tells us where to look <span class='hl-teal'>for accountability</span>.", src: "FOMC Records & Public Policy Records" },
+      { t: 42.4, text: "<span class='hl-yellow'>Check the votes.</span> Read the records. Challenge the policy.", src: "FOMC Records & Public Policy Records" },
+      { t: 47.7, text: "Blaming Jewish people as a group is <span class='hl-red'>not evidence</span> against a policymaker.", src: "Evidence-Based Public Accountability" },
+      { t: 53.2, text: "Hold decision-makers accountable for <span class='hl-yellow'>what they do</span>—", src: "Beyond the Myth · Facts, not scapegoats" },
+      { t: 56.0, text: "—not millions of people <span class='hl-teal'>for who they are</span>.", src: "Beyond the Myth · Facts, not scapegoats" }
+    ];
+
+    subtitles.forEach(s => {
+      tl.call(() => {
+        const subEl = document.getElementById("subtitleText");
+        const srcEl = document.getElementById("sourceText");
+        if (subEl) subEl.innerHTML = s.text;
+        if (srcEl) srcEl.innerText = s.src;
+      }, null, s.t);
+    });
+
+    // Dynamic Theatrical Spotlight movement across the video
+    tl.to("#spotlightBeam", { rotation: -6, x: -60, duration: 10.0, ease: "none" }, 0.0);
+    tl.to("#spotlightBeam", { rotation: 8, x: 80, duration: 5.0, ease: "power1.inOut" }, 10.0);
+    tl.to("#spotlightBeam", { rotation: 0, x: 0, duration: 7.4, ease: "power1.inOut" }, 15.0);
+    tl.to("#spotlightBeam", { rotation: -10, x: -100, duration: 4.8, ease: "power1.inOut" }, 22.4);
+    tl.to("#spotlightBeam", { rotation: 4, x: 40, duration: 7.6, ease: "power1.inOut" }, 27.2);
+    tl.to("#spotlightBeam", { rotation: -4, x: -40, duration: 12.9, ease: "power1.inOut" }, 34.8);
+    tl.to("#spotlightBeam", { rotation: 12, x: 120, duration: 5.5, ease: "power2.inOut" }, 47.7);
+    tl.to("#spotlightBeam", { rotation: 0, x: 0, duration: 6.8, ease: "power2.out" }, 53.2);
+
+    // =========================================================================
+    // SCENE 1: 0.0s - 10.0s (Follow The Institutions)
+    // =========================================================================
+    tl.set("#scene1", { opacity: 1 }, 0.0);
+    tl.fromTo("#scene1 .retro-eyebrow", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: easePop }, 0.2);
+    tl.fromTo("#scene1 .retro-headline", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: easePop }, 0.3);
+    tl.fromTo("#s1Illustration", { scale: 0.8, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.7, ease: easePop }, 0.5);
+    tl.fromTo("#s1Columns rect", { scaleY: 0, transformOrigin: "bottom" }, { scaleY: 1, stagger: 0.06, duration: 0.5, ease: "power2.out" }, 0.7);
+    // Subtle pigeon hops (homage to Ref 1)
+    tl.to("#s1Pigeon1", { y: -8, yoyo: true, repeat: 7, duration: 0.45, ease: "sine.inOut" }, 1.5);
+    tl.to("#s1Pigeon2", { y: -6, yoyo: true, repeat: 6, duration: 0.5, ease: "sine.inOut" }, 2.0);
+    // Camera drift
+    tl.to("#s1Illustration", { scale: 1.05, duration: 8.0, ease: "none" }, 1.3);
+    // Exit scene 1
+    tl.to("#scene1", { opacity: 0, scale: 0.94, duration: 0.45, ease: "power2.in" }, 9.55);
+
+    // =========================================================================
+    // SCENE 2: 10.0s - 15.0s (Minutes Released)
+    // =========================================================================
+    tl.set("#scene2", { opacity: 1 }, 9.95);
+    tl.fromTo("#scene2 .retro-eyebrow", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: easePop }, 10.0);
+    tl.fromTo("#scene2 .retro-headline", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: easePop }, 10.1);
+    tl.fromTo("#s2Dossier", { y: 60, scale: 0.88, opacity: 0 }, { y: 0, scale: 1.0, opacity: 1, duration: 0.6, ease: easePop }, 10.2);
+    tl.fromTo(".s2-stamp-seal", { scale: 2.2, opacity: 0, rotation: -20 }, { scale: 1.0, opacity: 1, rotation: 12, duration: 0.4, ease: "back.out(3)" }, 10.6);
+    tl.fromTo("#s2MeetingCard", { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: easeSmooth }, 10.8);
+    tl.fromTo("#s2ReleaseCard", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: easePop }, 11.1);
+    // Pulse release card
+    tl.to("#s2ReleaseCard", { scale: 1.05, duration: 0.6, yoyo: true, repeat: 2 }, 11.8);
+    // Exit scene 2
+    tl.to("#scene2", { opacity: 0, scale: 0.94, duration: 0.4, ease: "power2.in" }, 14.6);
+
+    // =========================================================================
+    // SCENE 3: 15.0s - 22.4s (Public + Private Features)
+    // =========================================================================
+    tl.set("#scene3", { opacity: 1 }, 14.95);
+    tl.fromTo("#scene3 .retro-eyebrow", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: easePop }, 15.0);
+    tl.fromTo("#scene3 .retro-headline", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: easePop }, 15.1);
+    tl.fromTo("#s3CardPublic", { x: -70, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: easePop }, 15.3);
+    tl.fromTo("#s3CardPrivate", { x: 70, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: easePop }, 15.5);
+    tl.fromTo("#s3CardPublic li", { x: -20, opacity: 0 }, { x: 0, opacity: 1, stagger: 0.2, duration: 0.4, ease: easeSmooth }, 16.0);
+    tl.fromTo("#s3CardPrivate li", { x: 20, opacity: 0 }, { x: 0, opacity: 1, stagger: 0.2, duration: 0.4, ease: easeSmooth }, 17.5);
+    // Exit scene 3
+    tl.to("#scene3", { opacity: 0, scale: 0.94, duration: 0.4, ease: "power2.in" }, 22.0);
+
+    // =========================================================================
+    // SCENE 4: 22.4s - 27.2s (Nomination → Confirmation)
+    // =========================================================================
+    tl.set("#scene4", { opacity: 1 }, 22.35);
+    tl.fromTo("#scene4 .retro-eyebrow", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: easePop }, 22.4);
+    tl.fromTo("#scene4 .retro-headline", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: easePop }, 22.5);
+    tl.fromTo("#s4BoxPres", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: easePop }, 22.6);
+    tl.fromTo("#s4BoxSen", { x: 60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: easePop }, 23.0);
+    tl.fromTo("#s4ArrowBadge", { scale: 0, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.4, ease: easePop }, 23.4);
+    tl.fromTo("#s4BoardResult", { y: 40, scale: 0.9, opacity: 0 }, { y: 0, scale: 1.0, opacity: 1, duration: 0.6, ease: easePop }, 23.8);
+    // Gavel confirmation thud
+    tl.to("#s4BoardResult", { scale: 1.04, duration: 0.2, yoyo: true, repeat: 1 }, 24.5);
+    // Exit scene 4
+    tl.to("#scene4", { opacity: 0, scale: 0.94, duration: 0.4, ease: "power2.in" }, 26.8);
+
+    // =========================================================================
+    // SCENE 5: 27.2s - 34.8s (7 Board Seats + 5 Bank Presidents)
+    // =========================================================================
+    tl.set("#scene5", { opacity: 1 }, 27.15);
+    tl.fromTo("#scene5 .retro-eyebrow", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: easePop }, 27.2);
+    tl.fromTo("#scene5 .retro-headline", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: easePop }, 27.3);
+    tl.fromTo("#s5Boardroom", { scale: 0.88, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.6, ease: easePop }, 27.4);
+    // Stagger 7 Gov Tokens with playful pops
+    tl.fromTo("#s5TokensGov .s5-token", 
+      { scale: 0, opacity: 0 }, 
+      { scale: 1.0, opacity: 1, stagger: 0.12, duration: 0.35, ease: "back.out(2.5)" }, 27.7);
+    // Stagger 5 Pres Tokens
+    tl.fromTo("#s5TokensPres .s5-token", 
+      { scale: 0, opacity: 0 }, 
+      { scale: 1.0, opacity: 1, stagger: 0.14, duration: 0.35, ease: "back.out(2.5)" }, 29.2);
+    // Mandate banner pop
+    tl.fromTo(".s5-mandate-banner", { scale: 0.6, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.4, ease: easePop }, 30.6);
+    // Exit scene 5
+    tl.to("#scene5", { opacity: 0, scale: 0.94, duration: 0.4, ease: "power2.in" }, 34.4);
+
+    // =========================================================================
+    // SCENE 6: 34.8s - 47.7s (Check Votes · Read Records · Question Policy)
+    // =========================================================================
+    tl.set("#scene6", { opacity: 1 }, 34.75);
+    tl.fromTo("#scene6 .retro-eyebrow", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: easePop }, 34.8);
+    tl.fromTo("#scene6 .retro-headline", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: easePop }, 34.9);
+    // Micro-Action 1: Check Votes
+    tl.fromTo("#s6Panel1", { x: -70, opacity: 0 }, { x: 0, opacity: 1, duration: 0.55, ease: easePop }, 35.2);
+    tl.to("#s6Panel1", { backgroundColor: "#FEF3C7", scale: 1.03, duration: 0.35, ease: "back.out(2)" }, 37.8);
+    // Micro-Action 2: Read Records
+    tl.fromTo("#s6Panel2", { x: 70, opacity: 0 }, { x: 0, opacity: 1, duration: 0.55, ease: easePop }, 39.0);
+    tl.to("#s6Panel2", { backgroundColor: "#FEF3C7", scale: 1.03, duration: 0.35, ease: "back.out(2)" }, 41.2);
+    // Micro-Action 3: Question Policy
+    tl.fromTo("#s6Panel3", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: easePop }, 42.4);
+    tl.to("#s6Panel3", { backgroundColor: "#FEF3C7", scale: 1.03, duration: 0.35, ease: "back.out(2)" }, 44.5);
+    // Exit scene 6
+    tl.to("#scene6", { opacity: 0, scale: 0.94, duration: 0.4, ease: "power2.in" }, 47.3);
+
+    // =========================================================================
+    // SCENE 7: 47.7s - 53.2s (Identity Is Not Evidence)
+    // =========================================================================
+    tl.set("#scene7", { opacity: 1 }, 47.65);
+    tl.fromTo("#scene7 .retro-eyebrow", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: easePop }, 47.7);
+    tl.fromTo("#scene7 .retro-headline", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: easePop }, 47.8);
+    tl.fromTo("#s7CardRejected", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: easePop }, 48.0);
+    tl.fromTo("#s7CardApproved", { x: 60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: easePop }, 48.4);
+    // Theatrical rejection: shift away the invalid card and illuminate the approved card
+    tl.to("#s7CardRejected", { x: -90, opacity: 0.35, filter: "grayscale(0.7)", duration: 0.8, ease: "power2.out" }, 49.8);
+    tl.to("#s7CardApproved", { scale: 1.05, boxShadow: "10px 10px 0 var(--ink-black)", duration: 0.8, ease: "power2.out" }, 50.2);
+    // Exit scene 7
+    tl.to("#scene7", { opacity: 0, scale: 0.94, duration: 0.4, ease: "power2.in" }, 52.8);
+
+    // =========================================================================
+    // SCENE 8: 53.2s - 60.0s (Accountability, Not Collective Blame)
+    // =========================================================================
+    tl.set("#scene8", { opacity: 1 }, 53.15);
+    tl.fromTo("#scene8 .retro-eyebrow", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: easePop }, 53.2);
+    tl.fromTo("#s8Box", { scale: 0.85, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.7, ease: easePop }, 53.4);
+    tl.fromTo("#s8OutroBrand", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: easePop }, 55.5);
+    // Hold final frame to 60.0s
+    tl.to("#root", { filter: "contrast(1.02)", duration: 0.05 }, 59.95);
+  </script>
+</body>
+</html>

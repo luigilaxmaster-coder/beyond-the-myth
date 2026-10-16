@@ -1,0 +1,75 @@
+{
+  "episode_id": "ep011",
+  "episode_num": "01",
+  "title": "Who Owns the Bank of England?",
+  "hero_object": "Official 1946 Bank of England Nationalisation Act & Treasury Share Register",
+  "hook": "This bank’s owner isn’t a mystery. So why does this claim keep getting shared?",
+  "punchline": "A famous surname is not an ownership document.",
+  "visual_paradigm": "British Crown Treasury & Central Bank Registry (Deep Oxford Blue #0A192F, Gilded Gold #F59E0B, St. James Marble #F8FAFC)",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Alex",
+      "start": 0.25,
+      "end": 4.5,
+      "text": "This bank’s owner isn’t a mystery. So why does this claim keep getting shared?",
+      "on_screen": "WHO OWNS THE BANK OF ENGLAND?",
+      "source": "Bank of England (bankofengland.co.uk)"
+    },
+    {
+      "id": 2,
+      "speaker": "Maya",
+      "start": 4.8,
+      "end": 13.5,
+      "text": "You’ve seen the meme: claims that the Rothschild family privately owns the Bank of England and controls the currency.",
+      "on_screen": "THE VIRAL CLAIM: PRIVATE FAMILY OWNERSHIP",
+      "source": "Viral Conspiracy Tracking"
+    },
+    {
+      "id": 3,
+      "speaker": "Alex",
+      "start": 13.8,
+      "end": 22.9,
+      "text": "Here is the actual law. In nineteen-forty-six, the UK Parliament passed the Bank of England Act, transferring one hundred percent of capital stock to the British Treasury.",
+      "on_screen": "1946 NATIONALISATION ACT: 100% PUBLIC TREASURY",
+      "source": "UK National Archives & BOE Act 1946"
+    },
+    {
+      "id": 4,
+      "speaker": "Maya",
+      "start": 23.2,
+      "end": 33.4,
+      "text": "It is completely state-owned. Profits go to the public exchequer. The Governor is appointed by the Crown, not a private banking syndicate.",
+      "on_screen": "PUBLIC GOVERNANCE & HM TREASURY OVERSIGHT",
+      "source": "HM Treasury Annual Accounts"
+    },
+    {
+      "id": 5,
+      "speaker": "Alex",
+      "start": 33.8,
+      "end": 44.2,
+      "text": "You can debate government interest rate policy all day. That’s legitimate economic debate. But claiming a private dynasty owns the institution is demonstrably false.",
+      "on_screen": "POLICY DEBATE ≠ INVENTED OWNERSHIP",
+      "source": "Parliamentary Monetary Policy Committee"
+    },
+    {
+      "id": 6,
+      "speaker": "Maya",
+      "start": 44.8,
+      "end": 53.5,
+      "text": "Whenever someone connects a famous bank to a secret family, don’t look at red string on a pinboard. Check the statutory share registry.",
+      "on_screen": "CHECK STATUTORY SHARE REGISTRIES",
+      "source": "Official UK Public Records"
+    },
+    {
+      "id": 7,
+      "speaker": "Alex",
+      "start": 54.5,
+      "end": 59.0,
+      "text": "A famous surname is not an ownership document.",
+      "on_screen": "A FAMOUS SURNAME IS NOT AN OWNERSHIP DOCUMENT",
+      "source": "Beyond the Myth · Facts, not scapegoats"
+    }
+  ]
+}

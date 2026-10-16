@@ -1,0 +1,72 @@
+{
+  "episode_id": "ep003",
+  "episode_num": "03",
+  "title": "Who Actually Makes Fed Decisions?",
+  "cover_text": "WHO ACTUALLY DECIDES?",
+  "total_duration": 60.0,
+  "scenes": [
+    {
+      "id": 1,
+      "speaker": "Maya",
+      "start": 0.25,
+      "end": 3.66,
+      "text": "The Fed has a decision process. Let\u2019s actually follow it.",
+      "on_screen": "FOLLOW THE INSTITUTIONAL PROCESS",
+      "source": "Federal Reserve (federalreserve.gov)"
+    },
+    {
+      "id": 2,
+      "speaker": "Alex",
+      "start": 4.3,
+      "end": 12.24,
+      "text": "The Federal Reserve is America\u2019s central bank. Its structure combines public and private features\u2014not a religious ownership system.",
+      "on_screen": "PUBLIC + PRIVATE STRUCTURE",
+      "source": "Federal Reserve Act, Sec. 10"
+    },
+    {
+      "id": 3,
+      "speaker": "Maya",
+      "start": 13.0,
+      "end": 21.33,
+      "text": "Its Board of Governors is a federal agency. The president nominates governors, and the Senate confirms them. That process is publicly described.",
+      "on_screen": "PRESIDENTIAL NOMINATION \u2192 SENATE CONFIRMATION",
+      "source": "12 U.S.C. \u00a7 241"
+    },
+    {
+      "id": 4,
+      "speaker": "Alex",
+      "start": 24.5,
+      "end": 34.75,
+      "text": "A key policy committee has twelve voting seats: seven governors and five regional Reserve Bank presidents. Its policy decisions influence interest rates across the economy.",
+      "on_screen": "12 VOTING SEATS: 7 GOVERNORS + 5 PRESIDENTS",
+      "source": "12 U.S.C. \u00a7 263 (FOMC)"
+    },
+    {
+      "id": 5,
+      "speaker": "Maya",
+      "start": 36.2,
+      "end": 44.94,
+      "text": "Does that make every decision good? Absolutely not. Ask who voted, what evidence they used, and who benefits. Those are real accountability questions.",
+      "on_screen": "ACCOUNTABILITY: VOTES \u00b7 EVIDENCE \u00b7 IMPACT",
+      "source": "FOMC Records & Public Transcripts"
+    },
+    {
+      "id": 6,
+      "speaker": "Alex",
+      "start": 47.5,
+      "end": 54.94,
+      "text": "But someone\u2019s Jewish identity is not evidence of a secret command chain. Check authority, records, and decisions.",
+      "on_screen": "CHECK AUTHORITY \u00b7 RECORDS \u00b7 DECISIONS",
+      "source": "Public Decision Framework"
+    },
+    {
+      "id": 7,
+      "speaker": "Maya",
+      "start": 55.29,
+      "end": 59.13,
+      "text": "Question power. Don\u2019t replace the investigation with a stereotype.",
+      "on_screen": "QUESTION POWER \u00b7 REJECT STEREOTYPES",
+      "source": "Beyond the Myth \u00b7 Facts, not scapegoats"
+    }
+  ]
+}
